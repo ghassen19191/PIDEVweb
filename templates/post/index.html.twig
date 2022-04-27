@@ -1,0 +1,49 @@
+{% extends 'back/news.html.twig' %}
+
+{% block title %}Post index{% endblock %}
+
+{% block body %}
+    <h1>Post </h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdPost</th>
+                <th>Titre</th>
+                <th>Auteur</th>
+                <th>ImgPost</th>
+                <th>DatePost</th>
+                <th>Rate</th>
+                <th>Image</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.idPost }}</td>
+                <td>{{ post.titre }}</td>
+                <td>{{ post.auteur }}</td>
+                <td>{{ post.imgPost }}</td>
+                <td>{{ post.datePost ? post.datePost|date('Y-m-d') : '' }}</td>
+                <td>{{ post.rate }}</td>
+             <td><img src="{{ asset('uploads/' ~ post.image) }}" alt="" width="80" height="50">
+					</td>
+                <td>
+                    <button class="btn" style="background-color:#28B463;border-color: black;color: purple">   <a href="{{ path('app_post_show', {'idPost': post.idPost}) }}">show</a></button>
+                  <button class="btn" style="background-color:#C0392B ;border-color: black;color: purple">  <a href="{{ path('app_post_edit', {'idPost': post.idPost}) }}">edit</a></button>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <div class="navigation">
+            {{ knp_pagination_render(posts) }}
+        </div>
+
+    <button class="btn" style="background-color:#F1C40F;border-color: black;color: purple"> <a href="{{ path('app_post_new') }}">Create new</a></button>
+{% endblock %}

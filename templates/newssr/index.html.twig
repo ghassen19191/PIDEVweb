@@ -1,0 +1,24 @@
+{% extends 'front/post.html.twig' %}
+
+{% block title %}Hello NewssrController!{% endblock %}
+
+{% block body %}
+{% for post in posts %}
+	<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="blog_items">
+						<div class="blog_img_box">
+							<img class="img-fluid" src="img/blog_img1.png" alt="">
+						</div>
+						<div class="blog_content">
+							<a class="title" href="blog.html">{{post.titre}}</a>
+							<p>{{post.imgPost}}</p>
+							<div class="date">
+								<a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>{{ post.datePost ? post.datePost|date('Y-m-d') : '' }} </a>
+							
+							</div>
+						</div>
+					</div>
+				</div>
+                {% endfor %}
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Reclamation Print</title>
+    <link rel="stylesheet" href="/style.css" media="all" />
+</head>
+<body>
+<header class="clearfix">
+    <div id="logo">
+        Hunters
+    </div>
+    <h1 align="center">Hunters Reclamation </h1>
+    <hr></hr>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdRec</th>
+                <th>NomRec</th>
+                <th>DateRec</th>
+                <th>DescriRec</th>
+                <th>Traite</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td>{{ reclamation.idRec }}</td>
+                <td>{{ reclamation.nomRec }}</td>
+                <td>{{ reclamation.dateRec ? reclamation.dateRec|date('Y-m-d') : '' }}</td>
+                <td>{{ reclamation.descriRec }}</td>
+                <td>{{ reclamation.traite }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</header>
+</main>
+
+</body>
