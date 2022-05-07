@@ -30,7 +30,10 @@ body {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #777777; }
+  color: #777777; 
+  background-color: red;
+}
+
   .darkthe{/**/
     --body-color:#0a0a0a;
     --nav-color:#000;
@@ -38,6 +41,8 @@ body {
 
 
 }
+.margin-calendar {
+  margin-right: 5px;}
 #dark{
   position: absolute;
   top: 20px;
@@ -907,8 +912,9 @@ body.blog_page {
   overflow: hidden; }
 
 .blog_item {
-  margin-bottom: 40px; }
-
+  margin-bottom: 40px; 
+  margin-left : 50px;
+padding-left: 50px;}
 .blog_info {
   padding-top: 30px; }
   .blog_info .post_tag {
@@ -2711,6 +2717,8 @@ h6 {
   width: 100%;
   padding: 10px 0 10px 0px; }
 
+  
+    
 .default-select .nice-select .list .option {
   font-weight: 300;
   -webkit-transition: all 0.3s ease 0s;
@@ -2743,6 +2751,8 @@ h6 {
 .form-select {
   height: 40px;
   width: 100%; }
+  
+
 
 .form-select .nice-select {
   border: none;
@@ -3125,9 +3135,12 @@ h6 {
 /* Start Blog Area css
 ============================================================================================ */
 .blog_area {
-  padding: 80px 0 120px; }
+  padding: 120px 0 120px; 
+  align-items: center;
+  text-align: center;;}
   .blog_area .blog_items {
-    position: relative; }
+    position: relative;
+   }
     .blog_area .blog_items:hover .blog_content {
       background: #22195e; }
       .blog_area .blog_items:hover .blog_content a.title {
@@ -3161,18 +3174,22 @@ h6 {
       -webkit-transition: all 0.4s ease 0s;
       -moz-transition: all 0.4s ease 0s;
       -o-transition: all 0.4s ease 0s;
-      transition: all 0.4s ease 0s; }
+      transition: all 0.4s ease 0s; 
+      text-align: center;;}
       .blog_area .blog_items .blog_content a.title {
         font-size: 18px;
         font-weight: 600;
         color: #fff;
-        font-family: "Rajdhani", sans-serif; }
+        font-family: "Rajdhani", sans-serif;
+        text-align: center; }
       .blog_area .blog_items .blog_content p {
         color: #ddd;
         font-weight: 400;
         padding: 20px 0 40px;
         margin: 0;
-        font-family: "Roboto", sans-serif; }
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+      display: flex; }
       .blog_area .blog_items .blog_content .date a {
         font-size: 13px;
         margin-right: 30px;
@@ -3933,7 +3950,175 @@ h6 {
       text-align: center; }
       .single-footer-widget .social_widget a:hover {
         background: #3fcaff; }
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+        
+        body {
+          font-family: "Open Sans", sans-serif;
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .submit {
+          font-size: 20px;
+          font-weight: bold;
+          text-transform: uppercase;
+          background-color: #0250cc;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 6px;
+          user-select: none;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        .submit.clicked {
+          opacity: 0;
+          transform: scale(0);
+        }
+        
+        .container {
+          opacity: 1;
+          transition: 0.3s;
+          width: 100%;
+          height: 100vh;
+          left: 0;
+          top: 0;
+          position: fixed;
+          z-index: -1;
+        }
+        
+        .container.showen {
+          z-index: 0;
+        }
+        
+        .message {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          width: 400px;
+          height: 200px;
+          background-color: white;
+          border-radius: 6px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px;
+          z-index: 1;
+          transition: 0.3s;
+        }
+        
+        .container.showen .message {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        
+        @media (max-width: 768px) {
+          .message {
+            width: 350px;
+          }
+        }
+        
+        #svg-animation {
+          width: 150px;
+          overflow: hidden;
+        }
+        
+        .success {
+          font-size: 18px;
+          font-weight: bolder;
+          text-transform: uppercase;
+        }
+        
+        .close {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #0250cc;
+          left: calc(100% - 10px);
+          top: -10px;
+          cursor: pointer;
+          transition: 0.3s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .close:hover,
+        .submit:hover {
+          background-color: #0206cc;
+        }
+        .close::before,
+        .close::after {
+          content: '';
+          width: 5px;
+          height: 5px;
+          transform: rotate(-45deg);
+        }
+        .close::before {
+          border-bottom: 2px solid white;
+          border-right: 2px solid white;
+        }
+        .close::after {
+          border-top: 2px solid white;
+          border-left: 2px solid white;
+        }
+        
+        @media (max-width: 768px) {
+          .close {
+            width: 30px;
+            height: 30px;
+            left: calc(100% - 15px);
+            top: -15px;
+          }
+          .close::before,
+          .close::after {
+            width: 6px;
+            height: 6px;
+          }
+        }
+        
+        .layout-in {
+          width: 100vw;
+          height: 100vh;
+          background-color: #00000059;
+          position: absolute;
+          left: -100%;
+          top: 0;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        
+        .container.showen .layout-in {
+          opacity: 1;
+          left: 0;
+        }
+        
+        .final {
+          opacity: 0;
+          transition: 0.3s;
+          transform: scale(0);
+          top: 0;
+          font-size: 18px;
+          position: absolute;
+          margin-top: 20px;
+          background-color: #0250cc;
+          color: white;
+          padding: 10px 20px;
+          border-radius: 6px;
+        }
+        .final.showen {
+          transform: scale(1);
+          opacity: 1;
+        }
 
+        
 /* End Footer Area css
 ============================================================================================ */
 /*---------------------------------------------------- */

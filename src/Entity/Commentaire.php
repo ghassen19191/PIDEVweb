@@ -26,7 +26,7 @@ class Commentaire
      *
      * @ORM\Column(name="nom_com", type="string", length=50, nullable=false)
      */
-    private $nomCom;
+    private $nomCom='Mouna';
 
     /**
      * @var string

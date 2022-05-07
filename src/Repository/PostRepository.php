@@ -44,7 +44,28 @@ class PostRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
-
+    public function findByNom($txt)
+    {
+        $entityManager=$this->getEntityManager();
+        $query=$entityManager
+            ->createQuery("SELECT p from APP\Entity\Post p where p.auteur like :txt")
+            ->setParameter('txt','%'.$txt.'%');
+        return $query->getResult();
+    }
+    public function findByExampleField($value)
+    {
+        return $this->createQueryBuilder('J')
+            ->andWhere('P.id_post LIKE :val')
+            ->orWhere('P.titre LIKE :val')
+        
+            ->setParameter('val','%'.$value.'%')
+            ->orderBy('P.id_post', 'ASC')
+            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+   
     // /**
     //  * @return Post[] Returns an array of Post objects
     //  */

@@ -33,7 +33,7 @@ class __TwigTemplate_bd871bbb7ac7b38166b03a8c17833f273c807cb8e3b53f3486cf943356f
     protected function doGetParent(array $context)
     {
         // line 1
-        return "back/com.html.twig";
+        return "front/com.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -45,7 +45,7 @@ class __TwigTemplate_bd871bbb7ac7b38166b03a8c17833f273c807cb8e3b53f3486cf943356f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "commentaire/new.html.twig"));
 
-        $this->parent = $this->loadTemplate("back/com.html.twig", "commentaire/new.html.twig", 1);
+        $this->parent = $this->loadTemplate("front/com.html.twig", "commentaire/new.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -92,10 +92,10 @@ class __TwigTemplate_bd871bbb7ac7b38166b03a8c17833f273c807cb8e3b53f3486cf943356f
         echo twig_include($this->env, $context, "commentaire/_form.html.twig");
         echo "
 <br>
-    <button class=\"btn\" style=\"background-color:grey;border-color: black;color: blue\"><a href=\"";
+    <button class=\"btn\" style=\"background-color:grey;border-color: black;color: blue\"><a href=";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_commentaire_index");
-        echo "\">back to list</a></button>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/post/front"), "html", null, true);
+        echo ">back to Posts</a></button>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +122,7 @@ class __TwigTemplate_bd871bbb7ac7b38166b03a8c17833f273c807cb8e3b53f3486cf943356f
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'back/com.html.twig' %}
+        return new Source("{% extends 'front/com.html.twig' %}
 
 {% block title %}New Commentaire{% endblock %}
 
@@ -131,7 +131,7 @@ class __TwigTemplate_bd871bbb7ac7b38166b03a8c17833f273c807cb8e3b53f3486cf943356f
 
     {{ include('commentaire/_form.html.twig') }}
 <br>
-    <button class=\"btn\" style=\"background-color:grey;border-color: black;color: blue\"><a href=\"{{ path('app_commentaire_index') }}\">back to list</a></button>
+    <button class=\"btn\" style=\"background-color:grey;border-color: black;color: blue\"><a href={{asset(\"index.php/post/front\")}}>back to Posts</a></button>
 {% endblock %}", "commentaire/new.html.twig", "C:\\xampp\\htdocs\\PIDEV\\templates\\commentaire\\new.html.twig");
     }
 }

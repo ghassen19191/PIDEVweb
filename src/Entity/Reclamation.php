@@ -26,7 +26,7 @@ class Reclamation
      *
      * @ORM\Column(name="nom_rec", type="string", length=50, nullable=false)
      */
-    private $nomRec;
+    private $nomRec= 'Mouna';
 
     /**
      * @var \DateTime

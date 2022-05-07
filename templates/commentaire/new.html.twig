@@ -1,4 +1,4 @@
-{% extends 'back/com.html.twig' %}
+{% extends 'front/com.html.twig' %}
 
 {% block title %}New Commentaire{% endblock %}
 
@@ -7,5 +7,5 @@
 
     {{ include('commentaire/_form.html.twig') }}
 <br>
-    <button class="btn" style="background-color:grey;border-color: black;color: blue"><a href="{{ path('app_commentaire_index') }}">back to list</a></button>
+    <button class="btn" style="background-color:grey;border-color: black;color: blue"><a href={{asset("index.php/post/front")}}>back to Posts</a></button>
 {% endblock %}

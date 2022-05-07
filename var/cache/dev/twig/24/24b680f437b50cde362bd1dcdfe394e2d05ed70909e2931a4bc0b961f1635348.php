@@ -90,7 +90,7 @@ class __TwigTemplate_d3f9ebce6b93fb7600868f2902d0aaeab8d8bbeb4892c83394303321142
     <table class=\"table\">
         <thead>
             <tr>
-                <th>IdCom</th>
+                
                 <th>NomCom</th>
                 <th>Descri</th>
                 <th>DateCom</th>
@@ -107,10 +107,7 @@ class __TwigTemplate_d3f9ebce6b93fb7600868f2902d0aaeab8d8bbeb4892c83394303321142
         foreach ($context['_seq'] as $context["_key"] => $context["commentaire"]) {
             // line 21
             echo "            <tr>
-                <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commentaire"], "idCom", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
+                
                 <td>";
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commentaire"], "nomCom", [], "any", false, false, false, 23), "html", null, true);
@@ -177,7 +174,7 @@ class __TwigTemplate_d3f9ebce6b93fb7600868f2902d0aaeab8d8bbeb4892c83394303321142
 
     public function getDebugInfo()
     {
-        return array (  155 => 37,  146 => 33,  137 => 29,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  152 => 37,  143 => 33,  134 => 29,  130 => 28,  125 => 26,  121 => 25,  117 => 24,  113 => 23,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -192,7 +189,7 @@ class __TwigTemplate_d3f9ebce6b93fb7600868f2902d0aaeab8d8bbeb4892c83394303321142
     <table class=\"table\">
         <thead>
             <tr>
-                <th>IdCom</th>
+                
                 <th>NomCom</th>
                 <th>Descri</th>
                 <th>DateCom</th>
@@ -203,7 +200,7 @@ class __TwigTemplate_d3f9ebce6b93fb7600868f2902d0aaeab8d8bbeb4892c83394303321142
         <tbody>
         {% for commentaire in commentaires %}
             <tr>
-                <td>{{ commentaire.idCom }}</td>
+                
                 <td>{{ commentaire.nomCom }}</td>
                 <td>{{ commentaire.descri }}</td>
                 <td>{{ commentaire.dateCom ? commentaire.dateCom|date('Y-m-d') : '' }}</td>

@@ -181,13 +181,13 @@ class __TwigTemplate_7a15034f49eabe7c8e33d53a774c7639ba86f79c374d3d2e97de781fdcf
 \t\t\t\t\t\t\t";
         // line 82
         $this->displayBlock('body', $context, $blocks);
-        // line 107
+        // line 114
         echo "\t\t\t\t\t\t\t</div> <br>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"navigation\">
             ";
-        // line 110
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 110, $this->source); })()));
+        // line 117
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 117, $this->source); })()));
         echo "
 \t\t\t</div>
 \t\t\t\t\t</div>
@@ -308,68 +308,68 @@ class __TwigTemplate_7a15034f49eabe7c8e33d53a774c7639ba86f79c374d3d2e97de781fdcf
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 229
+        // line 236
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 230
+        // line 237
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 231
+        // line 238
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 232
+        // line 239
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/stellar.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 233
+        // line 240
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.magnific-popup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 234
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/nice-select/js/jquery.nice-select.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 235
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/imagesloaded.pkgd.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 236
+        // line 243
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/isotope-min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 237
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/owl-carousel/owl.carousel.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 238
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 239
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.waypoints.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 240
+        // line 247
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.counterup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 241
+        // line 248
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mail-script.js"), "html", null, true);
         echo "></script>
 \t<!--gmaps Js-->
 \t<script src=";
-        // line 243
+        // line 250
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 244
+        // line 251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gmaps.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 245
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/theme.js"), "html", null, true);
         echo "></script>
 \t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js\"></script>
@@ -402,41 +402,61 @@ class __TwigTemplate_7a15034f49eabe7c8e33d53a774c7639ba86f79c374d3d2e97de781fdcf
         $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 84, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
             // line 85
-            echo "\t\t\t\t<div class=\"col-lg-4 col-md-6\">
+            echo "\t\t\t ";
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["p"], "enable", [], "any", false, false, false, 85), 0))) {
+                // line 86
+                echo "\t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img1.png\" alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">";
-            // line 91
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "titre", [], "any", false, false, false, 91), "html", null, true);
-            echo "</a> <br> <br>
-\t\t\t\t\t\t\t<img src=\"";
-            // line 92
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["p"], "image", [], "any", false, false, false, 92))), "html", null, true);
-            echo "\" alt=\"\" width=\"100\" height=\"100\"  >
-\t\t\t\t\t\t\t<p>";
-            // line 93
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "imgpost", [], "any", false, false, false, 93), "html", null, true);
-            echo "</p>
+\t\t\t\t\t\t\t<center> <a class=\"title\"font size =\"4\" > ";
+                // line 92
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "titre", [], "any", false, false, false, 92), "html", null, true);
+                echo "</a></font></center> <br> <br>
+\t\t\t\t\t\t<center>\t<img src=\"";
+                // line 93
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["p"], "image", [], "any", false, false, false, 93))), "html", null, true);
+                echo "\" alt=\"\" width=\"290\" height=\"200\"  ></center><br>
+\t\t\t\t\t\t<center><font size =\"2\" color=\"white\"\t<p>";
+                // line 94
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "imgpost", [], "any", false, false, false, 94), "html", null, true);
+                echo "</p></center>
 \t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>";
-            // line 95
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "datePost", [], "any", false, false, false, 95), "format", [0 => "d/m/y"], "method", false, false, false, 95), "html", null, true);
-            echo " </a>
+\t\t\t\t\t\t\t\t<i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>";
+                // line 96
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "datePost", [], "any", false, false, false, 96), "format", [0 => "d/m/y"], "method", false, false, false, 96), "html", null, true);
+                echo " 
 \t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<a href=\"";
+                // line 99
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 99)]), "html", null, true);
+                echo "\"><i  aria-hidden=\"true\"></i></a>
+\t\t\t\t\t\t\t\t<a href=\"";
+                // line 100
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 100)]), "html", null, true);
+                echo "\"><i  aria-hidden=\"true\"></i></a>
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<a href=\"";
+                // line 103
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 103)]), "html", null, true);
+                echo "\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i>comments </a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t";
+            }
+            // line 109
+            echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 103
+        // line 110
         echo "\t\t\t\t
 \t\t\t\t
 
@@ -461,7 +481,7 @@ class __TwigTemplate_7a15034f49eabe7c8e33d53a774c7639ba86f79c374d3d2e97de781fdcf
 
     public function getDebugInfo()
     {
-        return array (  440 => 103,  426 => 95,  421 => 93,  417 => 92,  413 => 91,  405 => 85,  401 => 84,  398 => 83,  388 => 82,  373 => 245,  369 => 244,  365 => 243,  360 => 241,  356 => 240,  352 => 239,  348 => 238,  344 => 237,  340 => 236,  336 => 235,  332 => 234,  328 => 233,  324 => 232,  320 => 231,  316 => 230,  312 => 229,  190 => 110,  185 => 107,  183 => 82,  163 => 65,  159 => 64,  141 => 49,  135 => 46,  131 => 45,  127 => 44,  123 => 43,  107 => 32,  93 => 21,  88 => 19,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
+        return array (  460 => 110,  454 => 109,  445 => 103,  439 => 100,  435 => 99,  429 => 96,  424 => 94,  420 => 93,  416 => 92,  408 => 86,  405 => 85,  401 => 84,  398 => 83,  388 => 82,  373 => 252,  369 => 251,  365 => 250,  360 => 248,  356 => 247,  352 => 246,  348 => 245,  344 => 244,  340 => 243,  336 => 242,  332 => 241,  328 => 240,  324 => 239,  320 => 238,  316 => 237,  312 => 236,  190 => 117,  185 => 114,  183 => 82,  163 => 65,  159 => 64,  141 => 49,  135 => 46,  131 => 45,  127 => 44,  123 => 43,  107 => 32,  93 => 21,  88 => 19,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -550,23 +570,30 @@ class __TwigTemplate_7a15034f49eabe7c8e33d53a774c7639ba86f79c374d3d2e97de781fdcf
 \t\t\t\t\t\t\t{% block body %}
 \t\t\t<div class=\"row\">
 \t\t\t{% for p in posts %}
+\t\t\t {% if p.enable==0 %}
 \t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img1.png\" alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">{{p.titre}}</a> <br> <br>
-\t\t\t\t\t\t\t<img src=\"{{ asset('uploads/' ~ p.image) }}\" alt=\"\" width=\"100\" height=\"100\"  >
-\t\t\t\t\t\t\t<p>{{p.imgpost}}</p>
+\t\t\t\t\t\t\t<center> <a class=\"title\"font size =\"4\" > {{p.titre}}</a></font></center> <br> <br>
+\t\t\t\t\t\t<center>\t<img src=\"{{ asset('uploads/' ~ p.image) }}\" alt=\"\" width=\"290\" height=\"200\"  ></center><br>
+\t\t\t\t\t\t<center><font size =\"2\" color=\"white\"\t<p>{{p.imgpost}}</p></center>
 \t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>{{p.datePost.format('d/m/y')}} </a>
+\t\t\t\t\t\t\t\t<i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>{{p.datePost.format('d/m/y')}} 
 \t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_postcom', {'idPost': p.idPost}) }}\"><i  aria-hidden=\"true\"></i></a>
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_postcom', {'idPost': p.idPost}) }}\"><i  aria-hidden=\"true\"></i></a>
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_postcom', {'idPost': p.idPost}) }}\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i>comments </a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t{% endif %}
 \t\t\t\t{% endfor %}
 \t\t\t\t
 \t\t\t\t

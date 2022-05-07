@@ -4,13 +4,16 @@ namespace App\Controller;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\Post;
 use App\Form\PostType;
+use App\Form\CommentaireType;
 use App\Repository\PostRepository;
+use App\Repository\CommentaireRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use MercurySeries\FlashyBundle\FlashyNotifier ;
-
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use App\Entity\Commentaire;
 /**
  * @Route("/post")
  */
@@ -134,4 +137,100 @@ class PostController extends Controller
 
         return $this->redirectToRoute('app_post_index', [], Response::HTTP_SEE_OTHER);
     }
+    /**
+     * @Route("/s/search", name="search")
+     */
+    public function searchJeux(Request $request,NormalizerInterface $Normalizer,PostRepository $repository):Response
+    {
+        $requestString=$request->get('searchValue');
+        $Post = $repository->findByNom($requestString);
+        $jsonContent = $Normalizer->normalize($Post, 'json',['Groups'=>'Post:read']);
+        $retour =json_encode($jsonContent);
+        return new Response($retour);
+
+    }
+    
+     /**
+     * @Route("/{idPost}/masquer", name="masquer_evenement")
+     */
+    public function masquerEvent($idPost): Response
+    {
+        $post= $this->getDoctrine()->getRepository(Post::class)->find($idPost);
+        $post->setEnable(0);
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $entityManager->persist($post);
+        $entityManager->flush();
+        return $this->redirectToRoute('app_post_index', [], Response::HTTP_SEE_OTHER);
+    }
+
+    /**
+     * @Route("/{idPost}/afficher", name="afficher_evenement")
+     */
+    public function afficherEvent($idPost):Response
+    {
+        $post = $this->getDoctrine()->getRepository(Post::class)->find($idPost);
+        $post->setEnable(1);
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $entityManager->persist($post);
+        $entityManager->flush();
+        return $this->redirectToRoute('app_post_index', [], Response::HTTP_SEE_OTHER);
+    }
+    /**
+     * @Route("/commentaire/{idPost}", name="app_postcom")
+     */
+    public function PackItem(Request $request,PostRepository $postRepository, $idPost, CommentaireRepository $commentaireRepository): Response
+    {   
+        $post = $postRepository->find($idPost); 
+        $commentaire = $commentaireRepository->getPostcom($idPost);
+        
+        $newCommentaire = new Commentaire();
+        $form = $this->createForm(CommentaireType::class, $newCommentaire);
+    
+        $form->handleRequest($request);
+        $newCommentaire->setIdPost($post);
+        if ($form->isSubmitted() && $form->isValid()) {
+            
+            $commentaireRepository->add($newCommentaire);
+            $newCommentaire->setIdPost($post);
+            return $this->redirectToRoute('app_postfront_index', [], Response::HTTP_SEE_OTHER);
+        }
+       
+
+        return $this->render('post/postitem.html.twig', [
+            'commentaire' => $commentaire,
+            'post' => $post,
+            'form' => $form->createView(),
+        ]);
+       
+        
+    }
+     /**
+     * @Route("/stats", name="stats")
+     */
+    public function statistiques(PostRepository $categRepo){
+        // On va chercher toutes les catégories
+        $categories = $categRepo->findAll();
+
+        $categNom = [];
+        $categColor = [];
+        $categCount = [];
+
+        // On "démonte" les données pour les séparer tel qu'attendu par ChartJS
+        foreach($categories as $categorie){
+            $categNom[] = $categorie->getAuteur();
+           
+            
+        }
+
+        
+
+        return $this->render('admin/stats.html.twig', [
+            'categNom' => json_encode($categNom),
+            
+            
+        ]);
+    }
+     
 }

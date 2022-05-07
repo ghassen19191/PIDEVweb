@@ -67,10 +67,10 @@ class Post extends \App\Entity\Post implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'idPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'titre', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'auteur', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'imgPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'datePost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'rate', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'image'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'idPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'titre', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'auteur', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'imgPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'datePost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'rate', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'enable'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'idPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'titre', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'auteur', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'imgPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'datePost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'rate', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'image'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'idPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'titre', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'auteur', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'imgPost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'datePost', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'rate', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'image', '' . "\0" . 'App\\Entity\\Post' . "\0" . 'enable'];
     }
 
     /**
@@ -333,6 +333,28 @@ class Post extends \App\Entity\Post implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, '__toString', []);
 
         return parent::__toString();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getEnable(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEnable', []);
+
+        return parent::getEnable();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setEnable(?bool $enable): \App\Entity\Post
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEnable', [$enable]);
+
+        return parent::setEnable($enable);
     }
 
 }

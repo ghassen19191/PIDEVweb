@@ -1,49 +1,140 @@
 {% extends 'back/news.html.twig' %}
-
-{% block title %}Post index{% endblock %}
-
 {% block body %}
-    <h1>Post </h1>
+<h1>Post</h1>
+{% block search %}
+        <form>
+            <div class="input-group input-group-dynamic mb-8">
+                <span class="input-group-text"><i class="fas fa-search" aria-hidden="true"></i></span>
 
-    <table class="table">
+                <input class="form-control" id="search" placeholder="Search" type="text" >
+
+            </div>
+        </form>
+    {% endblock %}
+
+
+
+
+
+    <table id ="t" class="table">
         <thead>
             <tr>
-                <th>IdPost</th>
+                
                 <th>Titre</th>
                 <th>Auteur</th>
                 <th>ImgPost</th>
                 <th>DatePost</th>
-                <th>Rate</th>
+               
                 <th>Image</th>
+                 <th>Rate</th>
+                <th>.....</th>
                 <th>actions</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="all">
+
         {% for post in posts %}
             <tr>
-                <td>{{ post.idPost }}</td>
+                
                 <td>{{ post.titre }}</td>
                 <td>{{ post.auteur }}</td>
                 <td>{{ post.imgPost }}</td>
                 <td>{{ post.datePost ? post.datePost|date('Y-m-d') : '' }}</td>
-                <td>{{ post.rate }}</td>
-             <td><img src="{{ asset('uploads/' ~ post.image) }}" alt="" width="80" height="50">
-					</td>
-                <td>
-                    <button class="btn" style="background-color:#28B463;border-color: black;color: purple">   <a href="{{ path('app_post_show', {'idPost': post.idPost}) }}">show</a></button>
-                  <button class="btn" style="background-color:#C0392B ;border-color: black;color: purple">  <a href="{{ path('app_post_edit', {'idPost': post.idPost}) }}">edit</a></button>
-                </td>
+              <td><img src="{{ asset('uploads/' ~ post.image) }}" alt="" width="80" height="50">
+					</td> 
+                     <td>{{ post.rate }}</td>
+             
+                <td> {% if post.enable == 1 %} Masqué
+                            {% else %} Affiché{% endif %}</td>
+                        <td>
+
+                            <a style=color:#00c94a href="{{ path('app_post_edit',{'idPost':post.idPost}) }}">   <input class="btn btn-warning " type="submit" value="Update"/>
+                            </a>
+                            <a style=color:red href="{{ path('app_post_show',{'idPost':post.idPost}) }}"> <input class="btn btn-danger " type="submit" value="show"/>
+                            </a>
+                            {% if post.enable == 1 %} <a href="{{ path('masquer_evenement', {'idPost' : post.idPost})}}" class="btn btn-success text-white" href="#">Afficher</a>
+                            {% else %}<a href="{{ path('afficher_evenement', {'idPost' : post.idPost})}}" class="btn btn-success text-white"
+                                         href="#">Masquer</a> {% endif %}
+                        </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
-        </tbody>
+      </tbody>
+         <tbody id="search"></tbody>
+
+
     </table>
     <div class="navigation">
             {{ knp_pagination_render(posts) }}
         </div>
 
     <button class="btn" style="background-color:#F1C40F;border-color: black;color: purple"> <a href="{{ path('app_post_new') }}">Create new</a></button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $("#search").keyup(function(e){
+                /* La variable value va prendre la valeur insérer dans le champ de texte afin d’effectuer la recherche */
+                var value = $(this).val();
+                /* Ajax est lancé lors du remplissage du champ texte dont l’id est « search » pour faire la recherche */
+                $.ajax({
+                    /* l’url est une chaine de caractères contenant l’adresse où la requête est envoyée */
+                    url : "{{ path('search') }}",
+                    /* La méthode utilisée pour transférer les données est GET */
+                    type : 'GET',
+                    /*Ici search value va prendre la chaine entrée par un utilisateur dans la zone de recherche et sera placée après l’url */
+                    data: {
+                        'searchValue' : value
+                    },
+                    /*Cette fonction permet de vider le contenu du tableau pour recevoir le nouveau contenu*/
+                    success : function(retour){
+                        if(retour){
+                            $('#t tbody#search').empty();
+                           // window.alert("sometext");
+
+                            $.each(JSON.parse(retour), function(o, obj) {
+
+                                $('#t tbody#all').hide();
+
+
+                                $('#t tbody#search').append(" <tr>");
+							    $('#t tbody#search').append(" <td>"+obj.titre+"</td>");
+                               $('#t tbody#search').append(" <td>"+obj.auteur+"</td>");
+                               $('#t tbody#search').append(" <td>"+obj.imgPost+"</td>"); 
+                               $('#t tbody#search').append(" <td>"+obj.datePost+"</td>");
+                               $('#t tbody#search').append(" <td>"+obj.rate+"</td>"); 
+                                var p="/PIDEV/public/uploads/"+obj.image;
+                                var img = "<img src="+p+" width='100' height='100'/>";
+                                $('#t tbody#search').append(" <td>"+img+"</td>");
+							   
+                                
+                                
+                                $('#t tbody#search').append(" <td><button class='btn btn-outline-primary' type='submit' href="+obj.idPost+">show</button> <button class='btn btn-outline-primary' type='submit'  href="+obj.idPost+">edit </button></td>");
+
+                             //   $('#t tbody#search').append("<td> <button class='btn btn-outline-primary' type='submit' onclick='window.location.href =" +obj.id_post+"'; role='button'> Show </button>");
+                                //$('#t tbody#search').append(" <button class='btn btn-outline-primary' type='submit' onclick='window.location.href =" +obj.id_post+"'; role='button'> Edit </button></td>");
+
+
+
+                                $('#t tbody#search').append("</tr>");
+                                // <td>'+obj.description+'</td><td>'+obj.dateajout+'  </td><td></td><td><a href="article/'+obj.id+'">show</a> </br><a href="article/'+obj.id+'/edit">edit</a></td></tr>');
+                            });
+                        }
+                        //$('#t tbody#search').append('<tr><td> '+obj.lieu+'  </td><td>    '+obj.nbPlace+'  </td><td>'+obj.descriptions+' </td><td>'+obj.dateEvent+' </td><td>'+obj.getcategory+' </td><td>'+obj.Description+'</td><td><td><a href="event/'+obj.idEvent+'/edit">Modifier</a></td></tr>');
+                        else
+                        {
+
+                            $('#t tbody#all').show();
+                            $('#t tbody#search').empty();
+                            $('#t tbody#search').fadeIn('fast');
+                        }
+                    },
+                });
+                return false;
+            });
+             });
+</script>
 {% endblock %}

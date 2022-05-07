@@ -8,7 +8,7 @@
     <table class="table">
         <thead>
             <tr>
-                <th>IdCom</th>
+                
                 <th>NomCom</th>
                 <th>Descri</th>
                 <th>DateCom</th>
@@ -19,14 +19,14 @@
         <tbody>
         {% for commentaire in commentaires %}
             <tr>
-                <td>{{ commentaire.idCom }}</td>
+                
                 <td>{{ commentaire.nomCom }}</td>
                 <td>{{ commentaire.descri }}</td>
                 <td>{{ commentaire.dateCom ? commentaire.dateCom|date('Y-m-d') : '' }}</td>
                 <td>{{commentaire.idpost.titre}}</td>
                 <td>
                    <button class="btn" style="background-color:#28B463 ;border-color: black;color: purple"> <a href="{{ path('app_commentaire_show', {'idCom': commentaire.idCom}) }}">show</a></button>
-                   <button class="btn" style="background-color:#C0392B  ;border-color: black;color: purple"> <a href="{{ path('app_commentaire_edit', {'idCom': commentaire.idCom}) }}">edit</a></button>
+                   
                 </td>
             </tr>
         {% else %}

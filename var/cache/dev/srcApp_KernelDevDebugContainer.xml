@@ -23,6 +23,7 @@
       <parameter key="WebServerBundle">Symfony\Bundle\WebServerBundle\WebServerBundle</parameter>
       <parameter key="MercurySeriesFlashyBundle">MercurySeries\FlashyBundle\MercurySeriesFlashyBundle</parameter>
       <parameter key="KnpPaginatorBundle">Knp\Bundle\PaginatorBundle\KnpPaginatorBundle</parameter>
+      <parameter key="FOSCKEditorBundle">FOS\CKEditorBundle\FOSCKEditorBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
@@ -80,6 +81,10 @@
       <parameter key="KnpPaginatorBundle" type="collection">
         <parameter key="path">C:\xampp\htdocs\PIDEV\vendor\knplabs\knp-paginator-bundle</parameter>
         <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
+      </parameter>
+      <parameter key="FOSCKEditorBundle" type="collection">
+        <parameter key="path">C:\xampp\htdocs\PIDEV\vendor\friendsofsymfony\ckeditor-bundle\src</parameter>
+        <parameter key="namespace">FOS\CKEditorBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -159,6 +164,7 @@
     <parameter key="twig.exception_listener.controller">null</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>@FOSCKEditor/Form/ckeditor_widget.html.twig</parameter>
       <parameter>bootstrap_4_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">C:\xampp\htdocs\PIDEV/templates</parameter>
@@ -845,6 +851,7 @@
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
         <argument>App\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
+        <argument>FOS\CKEditorBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
         <argument>App\Form\CommentaireType</argument>
@@ -855,6 +862,7 @@
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
+        <argument>FOS\CKEditorBundle\Form\Type\CKEditorType</argument>
       </argument>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension</argument>
@@ -1184,7 +1192,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.lK35RML"/>
+      <argument type="service" id=".service_locator.tUsL8Lt"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1820,6 +1828,8 @@
           <argument>C:\xampp\htdocs\PIDEV\vendor\mercuryseries\flashy-bundle\src/translations</argument>
           <argument>C:\xampp\htdocs\PIDEV\src/Resources/MercurySeriesFlashyBundle/translations</argument>
           <argument>C:\xampp\htdocs\PIDEV\src/Resources/KnpPaginatorBundle/translations</argument>
+          <argument>C:\xampp\htdocs\PIDEV\vendor\friendsofsymfony\ckeditor-bundle\src/translations</argument>
+          <argument>C:\xampp\htdocs\PIDEV\src/Resources/FOSCKEditorBundle/translations</argument>
           <argument>C:\xampp\htdocs\PIDEV\src/Resources/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
@@ -1856,6 +1866,8 @@
             <argument>C:\xampp\htdocs\PIDEV\vendor\mercuryseries\flashy-bundle\src/translations</argument>
             <argument>C:\xampp\htdocs\PIDEV\src/Resources/MercurySeriesFlashyBundle/translations</argument>
             <argument>C:\xampp\htdocs\PIDEV\src/Resources/KnpPaginatorBundle/translations</argument>
+            <argument>C:\xampp\htdocs\PIDEV\vendor\friendsofsymfony\ckeditor-bundle\src/translations</argument>
+            <argument>C:\xampp\htdocs\PIDEV\src/Resources/FOSCKEditorBundle/translations</argument>
             <argument>C:\xampp\htdocs\PIDEV\src/Resources/translations</argument>
           </argument>
         </argument>
@@ -3281,6 +3293,9 @@
       <call method="addExtension">
         <argument type="service" id="knp_paginator.twig.extension.pagination"/>
       </call>
+      <call method="addExtension">
+        <argument type="service" id="fos_ck_editor.twig_extension"/>
+      </call>
       <call method="addGlobal">
         <argument>app</argument>
         <argument type="service" id="twig.app_variable"/>
@@ -3412,6 +3427,14 @@
       <call method="addPath">
         <argument>C:\xampp\htdocs\PIDEV\vendor\knplabs\knp-paginator-bundle/templates</argument>
         <argument>!KnpPaginator</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\PIDEV\vendor\friendsofsymfony\ckeditor-bundle\src/Resources/views</argument>
+        <argument>FOSCKEditor</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\xampp\htdocs\PIDEV\vendor\friendsofsymfony\ckeditor-bundle\src/Resources/views</argument>
+        <argument>!FOSCKEditor</argument>
       </call>
       <call method="addPath">
         <argument>C:\xampp\htdocs\PIDEV/templates</argument>
@@ -5140,6 +5163,101 @@
       <tag name="twig.extension"/>
       <argument type="service" id="knp_paginator.helper.processor"/>
     </service>
+    <service id="fos_ck_editor.builder.json_builder" class="FOS\CKEditorBundle\Builder\JsonBuilder">
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="fos_ck_editor.command.installer" class="FOS\CKEditorBundle\Command\CKEditorInstallerCommand">
+      <tag name="console.command" command="ckeditor:install"/>
+      <argument type="service" id="fos_ck_editor.installer"/>
+      <call method="setName">
+        <argument>ckeditor:install</argument>
+      </call>
+    </service>
+    <service id="fos_ck_editor.configuration" class="FOS\CKEditorBundle\Config\CKEditorConfiguration">
+      <argument type="collection">
+        <argument key="configs" type="collection">
+          <argument key="main_config" type="collection">
+            <argument key="toolbar" type="collection">
+              <argument type="collection">
+                <argument key="name">styles</argument>
+                <argument key="items" type="collection">
+                  <argument>Bold</argument>
+                  <argument>Italic</argument>
+                  <argument>Underline</argument>
+                  <argument>Strike</argument>
+                  <argument>Blockquote</argument>
+                  <argument>-</argument>
+                  <argument>Link</argument>
+                  <argument>-</argument>
+                  <argument>RemoveFormat</argument>
+                  <argument>-</argument>
+                  <argument>NumberedList</argument>
+                  <argument>BulletedList</argument>
+                  <argument>-</argument>
+                  <argument>Outdent</argument>
+                  <argument>Indent</argument>
+                  <argument>-</argument>
+                  <argument>-</argument>
+                  <argument>JustifyLeft</argument>
+                  <argument>JustifyCenter</argument>
+                  <argument>JustifyRight</argument>
+                  <argument>JustifyBlock</argument>
+                  <argument>-</argument>
+                  <argument>Image</argument>
+                  <argument>Table</argument>
+                  <argument>-</argument>
+                  <argument>Styles</argument>
+                  <argument>Format</argument>
+                  <argument>Font</argument>
+                  <argument>FontSize</argument>
+                  <argument>-</argument>
+                  <argument>TextColor</argument>
+                  <argument>BGColor</argument>
+                  <argument>Source</argument>
+                </argument>
+              </argument>
+            </argument>
+          </argument>
+        </argument>
+        <argument key="enable">true</argument>
+        <argument key="async">false</argument>
+        <argument key="auto_inline">true</argument>
+        <argument key="inline">false</argument>
+        <argument key="autoload">true</argument>
+        <argument key="jquery">false</argument>
+        <argument key="require_js">false</argument>
+        <argument key="input_sync">false</argument>
+        <argument key="base_path">bundles/fosckeditor/</argument>
+        <argument key="js_path">bundles/fosckeditor/ckeditor.js</argument>
+        <argument key="jquery_path">bundles/fosckeditor/adapters/jquery.js</argument>
+        <argument key="default_config">null</argument>
+        <argument key="plugins" type="collection"/>
+        <argument key="styles" type="collection"/>
+        <argument key="templates" type="collection"/>
+        <argument key="filebrowsers" type="collection"/>
+        <argument key="toolbars" type="collection">
+          <argument key="configs" type="collection"/>
+          <argument key="items" type="collection"/>
+        </argument>
+      </argument>
+    </service>
+    <service id="fos_ck_editor.form.type" class="FOS\CKEditorBundle\Form\Type\CKEditorType">
+      <tag name="form.type"/>
+      <argument type="service" id="fos_ck_editor.configuration"/>
+    </service>
+    <service id="fos_ck_editor.installer" class="FOS\CKEditorBundle\Installer\CKEditorInstaller"/>
+    <service id="fos_ck_editor.renderer" class="FOS\CKEditorBundle\Renderer\CKEditorRenderer">
+      <argument type="service" id="fos_ck_editor.builder.json_builder"/>
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="assets.packages"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="twig"/>
+      <argument type="expression">container.hasParameter('locale') ? parameter('locale') : null</argument>
+    </service>
+    <service id="fos_ck_editor.twig_extension" class="FOS\CKEditorBundle\Twig\CKEditorExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="fos_ck_editor.renderer"/>
+    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CommentaireController" class="App\Controller\CommentaireController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CommentaireController" class="App\Controller\CommentaireController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CommentaireController" class="App\Controller\CommentaireController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5461,6 +5579,13 @@
         <argument key="commentaireRepository" type="service_closure" id="App\Repository\CommentaireRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.S5WN9nN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="commentaireRepository" type="service_closure" id="App\Repository\CommentaireRepository"/>
+        <argument key="postRepository" type="service_closure" id="App\Repository\PostRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.3ZciNJ_" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5509,6 +5634,19 @@
         <argument key="postRepository" type="service_closure" id="App\Repository\PostRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.KWgWOg1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Normalizer" type="service_closure" id="serializer"/>
+        <argument key="repository" type="service_closure" id="App\Repository\PostRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.gqRFayA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="categRepo" type="service_closure" id="App\Repository\PostRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.bJ2nGqo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5541,20 +5679,24 @@
         <argument key="repo" type="service_closure" id="App\Repository\ReclamationRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.Yk6ew.B" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.nxZm3rO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\CommentaireController::delete" type="service_closure" id=".service_locator.bzskbe."/>
         <argument key="App\Controller\CommentaireController::edit" type="service_closure" id=".service_locator.bzskbe."/>
         <argument key="App\Controller\CommentaireController::index" type="service_closure" id=".service_locator.8yqhsUG"/>
         <argument key="App\Controller\CommentaireController::new" type="service_closure" id=".service_locator.8yqhsUG"/>
+        <argument key="App\Controller\CommentaireController::new1" type="service_closure" id=".service_locator.S5WN9nN"/>
         <argument key="App\Controller\CommentaireController::show" type="service_closure" id=".service_locator.3ZciNJ_"/>
+        <argument key="App\Controller\PostController::PackItem" type="service_closure" id=".service_locator.S5WN9nN"/>
         <argument key="App\Controller\PostController::delete" type="service_closure" id=".service_locator.6EuxJXx"/>
         <argument key="App\Controller\PostController::edit" type="service_closure" id=".service_locator.Gjwhddr"/>
         <argument key="App\Controller\PostController::index" type="service_closure" id=".service_locator.OUBF8mu"/>
         <argument key="App\Controller\PostController::indexFront" type="service_closure" id=".service_locator.OUBF8mu"/>
         <argument key="App\Controller\PostController::new" type="service_closure" id=".service_locator.LkVa91x"/>
+        <argument key="App\Controller\PostController::searchJeux" type="service_closure" id=".service_locator.KWgWOg1"/>
         <argument key="App\Controller\PostController::show" type="service_closure" id=".service_locator.c7kbHeP"/>
+        <argument key="App\Controller\PostController::statistiques" type="service_closure" id=".service_locator.gqRFayA"/>
         <argument key="App\Controller\ReclamationController::delete" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController::edit" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController::exportAllReclamationsPDF" type="service_closure" id=".service_locator.z1a3NDa"/>
@@ -5565,13 +5707,17 @@
         <argument key="App\Controller\CommentaireController:edit" type="service_closure" id=".service_locator.bzskbe."/>
         <argument key="App\Controller\CommentaireController:index" type="service_closure" id=".service_locator.8yqhsUG"/>
         <argument key="App\Controller\CommentaireController:new" type="service_closure" id=".service_locator.8yqhsUG"/>
+        <argument key="App\Controller\CommentaireController:new1" type="service_closure" id=".service_locator.S5WN9nN"/>
         <argument key="App\Controller\CommentaireController:show" type="service_closure" id=".service_locator.3ZciNJ_"/>
+        <argument key="App\Controller\PostController:PackItem" type="service_closure" id=".service_locator.S5WN9nN"/>
         <argument key="App\Controller\PostController:delete" type="service_closure" id=".service_locator.6EuxJXx"/>
         <argument key="App\Controller\PostController:edit" type="service_closure" id=".service_locator.Gjwhddr"/>
         <argument key="App\Controller\PostController:index" type="service_closure" id=".service_locator.OUBF8mu"/>
         <argument key="App\Controller\PostController:indexFront" type="service_closure" id=".service_locator.OUBF8mu"/>
         <argument key="App\Controller\PostController:new" type="service_closure" id=".service_locator.LkVa91x"/>
+        <argument key="App\Controller\PostController:searchJeux" type="service_closure" id=".service_locator.KWgWOg1"/>
         <argument key="App\Controller\PostController:show" type="service_closure" id=".service_locator.c7kbHeP"/>
+        <argument key="App\Controller\PostController:statistiques" type="service_closure" id=".service_locator.gqRFayA"/>
         <argument key="App\Controller\ReclamationController:delete" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController:edit" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController:exportAllReclamationsPDF" type="service_closure" id=".service_locator.z1a3NDa"/>
@@ -5639,13 +5785,14 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.lK35RML" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.tUsL8Lt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\CommentaireType" type="service_closure" id="App\Form\CommentaireType"/>
         <argument key="App\Form\PostType" type="service_closure" id="App\Form\PostType"/>
         <argument key="App\Form\Reclamation1Type" type="service_closure" id="App\Form\Reclamation1Type"/>
         <argument key="App\Form\ReclamationType" type="service_closure" id="App\Form\ReclamationType"/>
+        <argument key="FOS\CKEditorBundle\Form\Type\CKEditorType" type="service_closure" id="fos_ck_editor.form.type"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service_closure" id="form.type.file"/>
@@ -6053,12 +6200,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.Yk6ew.B"/>
+      <argument type="service" id=".service_locator.nxZm3rO"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.Yk6ew.B"/>
+      <argument type="service" id=".service_locator.nxZm3rO"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6076,7 +6223,7 @@
     <service id=".errored..service_locator.Yrn9bQF.App\Entity\Reclamation" class="App\Entity\Reclamation"/>
     <service id=".errored..service_locator.8kL29dq.App\Entity\Reclamation" class="App\Entity\Reclamation"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.TfYcj5y"/>
+      <argument type="service" id=".service_locator.ii8BsH2"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -6146,6 +6293,7 @@
         <argument key="server:start">web_server.command.server_start</argument>
         <argument key="server:stop">web_server.command.server_stop</argument>
         <argument key="server:status">web_server.command.server_status</argument>
+        <argument key="ckeditor:install">fos_ck_editor.command.installer</argument>
         <argument key="make:auth">maker.auto_command.make_auth</argument>
         <argument key="make:command">maker.auto_command.make_command</argument>
         <argument key="make:controller">maker.auto_command.make_controller</argument>
@@ -6171,7 +6319,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.TfYcj5y" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ii8BsH2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand" type="service_closure" id="Doctrine\DBAL\Tools\Console\Command\RunSqlCommand"/>
@@ -6233,6 +6381,7 @@
         <argument key="doctrine_migrations.up_to_date_command" type="service_closure" id="doctrine_migrations.up_to_date_command"/>
         <argument key="doctrine_migrations.version_command" type="service_closure" id="doctrine_migrations.version_command"/>
         <argument key="doctrine_migrations.versions_command" type="service_closure" id="doctrine_migrations.versions_command"/>
+        <argument key="fos_ck_editor.command.installer" type="service_closure" id="fos_ck_editor.command.installer"/>
         <argument key="maker.auto_command.make_auth" type="service_closure" id="maker.auto_command.make_auth"/>
         <argument key="maker.auto_command.make_command" type="service_closure" id="maker.auto_command.make_command"/>
         <argument key="maker.auto_command.make_controller" type="service_closure" id="maker.auto_command.make_controller"/>
@@ -6468,7 +6617,7 @@
     <service id="Knp\Component\Pager\PaginatorInterface" alias="knp_paginator"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Yk6ew.B"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.nxZm3rO"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

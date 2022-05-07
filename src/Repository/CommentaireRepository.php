@@ -44,6 +44,7 @@ class CommentaireRepository extends ServiceEntityRepository
             $this->_em->flush();
         }
     }
+    
 
     // /**
     //  * @return Commentaire[] Returns an array of Commentaire objects
@@ -73,4 +74,14 @@ class CommentaireRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function getPostcom($idPost)
+    {
+
+        return $this->createQueryBuilder('s')
+            ->join('App\Entity\Commentaire', 'p')
+            ->where('s.idPost=:idPost')
+            ->setParameter('idPost', $idPost)
+            ->getQuery()
+            ->getResult();
+    }
 }

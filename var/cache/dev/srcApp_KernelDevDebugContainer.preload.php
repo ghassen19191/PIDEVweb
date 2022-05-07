@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerSewzm8g/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerRD9M8CL/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -27,6 +27,7 @@ $classes[] = 'Twig\Extra\TwigExtraBundle\TwigExtraBundle';
 $classes[] = 'Symfony\Bundle\WebServerBundle\WebServerBundle';
 $classes[] = 'MercurySeries\FlashyBundle\MercurySeriesFlashyBundle';
 $classes[] = 'Knp\Bundle\PaginatorBundle\KnpPaginatorBundle';
+$classes[] = 'FOS\CKEditorBundle\FOSCKEditorBundle';
 $classes[] = 'Symfony\Component\HttpClient\TraceableHttpClient';
 $classes[] = 'Symfony\Contracts\HttpClient\HttpClientInterface';
 $classes[] = 'Symfony\Component\HttpClient\HttpClient';
@@ -240,6 +241,10 @@ $classes[] = 'Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidato
 $classes[] = 'Symfony\Component\Form\Extension\Validator\Type\UploadValidatorExtension';
 $classes[] = 'Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser';
 $classes[] = 'Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser';
+$classes[] = 'FOS\CKEditorBundle\Command\CKEditorInstallerCommand';
+$classes[] = 'FOS\CKEditorBundle\Installer\CKEditorInstaller';
+$classes[] = 'FOS\CKEditorBundle\Form\Type\CKEditorType';
+$classes[] = 'FOS\CKEditorBundle\Config\CKEditorConfiguration';
 $classes[] = 'Symfony\Component\HttpKernel\Fragment\InlineFragmentRenderer';
 $classes[] = 'Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter';
 $classes[] = 'Sensio\Bundle\FrameworkExtraBundle\EventListener\IsGrantedListener';
@@ -465,6 +470,9 @@ $classes[] = 'Symfony\Component\VarDumper\Dumper\HtmlDumper';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension';
 $classes[] = 'Knp\Bundle\PaginatorBundle\Helper\Processor';
+$classes[] = 'FOS\CKEditorBundle\Twig\CKEditorExtension';
+$classes[] = 'FOS\CKEditorBundle\Renderer\CKEditorRenderer';
+$classes[] = 'FOS\CKEditorBundle\Builder\JsonBuilder';
 $classes[] = 'Symfony\Bridge\Twig\AppVariable';
 $classes[] = 'Twig\RuntimeLoader\ContainerRuntimeLoader';
 $classes[] = 'Twig\Extra\TwigExtraBundle\MissingExtensionSuggestor';

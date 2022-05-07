@@ -291,8 +291,8 @@ class __TwigTemplate_32ac7335dcf424f8b7044d374649f987f23b45d021a2a31219fbbbbed2d
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-12\">
 \t\t\t\t\t<div class=\"main_title\">
-\t\t\t\t\t\t<h2>Latest  Posts</h2>
-\t\t\t\t\t\t<h1>Latest  Posts</h1>
+\t\t\t\t\t\t<h2>Latest  news</h2>
+\t\t\t\t\t\t<h1>Latest  news</h1>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -300,51 +300,48 @@ class __TwigTemplate_32ac7335dcf424f8b7044d374649f987f23b45d021a2a31219fbbbbed2d
 \t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
-\t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img1.png\" alt=\"\">
+\t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
+        // line 196
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/00a8bcbdc5e5afa2538351d90379daef.jpeg"), "html", null, true);
+        echo " alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">Portable Fashion for women</a>
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-\t\t\t\t\t\t\t\tdolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-\t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>13th Dec </a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i> 15</a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<a class=\"title\" >Fortnite</a>
+\t\t\t\t\t\t\t<p>Fortnite est un jeu en ligne développé par Epic Games sous la forme de différents modes de jeu qui partagent le même gameplay général et le même moteur de jeu. Les modes de jeu comprennent : Fortnite : Sauver le monde, un jeu coopératif de tir et de survie conçu pour quatre joueurs au maximum et dont le but est de combattre des zombies et de défendre des objets à l'aide de fortifications, et Fortnite Battle Royale, un jeu de battle royale en free-to-play où jusqu'à 100 joueurs se battent entre eux dans des espaces de plus en plus petits avec pour objectif d'être le dernier survivant.</p>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
-\t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img2.png\" alt=\"\">
+\t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
+        // line 208
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/3ba095b71e0f843f7d6c04436d3f1723.jpeg"), "html", null, true);
+        echo " alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">Portable Fashion for women</a>
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-\t\t\t\t\t\t\t\tdolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-\t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>13th Dec </a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i> 15</a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<a class=\"title\" >Fifa 2022</a>
+\t\t\t\t\t\t\t<p>FIFA 22 est un jeu vidéo de simulation de football publié par Electronics Arts . Il s'agit du 29e volet de cette série FIFA. Il est sorti sur Microsoft Windows, Nintendo Switch, Play Station 4, PlayStation 5, Google Stadiaet, le 1er octobre 20211,2,3.
+
+Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology. </p>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-4 hidden-md\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
-\t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img3.png\" alt=\"\">
+\t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
+        // line 222
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/dc398d293b1fc36ec6da102687dd3b7c.jpeg"), "html", null, true);
+        echo " alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">Portable Fashion for women</a>
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-\t\t\t\t\t\t\t\tdolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-\t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>13th Dec </a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i> 15</a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<a class=\"title\" >Pes 22</a>
+\t\t\t\t\t\t\t<p>eFootball 2022, rappelez-vous. A l’automne, après une année supplémentaire de préparation, un passage à l’Unreal Engine et à un modèle de free-to-play, la simulation de Konami débarquait dans un état particulièrement inquiétant. Lacunes criantes sur le fond, gros soucis techniques : charcuté par les...
+\t\t\t\t\t\t\tDernier grand bastion du jeu premium chez un Konami désormais décidé à vivre du mobile et du rétro, PES a fini, lui aussi, par tomber. Sa mouture 2021-2022, qu’on espérait porteuse d’un certain renouveau avec le soutien de l’Unreal Engine, a ainsi perdu son nom en même temps que son modèle économique...</p>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -443,68 +440,68 @@ class __TwigTemplate_32ac7335dcf424f8b7044d374649f987f23b45d021a2a31219fbbbbed2d
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 338
+        // line 326
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 339
+        // line 327
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 340
+        // line 328
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 341
+        // line 329
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/stellar.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 342
+        // line 330
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.magnific-popup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 343
+        // line 331
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/nice-select/js/jquery.nice-select.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 344
+        // line 332
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/imagesloaded.pkgd.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 345
+        // line 333
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/isotope-min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 346
+        // line 334
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/owl-carousel/owl.carousel.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 347
+        // line 335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 348
+        // line 336
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.waypoints.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 349
+        // line 337
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.counterup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 350
+        // line 338
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mail-script.js"), "html", null, true);
         echo "></script>
 \t<!--gmaps Js-->
 \t<script src=";
-        // line 352
+        // line 340
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 353
+        // line 341
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gmaps.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 354
+        // line 342
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/theme.js"), "html", null, true);
         echo "></script>
 </body>
@@ -530,7 +527,7 @@ class __TwigTemplate_32ac7335dcf424f8b7044d374649f987f23b45d021a2a31219fbbbbed2d
 
     public function getDebugInfo()
     {
-        return array (  508 => 354,  504 => 353,  500 => 352,  495 => 350,  491 => 349,  487 => 348,  483 => 347,  479 => 346,  475 => 345,  471 => 344,  467 => 343,  463 => 342,  459 => 341,  455 => 340,  451 => 339,  447 => 338,  263 => 157,  250 => 147,  237 => 137,  224 => 127,  159 => 65,  139 => 48,  133 => 45,  129 => 44,  125 => 43,  121 => 42,  105 => 31,  91 => 20,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  52 => 8,  43 => 1,);
+        return array (  505 => 342,  501 => 341,  497 => 340,  492 => 338,  488 => 337,  484 => 336,  480 => 335,  476 => 334,  472 => 333,  468 => 332,  464 => 331,  460 => 330,  456 => 329,  452 => 328,  448 => 327,  444 => 326,  337 => 222,  320 => 208,  305 => 196,  263 => 157,  250 => 147,  237 => 137,  224 => 127,  159 => 65,  139 => 48,  133 => 45,  129 => 44,  125 => 43,  121 => 42,  105 => 31,  91 => 20,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -721,8 +718,8 @@ class __TwigTemplate_32ac7335dcf424f8b7044d374649f987f23b45d021a2a31219fbbbbed2d
 \t\t\t<div class=\"row\">
 \t\t\t\t<div class=\"col-lg-12\">
 \t\t\t\t\t<div class=\"main_title\">
-\t\t\t\t\t\t<h2>Latest  Posts</h2>
-\t\t\t\t\t\t<h1>Latest  Posts</h1>
+\t\t\t\t\t\t<h2>Latest  news</h2>
+\t\t\t\t\t\t<h1>Latest  news</h1>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -730,51 +727,39 @@ class __TwigTemplate_32ac7335dcf424f8b7044d374649f987f23b45d021a2a31219fbbbbed2d
 \t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
-\t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img1.png\" alt=\"\">
+\t\t\t\t\t\t\t<img class=\"img-fluid\" src={{asset(\"uploads/00a8bcbdc5e5afa2538351d90379daef.jpeg\")}} alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">Portable Fashion for women</a>
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-\t\t\t\t\t\t\t\tdolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-\t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>13th Dec </a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i> 15</a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<a class=\"title\" >Fortnite</a>
+\t\t\t\t\t\t\t<p>Fortnite est un jeu en ligne développé par Epic Games sous la forme de différents modes de jeu qui partagent le même gameplay général et le même moteur de jeu. Les modes de jeu comprennent : Fortnite : Sauver le monde, un jeu coopératif de tir et de survie conçu pour quatre joueurs au maximum et dont le but est de combattre des zombies et de défendre des objets à l'aide de fortifications, et Fortnite Battle Royale, un jeu de battle royale en free-to-play où jusqu'à 100 joueurs se battent entre eux dans des espaces de plus en plus petits avec pour objectif d'être le dernier survivant.</p>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
-\t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img2.png\" alt=\"\">
+\t\t\t\t\t\t\t<img class=\"img-fluid\" src={{asset(\"uploads/3ba095b71e0f843f7d6c04436d3f1723.jpeg\")}} alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">Portable Fashion for women</a>
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-\t\t\t\t\t\t\t\tdolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-\t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>13th Dec </a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i> 15</a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<a class=\"title\" >Fifa 2022</a>
+\t\t\t\t\t\t\t<p>FIFA 22 est un jeu vidéo de simulation de football publié par Electronics Arts . Il s'agit du 29e volet de cette série FIFA. Il est sorti sur Microsoft Windows, Nintendo Switch, Play Station 4, PlayStation 5, Google Stadiaet, le 1er octobre 20211,2,3.
+
+Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology. </p>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-lg-4 hidden-md\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
-\t\t\t\t\t\t\t<img class=\"img-fluid\" src=\"img/blog_img3.png\" alt=\"\">
+\t\t\t\t\t\t\t<img class=\"img-fluid\" src={{asset(\"uploads/dc398d293b1fc36ec6da102687dd3b7c.jpeg\")}} alt=\"\">
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
-\t\t\t\t\t\t\t<a class=\"title\" href=\"blog.html\">Portable Fashion for women</a>
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-\t\t\t\t\t\t\t\tdolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-\t\t\t\t\t\t\t<div class=\"date\">
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-calendar\" aria-hidden=\"true\"></i>13th Dec </a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-heart\" aria-hidden=\"true\"></i> 15</a>
-\t\t\t\t\t\t\t\t<a href=\"#\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i> 05</a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<a class=\"title\" >Pes 22</a>
+\t\t\t\t\t\t\t<p>eFootball 2022, rappelez-vous. A l’automne, après une année supplémentaire de préparation, un passage à l’Unreal Engine et à un modèle de free-to-play, la simulation de Konami débarquait dans un état particulièrement inquiétant. Lacunes criantes sur le fond, gros soucis techniques : charcuté par les...
+\t\t\t\t\t\t\tDernier grand bastion du jeu premium chez un Konami désormais décidé à vivre du mobile et du rétro, PES a fini, lui aussi, par tomber. Sa mouture 2021-2022, qu’on espérait porteuse d’un certain renouveau avec le soutien de l’Unreal Engine, a ainsi perdu son nom en même temps que son modèle économique...</p>
+\t\t\t\t\t\t\t
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>

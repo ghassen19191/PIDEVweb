@@ -113,10 +113,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
             <button class=\"btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0\" id=\"sidebarToggle\" href=\"#!\"><i class=\"fas fa-bars\"></i></button>
             <!-- Navbar Search-->
             <form class=\"d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0\">
-                <div class=\"input-group\">
-                    <input class=\"form-control\" type=\"text\" placeholder=\"Search for...\" aria-label=\"Search for...\" aria-describedby=\"btnNavbarSearch\" />
-                    <button class=\"btn btn-primary\" id=\"btnNavbarSearch\" type=\"button\"><i class=\"fas fa-search\"></i></button>
-                </div>
+               
             </form>
             <!-- Navbar-->
             <ul class=\"navbar-nav ms-auto ms-md-0 me-3 me-lg-4\">
@@ -137,7 +134,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
                             
                             <div class=\"sb-sidenav-menu-heading\" href=\"#\">Tables</div>
                             <a class=\"nav-link\" href=";
-        // line 57
+        // line 54
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/commentaire"), "html", null, true);
         echo ">
                                 
@@ -145,7 +142,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
                             </a>
                            
                             <a class=\"nav-link\" href=";
-        // line 62
+        // line 59
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/post"), "html", null, true);
         echo ">
                                 
@@ -153,14 +150,14 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
                             </a>
                             
                             <a class=\"nav-link\" href=";
-        // line 67
+        // line 64
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation"), "html", null, true);
         echo ">
                                 
                                 Reclamation
                             </a>
                             <a class=\"nav-link\" href=";
-        // line 71
+        // line 68
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget"), "html", null, true);
         echo ">
                                 
@@ -192,9 +189,9 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
                     
 \t\t\t\t\t\t<div class=\"home_left_img\">
 \t\t\t\t\t\t\t";
-        // line 100
+        // line 97
         $this->displayBlock('body', $context, $blocks);
-        // line 103
+        // line 100
         echo "\t\t\t\t\t</div><br><br><br>
 \t\t\t\t\t<div class=\"col-lg-6\">
 \t\t\t\t\t\t<div class=\"banner_content\">
@@ -225,31 +222,31 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 132
+        // line 129
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 133
+        // line 130
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/scripts.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 134
+        // line 131
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"), "html", null, true);
         echo "crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 135
+        // line 132
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-area-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 136
+        // line 133
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-bar-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 137
+        // line 134
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/simple-datatables@latest"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 138
+        // line 135
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/datatables-simple-demo.js"), "html", null, true);
         echo "></script>
     </body>
@@ -262,7 +259,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
 
     }
 
-    // line 100
+    // line 97
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -272,7 +269,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 101
+        // line 98
         echo "
                         ";
         
@@ -295,7 +292,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
 
     public function getDebugInfo()
     {
-        return array (  276 => 101,  266 => 100,  253 => 138,  249 => 137,  245 => 136,  241 => 135,  237 => 134,  233 => 133,  229 => 132,  198 => 103,  196 => 100,  164 => 71,  157 => 67,  149 => 62,  141 => 57,  110 => 29,  101 => 23,  97 => 22,  93 => 21,  88 => 19,  84 => 18,  80 => 17,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 10,  44 => 1,);
+        return array (  273 => 98,  263 => 97,  250 => 135,  246 => 134,  242 => 133,  238 => 132,  234 => 131,  230 => 130,  226 => 129,  195 => 100,  193 => 97,  161 => 68,  154 => 64,  146 => 59,  138 => 54,  110 => 29,  101 => 23,  97 => 22,  93 => 21,  88 => 19,  84 => 18,  80 => 17,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 10,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -333,10 +330,7 @@ class __TwigTemplate_1c1c1e9a7ca6ec27ab9b40181d6213014af4f224002f2445ed272aacbcb
             <button class=\"btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0\" id=\"sidebarToggle\" href=\"#!\"><i class=\"fas fa-bars\"></i></button>
             <!-- Navbar Search-->
             <form class=\"d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0\">
-                <div class=\"input-group\">
-                    <input class=\"form-control\" type=\"text\" placeholder=\"Search for...\" aria-label=\"Search for...\" aria-describedby=\"btnNavbarSearch\" />
-                    <button class=\"btn btn-primary\" id=\"btnNavbarSearch\" type=\"button\"><i class=\"fas fa-search\"></i></button>
-                </div>
+               
             </form>
             <!-- Navbar-->
             <ul class=\"navbar-nav ms-auto ms-md-0 me-3 me-lg-4\">

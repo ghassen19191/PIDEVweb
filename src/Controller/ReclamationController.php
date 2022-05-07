@@ -23,9 +23,14 @@ class ReclamationController extends AbstractController
      * @Route("/", name="app_reclamation_index", methods={"GET"})
      */
     public function index(ReclamationRepository $reclamationRepository): Response
-    {
+    {$reclamation= $reclamationRepository->findAll();
+        $nbrprest=0.0 ;
+       foreach($reclamation as $reclamation){
+        
+            $nbrprest+=1;
+        }
         return $this->render('reclamation/index.html.twig', [
-            'reclamations' => $reclamationRepository->findAll(),
+            'reclamations' => $reclamationRepository->findAll(),'nbrprest' => $nbrprest
         ]);
     }
 
@@ -40,7 +45,7 @@ class ReclamationController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $reclamationRepository->add($reclamation);
-            $flashy->primaryDark('Reclamation sended successfully!');
+            $flashy->success('Reclamation sended successfully!');
             return $this->redirectToRoute('app_reclamation_new', [], Response::HTTP_SEE_OTHER);
         }
 

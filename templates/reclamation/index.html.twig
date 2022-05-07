@@ -4,11 +4,21 @@
 
 {% block body %}
     <h1>Reclamation</h1>
-
+<div class="col-md-6 col-lg-3">
+			
+				
+				<div class="info">
+					<h4>number reclamation</h4>
+					<p>
+						<b>{{nbrprest}}</b>
+					</p>
+				</div>
+			
+</div>		
     <table class="table">
         <thead>
             <tr>
-                <th>IdRec</th>
+                
                 <th>NomRec</th>
                 <th>DateRec</th>
                 <th>DescriRec</th>
@@ -19,10 +29,10 @@
         <tbody>
         {% for reclamation in reclamations %}
             <tr>
-                <td>{{ reclamation.idRec }}</td>
+                
                 <td>{{ reclamation.nomRec }}</td>
                 <td>{{ reclamation.dateRec ? reclamation.dateRec|date('Y-m-d') : '' }}</td>
-                <td>{{ reclamation.descriRec }}</td>
+                <td>{{ reclamation.descriRec | raw }}</td>
                 <td>{{ reclamation.traite }}</td>
                 <td>
                     <button class="btn" style="background-color:#28B463;border-color: black; color: white">  <a href="{{ path('app_reclamation_show', {'idRec': reclamation.idRec}) }}">show</a></button>
@@ -37,7 +47,7 @@
         </tbody>
     </table>
 
-    <button class="btn" style="background-color:#2E4053  ;border-color: black;color: purple"><a href="{{ path('print_reclamations') }}">print</a></button>
-
+ <button class="btn" style="background-color:#2E4053  ;border-color: black;color: purple"><a href="{{ path('print_reclamations') }}">print</a></button>
+</div>
     
 {% endblock %}

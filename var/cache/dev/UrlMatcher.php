@@ -19,6 +19,7 @@ return [
         '/post' => [[['_route' => 'app_post_index', '_controller' => 'App\\Controller\\PostController::index'], null, ['GET' => 0], null, true, false, null]],
         '/post/front' => [[['_route' => 'app_postfront_index', '_controller' => 'App\\Controller\\PostController::indexFront'], null, ['GET' => 0], null, false, false, null]],
         '/post/new' => [[['_route' => 'app_post_new', '_controller' => 'App\\Controller\\PostController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/post/s/search' => [[['_route' => 'search', '_controller' => 'App\\Controller\\PostController::searchJeux'], null, null, null, false, false, null]],
         '/r' => [[['_route' => 'app_r', '_controller' => 'App\\Controller\\RController::index'], null, null, null, false, false, null]],
         '/reclamation' => [[['_route' => 'app_reclamation_index', '_controller' => 'App\\Controller\\ReclamationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/reclamation/new' => [[['_route' => 'app_reclamation_new', '_controller' => 'App\\Controller\\ReclamationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -43,20 +44,31 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/commentaire/([^/]++)(?'
-                    .'|(*:193)'
-                    .'|/edit(*:206)'
-                    .'|(*:214)'
+                .'|/commentaire/(?'
+                    .'|new/(\\d+)(*:194)'
+                    .'|([^/]++)(?'
+                        .'|(*:213)'
+                        .'|/edit(*:226)'
+                        .'|(*:234)'
+                    .')'
                 .')'
-                .'|/post/([^/]++)(?'
-                    .'|(*:240)'
-                    .'|/edit(*:253)'
-                    .'|(*:261)'
+                .'|/post/(?'
+                    .'|([^/]++)(?'
+                        .'|(*:264)'
+                        .'|/(?'
+                            .'|edit(*:280)'
+                            .'|masquer(*:295)'
+                            .'|afficher(*:311)'
+                        .')'
+                        .'|(*:320)'
+                    .')'
+                    .'|commentaire/([^/]++)(*:349)'
+                    .'|stats(*:362)'
                 .')'
                 .'|/reclamation/(?'
-                    .'|(\\d+)(*:291)'
-                    .'|(\\d+)/edit(*:309)'
-                    .'|(\\d+)(*:322)'
+                    .'|(\\d+)(*:392)'
+                    .'|(\\d+)/edit(*:410)'
+                    .'|(\\d+)(*:423)'
                 .')'
             .')/?$}sD',
     ],
@@ -68,15 +80,20 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        193 => [[['_route' => 'app_commentaire_show', '_controller' => 'App\\Controller\\CommentaireController::show'], ['idCom'], ['GET' => 0], null, false, true, null]],
-        206 => [[['_route' => 'app_commentaire_edit', '_controller' => 'App\\Controller\\CommentaireController::edit'], ['idCom'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        214 => [[['_route' => 'app_commentaire_delete', '_controller' => 'App\\Controller\\CommentaireController::delete'], ['idCom'], ['POST' => 0], null, false, true, null]],
-        240 => [[['_route' => 'app_post_show', '_controller' => 'App\\Controller\\PostController::show'], ['idPost'], ['GET' => 0], null, false, true, null]],
-        253 => [[['_route' => 'app_post_edit', '_controller' => 'App\\Controller\\PostController::edit'], ['idPost'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        261 => [[['_route' => 'app_post_delete', '_controller' => 'App\\Controller\\PostController::delete'], ['idPost'], ['POST' => 0], null, false, true, null]],
-        291 => [[['_route' => 'app_reclamation_show', '_controller' => 'App\\Controller\\ReclamationController::show'], ['idRec'], ['GET' => 0], null, false, true, null]],
-        309 => [[['_route' => 'app_reclamation_edit', '_controller' => 'App\\Controller\\ReclamationController::edit'], ['idRec'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        322 => [
+        194 => [[['_route' => 'app_commentaire_new_one', '_controller' => 'App\\Controller\\CommentaireController::new1'], ['idPost'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        213 => [[['_route' => 'app_commentaire_show', '_controller' => 'App\\Controller\\CommentaireController::show'], ['idCom'], ['GET' => 0], null, false, true, null]],
+        226 => [[['_route' => 'app_commentaire_edit', '_controller' => 'App\\Controller\\CommentaireController::edit'], ['idCom'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        234 => [[['_route' => 'app_commentaire_delete', '_controller' => 'App\\Controller\\CommentaireController::delete'], ['idCom'], ['POST' => 0], null, false, true, null]],
+        264 => [[['_route' => 'app_post_show', '_controller' => 'App\\Controller\\PostController::show'], ['idPost'], ['GET' => 0], null, false, true, null]],
+        280 => [[['_route' => 'app_post_edit', '_controller' => 'App\\Controller\\PostController::edit'], ['idPost'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        295 => [[['_route' => 'masquer_evenement', '_controller' => 'App\\Controller\\PostController::masquerEvent'], ['idPost'], null, null, false, false, null]],
+        311 => [[['_route' => 'afficher_evenement', '_controller' => 'App\\Controller\\PostController::afficherEvent'], ['idPost'], null, null, false, false, null]],
+        320 => [[['_route' => 'app_post_delete', '_controller' => 'App\\Controller\\PostController::delete'], ['idPost'], ['POST' => 0], null, false, true, null]],
+        349 => [[['_route' => 'app_postcom', '_controller' => 'App\\Controller\\PostController::PackItem'], ['idPost'], null, null, false, true, null]],
+        362 => [[['_route' => 'stats', '_controller' => 'App\\Controller\\PostController::statistiques'], [], null, null, false, false, null]],
+        392 => [[['_route' => 'app_reclamation_show', '_controller' => 'App\\Controller\\ReclamationController::show'], ['idRec'], ['GET' => 0], null, false, true, null]],
+        410 => [[['_route' => 'app_reclamation_edit', '_controller' => 'App\\Controller\\ReclamationController::edit'], ['idRec'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        423 => [
             [['_route' => 'app_reclamation_delete', '_controller' => 'App\\Controller\\ReclamationController::delete'], ['idRec'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

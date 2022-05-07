@@ -73,6 +73,11 @@ class Post
      */
     private $image;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $enable=0;
+
     public function getIdPost(): ?int
     {
         return $this->idPost;
@@ -153,5 +158,17 @@ class Post
     public function __toString()
     {
         return (string) $this->titre;
+    }
+
+    public function getEnable(): ?bool
+    {
+        return $this->enable;
+    }
+
+    public function setEnable(?bool $enable): self
+    {
+        $this->enable = $enable;
+
+        return $this;
     }
 }
