@@ -5,6 +5,8 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
   uploads_directory: "%kernel.project_dir%/public/uploads"
+  locale: 'en'
+  mercure_secret_key : '%env(MERCURE_SECRET_KEY)%'
 
 services:
     # default configuration for services in *this* file
@@ -26,6 +28,19 @@ services:
     App\Controller\:
         resource: '../src/Controller/'
         tags: ['controller.service_arguments']
+    EntityToExcel\Command\EntityToCsvCommand:
+        tags:
+            - { name: 'console.command', command: 'entity:excel' }
+    BotMan\BotMan\Cache\SymfonyCache:
+        arguments:
+            $adapter: '@cache.app'
+    App\Service\JWTprovider:
+        arguments:
+            - '%env(MERCURE_JWT_KEY)%'
+            - '@security.token_storage'
+    App\Service\CookieGenerator:
+        arguments:
+            $secret: '%env(MERCURE_JWT_KEY)%'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

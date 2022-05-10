@@ -118,10 +118,24 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
             <!-- Navbar-->
             <ul class=\"navbar-nav ms-auto ms-md-0 me-3 me-lg-4\">
                 <li class=\"nav-item dropdown\">
-                    <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i></a>
+                    <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i>";
+        // line 39
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 39, $this->source); })()), "user", [], "any", false, false, false, 39), "fullName", [], "any", false, false, false, 39), "html", null, true);
+        echo "</a>
                     <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">
                         
-                        <li><a class=\"dropdown-item\" href=\"#!\">Logout</a></li>
+                        <li><a class=\"dropdown-item\" href=\"";
+        // line 42
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_parameter_index");
+        echo "\">Change Password</a></li>
+                        <li><a class=\"dropdown-item\" href=\"";
+        // line 43
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_account_index");
+        echo "\">Profil</a></li>
+                        <li><a class=\"dropdown-item\" href=\"";
+        // line 44
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+        echo "\">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -134,7 +148,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                             
                             <div class=\"sb-sidenav-menu-heading\" href=\"#\">Tables</div>
                             <a class=\"nav-link\" href=";
-        // line 54
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/commentaire"), "html", null, true);
         echo ">
                                 
@@ -142,7 +156,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                             </a>
                            
                             <a class=\"nav-link\" href=";
-        // line 59
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/post"), "html", null, true);
         echo ">
                                
@@ -150,14 +164,27 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                             </a>
                             
                             <a class=\"nav-link\" href=";
-        // line 64
+        // line 66
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation"), "html", null, true);
         echo ">
                                 
                                 Reclamation
                             </a>
                             <a class=\"nav-link\" href=";
-        // line 68
+        // line 70
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/admin/profil"), "html", null, true);
+        echo ">
+                                
+                               Account
+                            </a><a class=\"nav-link\" href=";
+        // line 73
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/admin/utilisateur"), "html", null, true);
+        echo ">
+                                
+                                Users
+                            </a>
+                            <a class=\"nav-link\" href=";
+        // line 77
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget"), "html", null, true);
         echo ">
                                 
@@ -193,9 +220,9 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                     
 \t\t\t\t\t\t<div class=\"home_left_img\">
 \t\t\t\t\t\t\t";
-        // line 101
+        // line 110
         $this->displayBlock('body', $context, $blocks);
-        // line 104
+        // line 113
         echo "\t\t\t\t\t</div><br><br><br>
 \t\t\t\t\t<div class=\"col-lg-6\">
 \t\t\t\t\t\t<div class=\"banner_content\">
@@ -222,31 +249,31 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 129
+        // line 138
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 130
+        // line 139
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/scripts.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 131
+        // line 140
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"), "html", null, true);
         echo "crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 132
+        // line 141
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-area-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 133
+        // line 142
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-bar-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 134
+        // line 143
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/simple-datatables@latest"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 135
+        // line 144
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/datatables-simple-demo.js"), "html", null, true);
         echo "></script>
     </body>
@@ -259,7 +286,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
 
     }
 
-    // line 101
+    // line 110
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -269,7 +296,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 102
+        // line 111
         echo "
                         ";
         
@@ -292,7 +319,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
 
     public function getDebugInfo()
     {
-        return array (  273 => 102,  263 => 101,  250 => 135,  246 => 134,  242 => 133,  238 => 132,  234 => 131,  230 => 130,  226 => 129,  199 => 104,  197 => 101,  161 => 68,  154 => 64,  146 => 59,  138 => 54,  110 => 29,  101 => 23,  97 => 22,  93 => 21,  88 => 19,  84 => 18,  80 => 17,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 10,  44 => 1,);
+        return array (  300 => 111,  290 => 110,  277 => 144,  273 => 143,  269 => 142,  265 => 141,  261 => 140,  257 => 139,  253 => 138,  226 => 113,  224 => 110,  188 => 77,  181 => 73,  175 => 70,  168 => 66,  160 => 61,  152 => 56,  137 => 44,  133 => 43,  129 => 42,  123 => 39,  110 => 29,  101 => 23,  97 => 22,  93 => 21,  88 => 19,  84 => 18,  80 => 17,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 10,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -335,10 +362,12 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
             <!-- Navbar-->
             <ul class=\"navbar-nav ms-auto ms-md-0 me-3 me-lg-4\">
                 <li class=\"nav-item dropdown\">
-                    <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i></a>
+                    <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdown\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\"><i class=\"fas fa-user fa-fw\"></i>{{ app.user.fullName }}</a>
                     <ul class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"navbarDropdown\">
                         
-                        <li><a class=\"dropdown-item\" href=\"#!\">Logout</a></li>
+                        <li><a class=\"dropdown-item\" href=\"{{ path('admin_parameter_index') }}\">Change Password</a></li>
+                        <li><a class=\"dropdown-item\" href=\"{{ path('admin_account_index') }}\">Profil</a></li>
+                        <li><a class=\"dropdown-item\" href=\"{{ path('logout') }}\">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -363,6 +392,13 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                             <a class=\"nav-link\" href={{asset(\"index.php/reclamation\")}}>
                                 
                                 Reclamation
+                            </a>
+                            <a class=\"nav-link\" href={{asset(\"index.php/admin/profil\")}}>
+                                
+                               Account
+                            </a><a class=\"nav-link\" href={{asset(\"index.php/admin/utilisateur\")}}>
+                                
+                                Users
                             </a>
                             <a class=\"nav-link\" href={{asset(\"https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget\")}}>
                                 

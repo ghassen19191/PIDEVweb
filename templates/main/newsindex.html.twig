@@ -1,0 +1,9 @@
+{% extends 'user/layout.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+{% for message in app.flashes('message') %}
+    <div>{{ message }}</div>
+{% endfor %}
+{% endblock %}

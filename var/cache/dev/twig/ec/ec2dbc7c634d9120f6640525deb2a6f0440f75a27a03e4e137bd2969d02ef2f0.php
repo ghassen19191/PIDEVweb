@@ -87,9 +87,13 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
         // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/flaticon/flaticon.css"), "html", null, true);
         echo ">
+\t<link href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("sbadmin2/vendor/fontawesome-free/css/all.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" type=\"text/css\">
 \t<!-- main css -->
 \t<link rel=\"stylesheet\" href=";
-        // line 21
+        // line 22
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo ">
 </head>
@@ -103,7 +107,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t<div class=\"container\">
 \t\t\t\t\t<!-- Brand and toggle get grouped for better mobile display -->
 \t\t\t\t\t<a class=\"navbar-brand logo_h\" href=";
-        // line 32
+        // line 33
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/r"), "html", null, true);
         echo "><img src=";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/a.png"), "html", null, true);
@@ -119,27 +123,72 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t\t\t<ul class=\"nav navbar-nav menu_nav justify-content-center\">
                        
 \t\t\t\t\t\t\t<li class=\"nav-item \"><a class=\"nav-link\" href=";
-        // line 43
+        // line 44
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/r"), "html", null, true);
         echo ">Home</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
-        // line 44
+        // line 45
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("about-us.html"), "html", null, true);
         echo ">About</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item active\"  ><a class=\"nav-link\" href=";
-        // line 45
+        // line 46
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/post/front"), "html", null, true);
         echo ">News</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item \"><a class=\"nav-link\" href=";
-        // line 46
+        // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation/new"), "html", null, true);
         echo ">Reclamation</a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
-        // line 49
+        // line 50
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("contact.html"), "html", null, true);
         echo ">Contact</a></li>
+\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">
+\t\t\t\t\t\t\t <li class=\"nav-item dropdown no-arrow\">
+            <a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"userDropdown\" role=\"button\">
+                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\"><i class=\"far fa-user text-primary mr-2 fa-2x \"></i>";
+        // line 61
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 61, $this->source); })()), "user", [], "any", false, false, false, 61), "fullName", [], "any", false, false, false, 61), "html", null, true);
+        echo "</span>
+                ";
+        // line 63
+        echo "            </a>
+            <!-- Dropdown - User Information -->
+            <div aria-labelledby=\"userDropdown\" class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\">
+                <a class=\"dropdown-item\" href=\"";
+        // line 66
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_account_index");
+        echo "\">
+                    <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Profil
+                </a>
+                <a class=\"dropdown-item\" href=\"";
+        // line 70
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_parameter_index");
+        echo "\">
+                    <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Paramètres
+                </a>
+                ";
+        // line 78
+        echo "                
+                <a class=\"dropdown-item\"   href=\"";
+        // line 79
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
+        echo "\">
+                    <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Déconnexion
+                </a>
+            </div>
+        </li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
@@ -155,11 +204,11 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t\t<div class=\"banner_content text-center\">
 \t\t\t\t\t\t<div class=\"page_link\">
 \t\t\t\t\t\t\t<a href=";
-        // line 64
+        // line 99
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/r"), "html", null, true);
         echo ">Home</a>
 \t\t\t\t\t\t\t<a href=";
-        // line 65
+        // line 100
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/post/front"), "html", null, true);
         echo ">News</a>
 \t\t\t\t\t\t</div>
@@ -179,15 +228,15 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t<div class=\"col-lg-12\">
 \t\t\t\t\t
 \t\t\t\t\t\t\t";
-        // line 82
+        // line 117
         $this->displayBlock('body', $context, $blocks);
-        // line 116
+        // line 151
         echo "\t\t\t\t\t\t\t</div> <br>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"navigation\">
             ";
-        // line 119
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 119, $this->source); })()));
+        // line 154
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 154, $this->source); })()));
         echo "
 \t\t\t</div>
 \t\t\t\t\t</div>
@@ -308,68 +357,68 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 238
+        // line 273
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 239
+        // line 274
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 240
+        // line 275
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 241
+        // line 276
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/stellar.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 242
+        // line 277
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.magnific-popup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 243
+        // line 278
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/nice-select/js/jquery.nice-select.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 244
+        // line 279
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/imagesloaded.pkgd.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 245
+        // line 280
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/isotope-min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 246
+        // line 281
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/owl-carousel/owl.carousel.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 247
+        // line 282
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 248
+        // line 283
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.waypoints.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 249
+        // line 284
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.counterup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 250
+        // line 285
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mail-script.js"), "html", null, true);
         echo "></script>
 \t<!--gmaps Js-->
 \t<script src=";
-        // line 252
+        // line 287
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 253
+        // line 288
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gmaps.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 254
+        // line 289
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/theme.js"), "html", null, true);
         echo "></script>
 \t<script src=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js\"></script>
@@ -384,7 +433,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 
     }
 
-    // line 82
+    // line 117
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -394,17 +443,17 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 83
+        // line 118
         echo "\t\t\t<div class=\"row\">
 \t\t\t";
-        // line 84
+        // line 119
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 84, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 119, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 85
+            // line 120
             echo "\t\t\t ";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["p"], "enable", [], "any", false, false, false, 85), 0))) {
-                // line 86
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["p"], "enable", [], "any", false, false, false, 120), 0))) {
+                // line 121
                 echo "\t\t\t\t<div class=\"col-lg-4 col-md-6\">
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
@@ -412,42 +461,42 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"blog_content\">
 \t\t\t\t\t\t\t<center> <a class=\"title\"font size =\"4\" > ";
-                // line 92
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "titre", [], "any", false, false, false, 92), "html", null, true);
+                // line 127
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "titre", [], "any", false, false, false, 127), "html", null, true);
                 echo "</a></font></center> <br> <br>
 \t\t\t\t\t\t<center>\t<img src=\"";
-                // line 93
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["p"], "image", [], "any", false, false, false, 93))), "html", null, true);
+                // line 128
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/" . twig_get_attribute($this->env, $this->source, $context["p"], "image", [], "any", false, false, false, 128))), "html", null, true);
                 echo "\" alt=\"\" width=\"290\" height=\"200\"  ></center><br>
 \t\t\t\t\t\t<center><font size =\"2\" color=\"white\"\t<p>";
-                // line 94
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "imgpost", [], "any", false, false, false, 94), "html", null, true);
+                // line 129
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["p"], "imgpost", [], "any", false, false, false, 129), "html", null, true);
                 echo "</p></center>
 \t\t\t\t\t\t\t<div class=\"date\" style=\"text-align:center\">
 \t\t\t\t\t\t\t\t<i class=\"fa fa-calendar margin-calendar\" style=\"margin-right: 5px;\" style=\"pading-left: 20px;\" aria-hidden=\"true\"></i>";
-                // line 96
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "datePost", [], "any", false, false, false, 96), "format", [0 => "d/m/y"], "method", false, false, false, 96), "html", null, true);
+                // line 131
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["p"], "datePost", [], "any", false, false, false, 131), "format", [0 => "d/m/y"], "method", false, false, false, 131), "html", null, true);
                 echo " 
 \t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<a href=\"";
-                // line 100
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 100)]), "html", null, true);
+                // line 135
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 135)]), "html", null, true);
                 echo "\"><i  aria-hidden=\"true\"></i></a>
 \t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<a href=\"";
-                // line 102
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 102)]), "html", null, true);
+                // line 137
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 137)]), "html", null, true);
                 echo "\"><i  aria-hidden=\"true\"></i></a>
 \t\t\t\t\t\t\t\t<a href=\"";
-                // line 103
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 103)]), "html", null, true);
+                // line 138
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 138)]), "html", null, true);
                 echo "\"><i  aria-hidden=\"true\"></i></a>
 \t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t<a href=\"";
-                // line 105
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 105)]), "html", null, true);
+                // line 140
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_postcom", ["idPost" => twig_get_attribute($this->env, $this->source, $context["p"], "idPost", [], "any", false, false, false, 140)]), "html", null, true);
                 echo "\"><i class=\"fa fa-comments-o\" aria-hidden=\"true\"></i>comments </a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -455,13 +504,13 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t</div>
 \t\t\t\t";
             }
-            // line 111
+            // line 146
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 147
         echo "\t\t\t\t
 \t\t\t\t
 
@@ -486,7 +535,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 
     public function getDebugInfo()
     {
-        return array (  465 => 112,  459 => 111,  450 => 105,  445 => 103,  441 => 102,  436 => 100,  429 => 96,  424 => 94,  420 => 93,  416 => 92,  408 => 86,  405 => 85,  401 => 84,  398 => 83,  388 => 82,  373 => 254,  369 => 253,  365 => 252,  360 => 250,  356 => 249,  352 => 248,  348 => 247,  344 => 246,  340 => 245,  336 => 244,  332 => 243,  328 => 242,  324 => 241,  320 => 240,  316 => 239,  312 => 238,  190 => 119,  185 => 116,  183 => 82,  163 => 65,  159 => 64,  141 => 49,  135 => 46,  131 => 45,  127 => 44,  123 => 43,  107 => 32,  93 => 21,  88 => 19,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
+        return array (  514 => 147,  508 => 146,  499 => 140,  494 => 138,  490 => 137,  485 => 135,  478 => 131,  473 => 129,  469 => 128,  465 => 127,  457 => 121,  454 => 120,  450 => 119,  447 => 118,  437 => 117,  422 => 289,  418 => 288,  414 => 287,  409 => 285,  405 => 284,  401 => 283,  397 => 282,  393 => 281,  389 => 280,  385 => 279,  381 => 278,  377 => 277,  373 => 276,  369 => 275,  365 => 274,  361 => 273,  239 => 154,  234 => 151,  232 => 117,  212 => 100,  208 => 99,  185 => 79,  182 => 78,  175 => 70,  168 => 66,  163 => 63,  159 => 61,  145 => 50,  139 => 47,  135 => 46,  131 => 45,  127 => 44,  111 => 33,  97 => 22,  92 => 20,  88 => 19,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -510,6 +559,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/animate-css/animate.css\")}}>
 \t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css\">
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/flaticon/flaticon.css\")}}>
+\t<link href=\"{{ asset('sbadmin2/vendor/fontawesome-free/css/all.min.css') }}\" rel=\"stylesheet\" type=\"text/css\">
 \t<!-- main css -->
 \t<link rel=\"stylesheet\" href={{asset(\"css/style.css\")}}>
 </head>
@@ -540,6 +590,40 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"contact.html\")}}>Contact</a></li>
+\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t
+\t\t\t\t\t\t<ul class=\"nav navbar-nav navbar-right\">
+\t\t\t\t\t\t\t <li class=\"nav-item dropdown no-arrow\">
+            <a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"userDropdown\" role=\"button\">
+                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\"><i class=\"far fa-user text-primary mr-2 fa-2x \"></i>{{ app.user.fullName }}</span>
+                {# <img class=\"img-profile rounded-circle\" src=\"https://source.unsplash.com/QAB-WJcbgJk/60x60\"> #}
+            </a>
+            <!-- Dropdown - User Information -->
+            <div aria-labelledby=\"userDropdown\" class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\">
+                <a class=\"dropdown-item\" href=\"{{ path('user_account_index') }}\">
+                    <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Profil
+                </a>
+                <a class=\"dropdown-item\" href=\"{{ path('user_parameter_index') }}\">
+                    <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Paramètres
+                </a>
+                {# <a class=\"dropdown-item\" href=\"#\">
+                    <i class=\"fas fa-list fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Activity Log
+                </a> #}
+                
+                <a class=\"dropdown-item\"   href=\"{{ path('logout') }}\">
+                    <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>
+                    Déconnexion
+                </a>
+            </div>
+        </li>
 \t\t\t\t\t\t</ul>
 \t\t\t\t\t\t
 \t\t\t\t\t</div>
