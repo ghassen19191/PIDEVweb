@@ -139,6 +139,16 @@ class ChatController extends AbstractController
                 $bot->reply('here is help, ' . $help);
             }
         );
+        $botman->hears(
+            'tell me about the site {tell}',
+            function (BotMan $bot, string $tell) {
+               
+                $bot->reply('At runners we make games andhardware.
+Our games attract millions
+and define genres, ' . $tell);
+            }
+        );
+        
         
         // fallback, nothing matched
         // --------------------------------
