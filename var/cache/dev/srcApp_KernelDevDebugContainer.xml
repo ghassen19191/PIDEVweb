@@ -99,6 +99,7 @@
     <parameter key="uploads_directory">C:\xampp\htdocs\PIDEV/public/uploads</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="mercure_secret_key">%env(MERCURE_SECRET_KEY)%</parameter>
+    <parameter key="upload_directory">C:\xampp\htdocs\PIDEV/public/uploads</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -391,6 +392,13 @@
       <argument type="service" id="kernel"/>
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
     </service>
+    <service id="App\Controller\AchatController" class="App\Controller\AchatController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\AchatController"/>
+      </call>
+    </service>
     <service id="App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -436,6 +444,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\CalendarController"/>
       </call>
     </service>
+    <service id="App\Controller\CartController" class="App\Controller\CartController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\CartController"/>
+      </call>
+    </service>
     <service id="App\Controller\ChartsjsController" class="App\Controller\ChartsjsController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -469,6 +484,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\FailedController"/>
+      </call>
+    </service>
+    <service id="App\Controller\GameController" class="App\Controller\GameController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\GameController"/>
       </call>
     </service>
     <service id="App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" public="true" autowire="true" autoconfigure="true">
@@ -540,6 +562,14 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\OptionsController"/>
       </call>
     </service>
+    <service id="App\Controller\PaymentController" class="App\Controller\PaymentController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id="security.helper"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\PaymentController"/>
+      </call>
+    </service>
     <service id="App\Controller\PostController" class="App\Controller\PostController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
@@ -577,6 +607,13 @@
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\SecurityController"/>
+      </call>
+    </service>
+    <service id="App\Controller\StatController" class="App\Controller\StatController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\StatController"/>
       </call>
     </service>
     <service id="App\Controller\TController" class="App\Controller\TController" public="true" autowire="true" autoconfigure="true">
@@ -635,6 +672,9 @@
     </service>
     <service id="App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true"/>
     <service id="App\Excel\ExcelFileBuilder" class="App\Excel\ExcelFileBuilder" autowire="true" autoconfigure="true"/>
+    <service id="App\Form\AchatType" class="App\Form\AchatType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\CalendarType" class="App\Form\CalendarType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -642,6 +682,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\DevType" class="App\Form\DevType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\GameType" class="App\Form\GameType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\GroupConversationType" class="App\Form\GroupConversationType" autowire="true" autoconfigure="true">
@@ -658,6 +701,9 @@
     <service id="App\Form\NewslettersUsersType" class="App\Form\NewslettersUsersType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\PaymentType" class="App\Form\PaymentType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\PostType" class="App\Form\PostType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -670,6 +716,9 @@
     <service id="App\Form\RegistrationType" class="App\Form\RegistrationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\SearchAnnonceType" class="App\Form\SearchAnnonceType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\UpdatePasswordType" class="App\Form\UpdatePasswordType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -677,6 +726,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UserEditType" class="App\Form\UserEditType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\VerificationType" class="App\Form\VerificationType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\VisitorType" class="App\Form\VisitorType" autowire="true" autoconfigure="true">
@@ -688,6 +740,14 @@
       <argument type="service" id="App\Service\SendNewsletterService"/>
     </service>
     <service id="App\Message\SendNewsletterMessage" class="App\Message\SendNewsletterMessage" autowire="true" autoconfigure="true"/>
+    <service id="App\Repository\AchatRepository" class="App\Repository\AchatRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\AchattRepository" class="App\Repository\AchattRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\CalendarRepository" class="App\Repository\CalendarRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -705,6 +765,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\FailedMessageRepository" class="App\Repository\FailedMessageRepository" autowire="true" autoconfigure="true"/>
+    <service id="App\Repository\GameRepository" class="App\Repository\GameRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Repository\GroupConversationRepository" class="App\Repository\GroupConversationRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -1264,20 +1328,25 @@
         <argument>FOS\CKEditorBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\AchatType</argument>
         <argument>App\Form\CalendarType</argument>
         <argument>App\Form\CommentaireType</argument>
         <argument>App\Form\DevType</argument>
+        <argument>App\Form\GameType</argument>
         <argument>App\Form\GroupConversationType</argument>
         <argument>App\Form\MessageType</argument>
         <argument>App\Form\NewslettersType</argument>
         <argument>App\Form\NewslettersUsersType</argument>
+        <argument>App\Form\PaymentType</argument>
         <argument>App\Form\PostType</argument>
         <argument>App\Form\Reclamation1Type</argument>
         <argument>App\Form\ReclamationType</argument>
         <argument>App\Form\RegistrationType</argument>
+        <argument>App\Form\SearchAnnonceType</argument>
         <argument>App\Form\UpdatePasswordType</argument>
         <argument>App\Form\UserAddType</argument>
         <argument>App\Form\UserEditType</argument>
+        <argument>App\Form\VerificationType</argument>
         <argument>App\Form\VisitorType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
@@ -1620,7 +1689,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.6YcWm1V"/>
+      <argument type="service" id=".service_locator.zhnAF.X"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1860,6 +1929,12 @@
       <tag name="kernel.reset" method="reset"/>
     </service>
     <service id="mailer.transport_factory.abstract" class="Symfony\Component\Mailer\Transport\AbstractTransportFactory" abstract="true">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id=".debug.http_client" on-invalid="ignore"/>
+      <argument type="service" id="monolog.logger" on-invalid="ignore"/>
+    </service>
+    <service id="mailer.transport_factory.gmail" class="Symfony\Component\Mailer\Bridge\Google\Transport\GmailTransportFactory">
+      <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
       <argument type="service" id=".debug.http_client" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger" on-invalid="ignore"/>
@@ -4733,7 +4808,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.oNuHai2"/>
+      <argument type="service" id=".service_locator.g9ZUAax"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -6032,6 +6107,9 @@
     <service id="chartjs.builder" class="Symfony\UX\Chartjs\Builder\ChartBuilder" public="false"/>
     <service id=".instanceof.Symfony\Component\Console\Command\Command.0.App\Command\EntityToCsvCommand" class="App\Command\EntityToCsvCommand" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Command\EntityToCsvCommand" class="App\Command\EntityToCsvCommand" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AchatController" class="App\Controller\AchatController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AchatController" class="App\Controller\AchatController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AchatController" class="App\Controller\AchatController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6050,6 +6128,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CalendarController" class="App\Controller\CalendarController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CalendarController" class="App\Controller\CalendarController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CalendarController" class="App\Controller\CalendarController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CartController" class="App\Controller\CartController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CartController" class="App\Controller\CartController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ChartsjsController" class="App\Controller\ChartsjsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ChartsjsController" class="App\Controller\ChartsjsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ChartsjsController" class="App\Controller\ChartsjsController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6065,6 +6146,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\FailedController" class="App\Controller\FailedController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\FailedController" class="App\Controller\FailedController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\FailedController" class="App\Controller\FailedController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GameController" class="App\Controller\GameController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GameController" class="App\Controller\GameController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\GameController" class="App\Controller\GameController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6092,6 +6176,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\OptionsController" class="App\Controller\OptionsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\OptionsController" class="App\Controller\OptionsController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\OptionsController" class="App\Controller\OptionsController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\PaymentController" class="App\Controller\PaymentController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\PaymentController" class="App\Controller\PaymentController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\PaymentController" class="App\Controller\PaymentController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\PostController" class="App\Controller\PostController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\PostController" class="App\Controller\PostController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RController" class="App\Controller\RController" autowire="true" abstract="true"/>
@@ -6109,6 +6196,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\StatController" class="App\Controller\StatController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\StatController" class="App\Controller\StatController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\StatController" class="App\Controller\StatController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TController" class="App\Controller\TController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TController" class="App\Controller\TController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TController" class="App\Controller\TController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6132,12 +6222,16 @@
     <service id=".abstract.instanceof.App\Controller\WishListOtherController" class="App\Controller\WishListOtherController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.App\Controller\mapController" class="App\Controller\mapController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\mapController" class="App\Controller\mapController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AchatType" class="App\Form\AchatType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\AchatType" class="App\Form\AchatType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CalendarType" class="App\Form\CalendarType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CalendarType" class="App\Form\CalendarType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CommentaireType" class="App\Form\CommentaireType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\CommentaireType" class="App\Form\CommentaireType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DevType" class="App\Form\DevType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\DevType" class="App\Form\DevType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\GameType" class="App\Form\GameType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\GameType" class="App\Form\GameType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\GroupConversationType" class="App\Form\GroupConversationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\GroupConversationType" class="App\Form\GroupConversationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\MessageType" class="App\Form\MessageType" autowire="true" abstract="true"/>
@@ -6146,6 +6240,8 @@
     <service id=".abstract.instanceof.App\Form\NewslettersType" class="App\Form\NewslettersType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\NewslettersUsersType" class="App\Form\NewslettersUsersType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\NewslettersUsersType" class="App\Form\NewslettersUsersType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PaymentType" class="App\Form\PaymentType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PaymentType" class="App\Form\PaymentType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PostType" class="App\Form\PostType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\PostType" class="App\Form\PostType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Reclamation1Type" class="App\Form\Reclamation1Type" autowire="true" abstract="true"/>
@@ -6154,16 +6250,24 @@
     <service id=".abstract.instanceof.App\Form\ReclamationType" class="App\Form\ReclamationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationType" class="App\Form\RegistrationType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationType" class="App\Form\RegistrationType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\SearchAnnonceType" class="App\Form\SearchAnnonceType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\SearchAnnonceType" class="App\Form\SearchAnnonceType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UpdatePasswordType" class="App\Form\UpdatePasswordType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UpdatePasswordType" class="App\Form\UpdatePasswordType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserAddType" class="App\Form\UserAddType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserAddType" class="App\Form\UserAddType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserEditType" class="App\Form\UserEditType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UserEditType" class="App\Form\UserEditType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\VerificationType" class="App\Form\VerificationType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\VerificationType" class="App\Form\VerificationType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\VisitorType" class="App\Form\VisitorType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\VisitorType" class="App\Form\VisitorType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Messenger\Handler\MessageHandlerInterface.0.App\MessageHandler\SendNewsletterMessageHandler" class="App\MessageHandler\SendNewsletterMessageHandler" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\MessageHandler\SendNewsletterMessageHandler" class="App\MessageHandler\SendNewsletterMessageHandler" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AchatRepository" class="App\Repository\AchatRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AchatRepository" class="App\Repository\AchatRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AchattRepository" class="App\Repository\AchattRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\AchattRepository" class="App\Repository\AchattRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CalendarRepository" class="App\Repository\CalendarRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CalendarRepository" class="App\Repository\CalendarRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CategoryWishesRepository" class="App\Repository\CategoryWishesRepository" autowire="true" abstract="true"/>
@@ -6172,6 +6276,8 @@
     <service id=".abstract.instanceof.App\Repository\CommentaireRepository" class="App\Repository\CommentaireRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DevRepository" class="App\Repository\DevRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\DevRepository" class="App\Repository\DevRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\GameRepository" class="App\Repository\GameRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\GameRepository" class="App\Repository\GameRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\GroupConversationRepository" class="App\Repository\GroupConversationRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\GroupConversationRepository" class="App\Repository\GroupConversationRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ListAccessRepository" class="App\Repository\ListAccessRepository" autowire="true" abstract="true"/>
@@ -6475,6 +6581,25 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.a3_gg16" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="achatRepository" type="service_closure" id="App\Repository\AchatRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.KelfIhy" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="achat" type="service_closure" id=".errored..service_locator.KelfIhy.App\Entity\Achatt"/>
+      </argument>
+    </service>
+    <service id=".service_locator.1Z41jEH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="achat" type="service_closure" id=".errored..service_locator.1Z41jEH.App\Entity\Achat"/>
+        <argument key="achatRepository" type="service_closure" id="App\Repository\AchatRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.1UuH9tO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6513,6 +6638,26 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="calendar" type="service_closure" id=".errored..service_locator.NF7cwmN.App\Entity\Calendar"/>
+      </argument>
+    </service>
+    <service id=".service_locator.EbY4Gec" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+        <argument key="session" type="service_closure" id="session"/>
+      </argument>
+    </service>
+    <service id=".service_locator.bc4WypA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="game" type="service_closure" id=".errored..service_locator.bc4WypA.App\Entity\Game"/>
+        <argument key="session" type="service_closure" id="session"/>
+      </argument>
+    </service>
+    <service id=".service_locator.o3htLhs" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="session" type="service_closure" id="session"/>
       </argument>
     </service>
     <service id=".service_locator.HD4t1fi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -6586,6 +6731,31 @@
         <argument key="messageBus" type="service_closure" id="debug.traced.messenger.bus.default"/>
       </argument>
     </service>
+    <service id=".service_locator.Ui1PEd." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="g" type="service_closure" id="App\Repository\GameRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.cnYF4_2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="game" type="service_closure" id=".errored..service_locator.cnYF4_2.App\Entity\Game"/>
+      </argument>
+    </service>
+    <service id=".service_locator.BltmxVt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.LEDhkMU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="game" type="service_closure" id=".errored..service_locator.LEDhkMU.App\Entity\Game"/>
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.ykFEPKM" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6650,6 +6820,23 @@
         <argument key="user" type="service_closure" id=".errored..service_locator.mADJkZo.App\Entity\User"/>
       </argument>
     </service>
+    <service id=".service_locator.rYhGJk5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+        <argument key="mailer" type="service_closure" id="mailer.mailer"/>
+        <argument key="session" type="service_closure" id="session"/>
+      </argument>
+    </service>
+    <service id=".service_locator.JRYMsmw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="em" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+        <argument key="session" type="service_closure" id="session"/>
+      </argument>
+    </service>
     <service id=".service_locator.OUBF8mu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6696,6 +6883,12 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="categRepo" type="service_closure" id="App\Repository\PostRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.4wRfwhS" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="Normalizer" type="service_closure" id="serializer"/>
       </argument>
     </service>
     <service id=".service_locator.bJ2nGqo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -6782,9 +6975,13 @@
         <argument key="id" type="service_closure" id=".errored..service_locator.xb2Fmw5.App\Entity\Wishes"/>
       </argument>
     </service>
-    <service id=".service_locator.G4Mtda5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.SWGSOpx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\AchatController::delete" type="service_closure" id=".service_locator.1Z41jEH"/>
+        <argument key="App\Controller\AchatController::edit" type="service_closure" id=".service_locator.1Z41jEH"/>
+        <argument key="App\Controller\AchatController::new" type="service_closure" id=".service_locator.a3_gg16"/>
+        <argument key="App\Controller\AchatController::show" type="service_closure" id=".service_locator.KelfIhy"/>
         <argument key="App\Controller\AdminDashboardController::index" type="service_closure" id=".service_locator.1UuH9tO"/>
         <argument key="App\Controller\AdminParameterController::edit" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\AdminUserController::add" type="service_closure" id=".service_locator.jmvbEvf"/>
@@ -6796,6 +6993,11 @@
         <argument key="App\Controller\CalendarController::edit" type="service_closure" id=".service_locator.NF7cwmN"/>
         <argument key="App\Controller\CalendarController::index" type="service_closure" id=".service_locator.1lMDBp1"/>
         <argument key="App\Controller\CalendarController::show" type="service_closure" id=".service_locator.NF7cwmN"/>
+        <argument key="App\Controller\CartController::add" type="service_closure" id=".service_locator.bc4WypA"/>
+        <argument key="App\Controller\CartController::delete" type="service_closure" id=".service_locator.bc4WypA"/>
+        <argument key="App\Controller\CartController::deleteAll" type="service_closure" id=".service_locator.o3htLhs"/>
+        <argument key="App\Controller\CartController::index" type="service_closure" id=".service_locator.EbY4Gec"/>
+        <argument key="App\Controller\CartController::remove" type="service_closure" id=".service_locator.bc4WypA"/>
         <argument key="App\Controller\ChartsjsController::index" type="service_closure" id=".service_locator.HD4t1fi"/>
         <argument key="App\Controller\ChatController::message" type="service_closure" id=".service_locator.Fek4Uix"/>
         <argument key="App\Controller\CommentaireController::delete" type="service_closure" id=".service_locator.bzskbe."/>
@@ -6812,6 +7014,14 @@
         <argument key="App\Controller\FailedController::delete" type="service_closure" id=".service_locator.jj1PtJa"/>
         <argument key="App\Controller\FailedController::index" type="service_closure" id=".service_locator.jj1PtJa"/>
         <argument key="App\Controller\FailedController::resend" type="service_closure" id=".service_locator.gamKz6y"/>
+        <argument key="App\Controller\GameController::delete" type="service_closure" id=".service_locator.LEDhkMU"/>
+        <argument key="App\Controller\GameController::edit" type="service_closure" id=".service_locator.LEDhkMU"/>
+        <argument key="App\Controller\GameController::espaceAdmin" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameController::galery" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameController::new" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameController::recherche" type="service_closure" id=".service_locator.Ui1PEd."/>
+        <argument key="App\Controller\GameController::show" type="service_closure" id=".service_locator.cnYF4_2"/>
+        <argument key="App\Controller\GameController::showFront" type="service_closure" id=".service_locator.cnYF4_2"/>
         <argument key="App\Controller\GroupConversationController::add" type="service_closure" id=".service_locator.U_5YyZ3"/>
         <argument key="App\Controller\GroupConversationController::browse" type="service_closure" id=".service_locator.ykFEPKM"/>
         <argument key="App\Controller\GroupConversationController::delete" type="service_closure" id=".service_locator.50Xitbh"/>
@@ -6824,8 +7034,12 @@
         <argument key="App\Controller\NewslettersController::list" type="service_closure" id=".service_locator.NP6zOIJ"/>
         <argument key="App\Controller\NewslettersController::send" type="service_closure" id=".service_locator.AR5npSp"/>
         <argument key="App\Controller\NewslettersController::unsubscribe" type="service_closure" id=".service_locator.mADJkZo"/>
+        <argument key="App\Controller\PaymentController::code" type="service_closure" id=".service_locator.JRYMsmw"/>
+        <argument key="App\Controller\PaymentController::index" type="service_closure" id=".service_locator.rYhGJk5"/>
         <argument key="App\Controller\PostController::PackItem" type="service_closure" id=".service_locator.S5WN9nN"/>
+        <argument key="App\Controller\PostController::ajouterpostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\PostController::delete" type="service_closure" id=".service_locator.6EuxJXx"/>
+        <argument key="App\Controller\PostController::deletePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\PostController::edit" type="service_closure" id=".service_locator.Gjwhddr"/>
         <argument key="App\Controller\PostController::index" type="service_closure" id=".service_locator.OUBF8mu"/>
         <argument key="App\Controller\PostController::indexFront" type="service_closure" id=".service_locator.OUBF8mu"/>
@@ -6833,6 +7047,7 @@
         <argument key="App\Controller\PostController::searchJeux" type="service_closure" id=".service_locator.KWgWOg1"/>
         <argument key="App\Controller\PostController::show" type="service_closure" id=".service_locator.c7kbHeP"/>
         <argument key="App\Controller\PostController::statistiques" type="service_closure" id=".service_locator.gqRFayA"/>
+        <argument key="App\Controller\PostController::updatePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\ReclamationController::delete" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController::edit" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController::exportAllReclamationsPDF" type="service_closure" id=".service_locator.z1a3NDa"/>
@@ -6855,6 +7070,10 @@
         <argument key="App\Controller\WishListOtherController::wishlistOtherJoin" type="service_closure" id=".service_locator.xb2Fmw5"/>
         <argument key="App\Controller\WishListOtherController::wishlistOtherLeave" type="service_closure" id=".service_locator.xb2Fmw5"/>
         <argument key="App\Controller\WishListOtherController::wishlistOtherOpen" type="service_closure" id=".service_locator.EMzfi2z"/>
+        <argument key="App\Controller\AchatController:delete" type="service_closure" id=".service_locator.1Z41jEH"/>
+        <argument key="App\Controller\AchatController:edit" type="service_closure" id=".service_locator.1Z41jEH"/>
+        <argument key="App\Controller\AchatController:new" type="service_closure" id=".service_locator.a3_gg16"/>
+        <argument key="App\Controller\AchatController:show" type="service_closure" id=".service_locator.KelfIhy"/>
         <argument key="App\Controller\AdminDashboardController:index" type="service_closure" id=".service_locator.1UuH9tO"/>
         <argument key="App\Controller\AdminParameterController:edit" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\AdminUserController:add" type="service_closure" id=".service_locator.jmvbEvf"/>
@@ -6866,6 +7085,11 @@
         <argument key="App\Controller\CalendarController:edit" type="service_closure" id=".service_locator.NF7cwmN"/>
         <argument key="App\Controller\CalendarController:index" type="service_closure" id=".service_locator.1lMDBp1"/>
         <argument key="App\Controller\CalendarController:show" type="service_closure" id=".service_locator.NF7cwmN"/>
+        <argument key="App\Controller\CartController:add" type="service_closure" id=".service_locator.bc4WypA"/>
+        <argument key="App\Controller\CartController:delete" type="service_closure" id=".service_locator.bc4WypA"/>
+        <argument key="App\Controller\CartController:deleteAll" type="service_closure" id=".service_locator.o3htLhs"/>
+        <argument key="App\Controller\CartController:index" type="service_closure" id=".service_locator.EbY4Gec"/>
+        <argument key="App\Controller\CartController:remove" type="service_closure" id=".service_locator.bc4WypA"/>
         <argument key="App\Controller\ChartsjsController:index" type="service_closure" id=".service_locator.HD4t1fi"/>
         <argument key="App\Controller\ChatController:message" type="service_closure" id=".service_locator.Fek4Uix"/>
         <argument key="App\Controller\CommentaireController:delete" type="service_closure" id=".service_locator.bzskbe."/>
@@ -6882,6 +7106,14 @@
         <argument key="App\Controller\FailedController:delete" type="service_closure" id=".service_locator.jj1PtJa"/>
         <argument key="App\Controller\FailedController:index" type="service_closure" id=".service_locator.jj1PtJa"/>
         <argument key="App\Controller\FailedController:resend" type="service_closure" id=".service_locator.gamKz6y"/>
+        <argument key="App\Controller\GameController:delete" type="service_closure" id=".service_locator.LEDhkMU"/>
+        <argument key="App\Controller\GameController:edit" type="service_closure" id=".service_locator.LEDhkMU"/>
+        <argument key="App\Controller\GameController:espaceAdmin" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameController:galery" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameController:new" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameController:recherche" type="service_closure" id=".service_locator.Ui1PEd."/>
+        <argument key="App\Controller\GameController:show" type="service_closure" id=".service_locator.cnYF4_2"/>
+        <argument key="App\Controller\GameController:showFront" type="service_closure" id=".service_locator.cnYF4_2"/>
         <argument key="App\Controller\GroupConversationController:add" type="service_closure" id=".service_locator.U_5YyZ3"/>
         <argument key="App\Controller\GroupConversationController:browse" type="service_closure" id=".service_locator.ykFEPKM"/>
         <argument key="App\Controller\GroupConversationController:delete" type="service_closure" id=".service_locator.50Xitbh"/>
@@ -6894,8 +7126,12 @@
         <argument key="App\Controller\NewslettersController:list" type="service_closure" id=".service_locator.NP6zOIJ"/>
         <argument key="App\Controller\NewslettersController:send" type="service_closure" id=".service_locator.AR5npSp"/>
         <argument key="App\Controller\NewslettersController:unsubscribe" type="service_closure" id=".service_locator.mADJkZo"/>
+        <argument key="App\Controller\PaymentController:code" type="service_closure" id=".service_locator.JRYMsmw"/>
+        <argument key="App\Controller\PaymentController:index" type="service_closure" id=".service_locator.rYhGJk5"/>
         <argument key="App\Controller\PostController:PackItem" type="service_closure" id=".service_locator.S5WN9nN"/>
+        <argument key="App\Controller\PostController:ajouterpostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\PostController:delete" type="service_closure" id=".service_locator.6EuxJXx"/>
+        <argument key="App\Controller\PostController:deletePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\PostController:edit" type="service_closure" id=".service_locator.Gjwhddr"/>
         <argument key="App\Controller\PostController:index" type="service_closure" id=".service_locator.OUBF8mu"/>
         <argument key="App\Controller\PostController:indexFront" type="service_closure" id=".service_locator.OUBF8mu"/>
@@ -6903,6 +7139,7 @@
         <argument key="App\Controller\PostController:searchJeux" type="service_closure" id=".service_locator.KWgWOg1"/>
         <argument key="App\Controller\PostController:show" type="service_closure" id=".service_locator.c7kbHeP"/>
         <argument key="App\Controller\PostController:statistiques" type="service_closure" id=".service_locator.gqRFayA"/>
+        <argument key="App\Controller\PostController:updatePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\ReclamationController:delete" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController:edit" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController:exportAllReclamationsPDF" type="service_closure" id=".service_locator.z1a3NDa"/>
@@ -6986,23 +7223,28 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.6YcWm1V" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.zhnAF.X" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\AchatType" type="service_closure" id="App\Form\AchatType"/>
         <argument key="App\Form\CalendarType" type="service_closure" id="App\Form\CalendarType"/>
         <argument key="App\Form\CommentaireType" type="service_closure" id="App\Form\CommentaireType"/>
         <argument key="App\Form\DevType" type="service_closure" id="App\Form\DevType"/>
+        <argument key="App\Form\GameType" type="service_closure" id="App\Form\GameType"/>
         <argument key="App\Form\GroupConversationType" type="service_closure" id="App\Form\GroupConversationType"/>
         <argument key="App\Form\MessageType" type="service_closure" id="App\Form\MessageType"/>
         <argument key="App\Form\NewslettersType" type="service_closure" id="App\Form\NewslettersType"/>
         <argument key="App\Form\NewslettersUsersType" type="service_closure" id="App\Form\NewslettersUsersType"/>
+        <argument key="App\Form\PaymentType" type="service_closure" id="App\Form\PaymentType"/>
         <argument key="App\Form\PostType" type="service_closure" id="App\Form\PostType"/>
         <argument key="App\Form\Reclamation1Type" type="service_closure" id="App\Form\Reclamation1Type"/>
         <argument key="App\Form\ReclamationType" type="service_closure" id="App\Form\ReclamationType"/>
         <argument key="App\Form\RegistrationType" type="service_closure" id="App\Form\RegistrationType"/>
+        <argument key="App\Form\SearchAnnonceType" type="service_closure" id="App\Form\SearchAnnonceType"/>
         <argument key="App\Form\UpdatePasswordType" type="service_closure" id="App\Form\UpdatePasswordType"/>
         <argument key="App\Form\UserAddType" type="service_closure" id="App\Form\UserAddType"/>
         <argument key="App\Form\UserEditType" type="service_closure" id="App\Form\UserEditType"/>
+        <argument key="App\Form\VerificationType" type="service_closure" id="App\Form\VerificationType"/>
         <argument key="App\Form\VisitorType" type="service_closure" id="App\Form\VisitorType"/>
         <argument key="FOS\CKEditorBundle\Form\Type\CKEditorType" type="service_closure" id="fos_ck_editor.form.type"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
@@ -7225,13 +7467,16 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service_closure" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.oNuHai2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.g9ZUAax" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\AchatRepository" type="service_closure" id="App\Repository\AchatRepository"/>
+        <argument key="App\Repository\AchattRepository" type="service_closure" id="App\Repository\AchattRepository"/>
         <argument key="App\Repository\CalendarRepository" type="service_closure" id="App\Repository\CalendarRepository"/>
         <argument key="App\Repository\CategoryWishesRepository" type="service_closure" id="App\Repository\CategoryWishesRepository"/>
         <argument key="App\Repository\CommentaireRepository" type="service_closure" id="App\Repository\CommentaireRepository"/>
         <argument key="App\Repository\DevRepository" type="service_closure" id="App\Repository\DevRepository"/>
+        <argument key="App\Repository\GameRepository" type="service_closure" id="App\Repository\GameRepository"/>
         <argument key="App\Repository\GroupConversationRepository" type="service_closure" id="App\Repository\GroupConversationRepository"/>
         <argument key="App\Repository\ListAccessRepository" type="service_closure" id="App\Repository\ListAccessRepository"/>
         <argument key="App\Repository\ListWishesRepository" type="service_closure" id="App\Repository\ListWishesRepository"/>
@@ -7298,6 +7543,12 @@
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\AchatController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\AchatController"/>
+      <argument>App\Controller\AchatController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\AdminAccountController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\AdminAccountController"/>
       <argument>App\Controller\AdminAccountController</argument>
@@ -7334,6 +7585,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\CartController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\CartController"/>
+      <argument>App\Controller\CartController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\ChartsjsController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\ChartsjsController"/>
       <argument>App\Controller\ChartsjsController</argument>
@@ -7361,6 +7618,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\FailedController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\FailedController"/>
       <argument>App\Controller\FailedController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\GameController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\GameController"/>
+      <argument>App\Controller\GameController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -7418,6 +7681,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\PaymentController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\PaymentController"/>
+      <argument>App\Controller\PaymentController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\RController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\RController"/>
       <argument>App\Controller\RController</argument>
@@ -7445,6 +7714,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
       <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\StatController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\StatController"/>
+      <argument>App\Controller\StatController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -7636,12 +7911,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.G4Mtda5"/>
+      <argument type="service" id=".service_locator.SWGSOpx"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.G4Mtda5"/>
+      <argument type="service" id=".service_locator.SWGSOpx"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus" public="false">
       <argument type="iterator">
@@ -7662,12 +7937,17 @@
       </call>
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
+    <service id=".errored..service_locator.KelfIhy.App\Entity\Achatt" class="App\Entity\Achatt"/>
+    <service id=".errored..service_locator.1Z41jEH.App\Entity\Achat" class="App\Entity\Achat"/>
     <service id=".errored..service_locator.tIQ5Q0N.App\Entity\User" class="App\Entity\User"/>
     <service id=".errored..service_locator.NF7cwmN.App\Entity\Calendar" class="App\Entity\Calendar"/>
+    <service id=".errored..service_locator.bc4WypA.App\Entity\Game" class="App\Entity\Game"/>
     <service id=".errored..service_locator.3ZciNJ_.App\Entity\Commentaire" class="App\Entity\Commentaire"/>
     <service id=".errored..service_locator.bzskbe..App\Entity\Commentaire" class="App\Entity\Commentaire"/>
     <service id=".errored..service_locator.tWCkR.9.App\Entity\Dev" class="App\Entity\Dev"/>
     <service id=".errored..service_locator.WHJcPuk.App\Entity\Dev" class="App\Entity\Dev"/>
+    <service id=".errored..service_locator.cnYF4_2.App\Entity\Game" class="App\Entity\Game"/>
+    <service id=".errored..service_locator.LEDhkMU.App\Entity\Game" class="App\Entity\Game"/>
     <service id=".errored..service_locator.50Xitbh.App\Entity\GroupConversation" class="App\Entity\GroupConversation"/>
     <service id=".errored..service_locator.7C_iKt2.App\Entity\GroupConversation" class="App\Entity\GroupConversation"/>
     <service id=".errored..service_locator.7C_iKt2.Symfony\Component\Mercure\HubInterface" class="Symfony\Component\Mercure\HubInterface"/>
@@ -8105,7 +8385,7 @@
     <service id="Symfony\UX\Chartjs\Builder\ChartBuilderInterface" alias="chartjs.builder" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.G4Mtda5"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.SWGSOpx"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

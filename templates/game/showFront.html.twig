@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game{% endblock %}
+
+{% block content %}
+<br/> <br/><br/><br/><br/><br/>
+    <h1>Game</h1>
+
+    <table class="table">
+        <div class="f_title">
+        <tbody>
+            <img src="{{ asset ('uploads/') ~ game.photo}}" alt="" style="width:250px; height:280px">
+            <br/><br/><br/><br/>
+          
+            <tr>
+                <th>Name</th>
+                <td>{{ game.name }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ game.category }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ game.description }}</td>
+            </tr>
+            <tr>
+                <th>Release_year</th>
+                <td>{{ game.releaseYear ? game.releaseYear|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ game.price }}</td>
+            </tr>
+            <tr>
+                <th>Stock</th>
+                <td>{{ game.stock }}</td>
+            </tr>
+        </tbody>
+    </div>
+    </table>
+
+    <a class="primary_btn" href="{{ path('new_achat', {'id': game.id}) }}">Acheter</a>
+
+    
+{% endblock %}

@@ -145,12 +145,24 @@ class __TwigTemplate_b1814bc8c23adda81679d450529e2aa170ca7e113012a5b82962fcf7df8
         echo ">Reclamation</a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+        // line 56
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("galery");
+        echo "\">Gallery</a>
+\t\t\t\t\t\t    <li class=\"nav-item\"><a class=\"nav-link\" href=\"";
         // line 57
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cartindex");
+        echo "\">Panier</a>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+        // line 59
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("MesAchat");
+        echo "\">Mes achats</a></li>
+\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
+        // line 60
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("contact.html"), "html", null, true);
         echo ">Contact</a></li>
-\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t                                                                                                       </a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t
@@ -161,33 +173,33 @@ class __TwigTemplate_b1814bc8c23adda81679d450529e2aa170ca7e113012a5b82962fcf7df8
 \t\t\t\t\t\t\t <li class=\"nav-item dropdown no-arrow\">
             <a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"userDropdown\" role=\"button\">
                 <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\"><i class=\"far fa-user text-primary mr-2 fa-2x \"></i>";
-        // line 68
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 68, $this->source); })()), "user", [], "any", false, false, false, 68), "fullName", [], "any", false, false, false, 68), "html", null, true);
+        // line 71
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 71, $this->source); })()), "user", [], "any", false, false, false, 71), "fullName", [], "any", false, false, false, 71), "html", null, true);
         echo "</span>
                 ";
-        // line 70
+        // line 73
         echo "            </a>
             <!-- Dropdown - User Information -->
             <div aria-labelledby=\"userDropdown\" class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\">
                 <a class=\"dropdown-item\" href=\"";
-        // line 73
+        // line 76
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_account_index");
         echo "\">
                     <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i>
                     Profil
                 </a>
                 <a class=\"dropdown-item\" href=\"";
-        // line 77
+        // line 80
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_parameter_index");
         echo "\">
                     <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i>
                     Paramètres
                 </a>
                 ";
-        // line 85
+        // line 88
         echo "                
                 <a class=\"dropdown-item\"   href=\"";
-        // line 86
+        // line 89
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
         echo "\">
                     <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>
@@ -212,7 +224,7 @@ class __TwigTemplate_b1814bc8c23adda81679d450529e2aa170ca7e113012a5b82962fcf7df8
 \t\t\t\t\t<div class=\"col-lg-6\">
 \t\t\t\t\t\t<div class=\"home_left_img\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
-        // line 108
+        // line 111
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/banner/home-left.png"), "html", null, true);
         echo " alt=\"\" width=350px>
 \t\t\t\t\t\t</div>
@@ -248,7 +260,7 @@ class __TwigTemplate_b1814bc8c23adda81679d450529e2aa170ca7e113012a5b82962fcf7df8
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
-        // line 141
+        // line 144
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/00a8bcbdc5e5afa2538351d90379daef.jpeg"), "html", null, true);
         echo " alt=\"\">
 \t\t\t\t\t\t</div>
@@ -263,7 +275,7 @@ class __TwigTemplate_b1814bc8c23adda81679d450529e2aa170ca7e113012a5b82962fcf7df8
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
-        // line 153
+        // line 156
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/3ba095b71e0f843f7d6c04436d3f1723.jpeg"), "html", null, true);
         echo " alt=\"\">
 \t\t\t\t\t\t</div>
@@ -280,7 +292,7 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t\t\t\t\t<div class=\"blog_items\">
 \t\t\t\t\t\t<div class=\"blog_img_box\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
-        // line 167
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/dc398d293b1fc36ec6da102687dd3b7c.jpeg"), "html", null, true);
         echo " alt=\"\">
 \t\t\t\t\t\t</div>
@@ -338,7 +350,7 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t\t\t\t<div class=\"testi_slider owl-carousel\">
 \t\t\t\t\t<div class=\"testi_item\">
 \t\t\t\t\t\t<img src=";
-        // line 222
+        // line 225
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/121.png"), "html", null, true);
         echo " alt=\"\" width=\"75\" height=\"100\">
 \t\t\t\t\t\t<h4>Ultra rapide</h4>
@@ -351,7 +363,7 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"testi_item\">
 \t\t\t\t\t\t<img src=";
-        // line 232
+        // line 235
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/00.jpg"), "html", null, true);
         echo " alt=\"\" width=\"75\" height=\"100\">
 \t\t\t\t\t\t<h4>Service client</h4>
@@ -364,7 +376,7 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"testi_item\">
 \t\t\t\t\t\t<img src=";
-        // line 242
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/77.jpg"), "html", null, true);
         echo " alt=\"\"width=\"75\" height=\"100\">
 \t\t\t\t\t\t<h4>Fiable et sûr</h4>
@@ -377,7 +389,7 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"testi_item\">
 \t\t\t\t\t\t<img src=";
-        // line 252
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/c.jpg"), "html", null, true);
         echo " alt=\"\"width=\"75\" height=\"100\">
 \t\t\t\t\t\t<h4>Accès instantané aux jeux</h4>
@@ -497,68 +509,68 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 369
+        // line 372
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 370
+        // line 373
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 371
+        // line 374
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 372
+        // line 375
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/stellar.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 373
+        // line 376
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.magnific-popup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 374
+        // line 377
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/nice-select/js/jquery.nice-select.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 375
+        // line 378
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/imagesloaded.pkgd.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 376
+        // line 379
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/isotope-min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 377
+        // line 380
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/owl-carousel/owl.carousel.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 378
+        // line 381
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 379
+        // line 382
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.waypoints.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 380
+        // line 383
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.counterup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 381
+        // line 384
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mail-script.js"), "html", null, true);
         echo "></script>
 \t<!--gmaps Js-->
 \t<script src=";
-        // line 383
+        // line 386
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 384
+        // line 387
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gmaps.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 385
+        // line 388
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/theme.js"), "html", null, true);
         echo "></script>
 </body>
@@ -584,7 +596,7 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 
     public function getDebugInfo()
     {
-        return array (  562 => 385,  558 => 384,  554 => 383,  549 => 381,  545 => 380,  541 => 379,  537 => 378,  533 => 377,  529 => 376,  525 => 375,  521 => 374,  517 => 373,  513 => 372,  509 => 371,  505 => 370,  501 => 369,  381 => 252,  368 => 242,  355 => 232,  342 => 222,  284 => 167,  267 => 153,  252 => 141,  216 => 108,  191 => 86,  188 => 85,  181 => 77,  174 => 73,  169 => 70,  165 => 68,  151 => 57,  144 => 53,  140 => 52,  136 => 51,  132 => 50,  116 => 39,  95 => 21,  90 => 19,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  52 => 8,  43 => 1,);
+        return array (  574 => 388,  570 => 387,  566 => 386,  561 => 384,  557 => 383,  553 => 382,  549 => 381,  545 => 380,  541 => 379,  537 => 378,  533 => 377,  529 => 376,  525 => 375,  521 => 374,  517 => 373,  513 => 372,  393 => 255,  380 => 245,  367 => 235,  354 => 225,  296 => 170,  279 => 156,  264 => 144,  228 => 111,  203 => 89,  200 => 88,  193 => 80,  186 => 76,  181 => 73,  177 => 71,  163 => 60,  159 => 59,  154 => 57,  150 => 56,  144 => 53,  140 => 52,  136 => 51,  132 => 50,  116 => 39,  95 => 21,  90 => 19,  86 => 18,  82 => 17,  78 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  52 => 8,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -644,9 +656,12 @@ Les versions du jeu PlayStation 5, Xbox Series  utilise  Hyper Motion Technology
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"index.php/reclamation/new\")}}>Reclamation</a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('galery')}}\">Gallery</a>
+\t\t\t\t\t\t    <li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('app_cartindex')}}\">Panier</a>
 \t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('MesAchat')}}\">Mes achats</a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"contact.html\")}}>Contact</a></li>
-\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t                                                                                                       </a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t

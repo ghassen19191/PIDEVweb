@@ -1,0 +1,118 @@
+
+
+
+
+{% block content %}
+   
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>Jobby - Checkout Plans</title>
+		
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="images/fav.png">
+		
+		<!-- Stylesheets -->
+		<link href="{{ asset ('Payement/css/responsive.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/css/style.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/css/datepicker.min.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/css/jquery.range.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/OwlCarousel/assets/owl.carousel.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/OwlCarousel/assets/owl.theme.default.min.css') }}" rel="stylesheet">
+		
+		<!-- Semantic Css -->
+		<link rel="stylesheet" type="text/css" href="{{ asset ('Payement/vendor/semantic/semantic.min.css') }}">
+		
+	</head>
+	<body>
+        <main class="browse-section">				
+			<div class="container">
+				<div class="row justify-content-md-center">					
+					<div class="col-md-9">
+						<div class="main-heading">
+							<h2>Checkout</h2>
+							<div class="line-shape1">
+								<img src="images/line.svg" alt="">
+							</div>
+						</div>
+						<div class="statement_table checkout_dt">
+							<div class="statement_body">
+								<div class="table-responsive-md">
+									<table class="table table-striped">
+									<thead>
+										<tr>
+										  <th scope="col">Description</th>
+										  <th scope="col">Type</th>
+										  <th scope="col">Price</th>
+										  
+										  <th scope="col">Total Amount</th>
+										</tr>
+										</thead>
+										<tbody>
+                                            {% for achat in achats %}
+											<tr>
+												<th scope="row">
+													<div class="user_dt_trans">
+														<p>{{ achat.id }}</p>
+													</div>
+												</th>
+												<td>
+													<div class="user_dt_trans">														
+														<p>{{ achat.prix}}</p>
+													</div>
+												</td>
+												<td>
+                                                    {% for i in achat.game %}
+                                                    <div class="user_dt_trans">
+														<p>{{ i.name}}</p>
+													</div>
+                                                   
+                                                
+                                                    
+                                                    {% endfor %}
+													
+												</td>
+												<td>
+													<div class="user_dt_trans">														
+														<p>{{achat.game.count()}}</p>
+													</div>
+												</td>
+												
+											</tr>
+                                            {% endfor %}																				
+										</tbody>
+									</table>														
+								</div>
+							</div>
+						</div>
+					</div>																																										
+				</div>		
+	    
+		<!-- footer End -->
+		<!-- Scroll to Top Button Start -->
+		<button onclick="topFunction()" id="pageup" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+		<!-- Scroll to Top Button End -->
+		<!-- Scripts js -->	
+		
+		<script src="{{ asset ('Payement/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset ('Payement/vendor/OwlCarousel/owl.carousel.js') }}"></script>
+		<script src="{{ asset ('Payement/vendor/semantic/semantic.min.js') }}"></script>
+		<script src="{{ asset ('Payement/js/jquery.range-min.js') }}"></script>
+		<script src="{{ asset ('Payement/js/custom1.js') }}"></script>
+		<a class="print_btn" href="javascript:window.print();">Print</a>
+		
+	</body>
+	
+</html>
+{% endblock %}
+
+
+

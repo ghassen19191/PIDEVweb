@@ -1,0 +1,48 @@
+{% extends 'back/news.html.twig' %}
+
+
+
+{% block body %}
+<br/> <br/><br/><br/><br/><br/>
+    <h1>Game index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Release_year</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for game in games %}
+            <tr>
+                <td> <img style="width:50px;
+                    clip-path:ellipse(50% 50%);" src="{{ asset ('uploads/') ~ game.photo}}" alt=""></td>
+                <td>{{ game.id }}</td>
+                <td>{{ game.name }}</td>
+                <td>{{ game.category }}</td>
+                <td>{{ game.description }}</td>
+                <td>{{ game.releaseYear ? game.releaseYear|date('Y-m-d') : '' }}</td>
+                <td>{{ game.price }}</td>
+                <td>{{ game.stock }}</td>
+                <td>
+                    <a href="{{ path('app_game_show', {'id': game.id}) }}">show</a>
+                    <a href="{{ path('app_game_edit', {'id': game.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_game_new') }}">Create new</a>
+{% endblock %}

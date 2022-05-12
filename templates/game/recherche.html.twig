@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Game index{% endblock %}
+
+{% block content %}
+<br/> <br/><br/><br/><br/><br/>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6">
+        
+            <div class="col-lg-6 col-md-6">
+               
+                {% for game in games %}
+                <div class="single-gallery">
+                 
+                    <div class="overlay"></div>
+                    <img  src="{{ asset ('uploads/') ~ game.photo}}" alt="">
+                    <div class="content">
+                        <a class="pop-up-image" href="{{ path ('show_front', {'id': game.id})}}">
+                            <i class="lnr lnr-eye"></i>
+                        </a>
+                    </div>
+                </span>
+                </div>
+
+                <a class="primary_btn" href="{{path("app_cartadd", {id: game.id})}}">Add to my cart</a>
+                <p style="text-align:center; color:white;">{{ game.name}}</p>
+                {% endfor %}
+                
+                
+            
+        </div></div></div>
+{% endblock %}

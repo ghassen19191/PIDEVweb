@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Game{% endblock %}
+
+{% block content %}
+<br/> <br/><br/><br/><br/><br/>
+    <h1>Create new Game</h1>
+    {{ form_start(form)}}
+    {{ form_widget(form.name,{'attr':{ 'placeholder': 'Name Here'}})}}
+    <div style="color:red">{{ form_errors(form.name) }} </div>
+    {{ form_widget(form.category,{'attr':{ 'placeholder': 'Category Here' ,'class': 'job-input' }})}}
+    <div style="color:red">{{ form_errors(form.category) }} </div>
+    {{ form_widget(form.description,{'attr':{ 'placeholder': 'Description Here' ,'class': 'job-input' }})}}
+    <div style="color:red">{{ form_errors(form.description) }} </div>
+    {{ form_widget(form.release_year,{'attr':{ 'placeholder': 'Release_year' ,'class': 'job-input' }})}}
+    <div style="color:red">{{ form_errors(form.release_year) }} </div>
+    {{ form_widget(form.price,{'attr':{ 'placeholder': 'Price' ,'class': 'job-input' }})}}
+    <div style="color:red">{{ form_errors(form.price) }} </div>
+    {{ form_widget(form.stock,{'attr':{ 'placeholder': 'Stock' ,'class': 'job-input' }})}}
+    <div style="color:red">{{ form_errors(form.stock) }} </div>
+
+    {{ form_end(form)}}
+
+    
+
+    <a href="{{ path('app_game_index') }}">back to list</a>
+{% endblock %}

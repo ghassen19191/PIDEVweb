@@ -188,8 +188,15 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
                                 
                                 Users
                             </a>
-                            <a class=\"nav-link\" href=";
+                            </a><a class=\"nav-link\" href=";
         // line 79
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_game_index");
+        echo ">
+                                
+                                Games
+                            </a>
+                            <a class=\"nav-link\" href=";
+        // line 83
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget"), "html", null, true);
         echo ">
                                 
@@ -209,8 +216,8 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
             </div>
 \t</body>
     <nav class=\"navbar navbar-expand-lg navbar-dark navbar-bg ";
-        // line 96
-        echo (((1 === twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 96, $this->source); })()), "session", [], "any", false, false, false, 96), "flashbag", [], "any", false, false, false, 96), "peek", [0 => "success"], "method", false, false, false, 96)), 0))) ? ("") : ("mb-5"));
+        // line 100
+        echo (((1 === twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 100, $this->source); })()), "session", [], "any", false, false, false, 100), "flashbag", [], "any", false, false, false, 100), "peek", [0 => "success"], "method", false, false, false, 100)), 0))) ? ("") : ("mb-5"));
         echo "\">
 <div id=\"layoutSidenav_content\">
                 <main>
@@ -224,14 +231,14 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
                     
 \t\t\t\t\t\t<div class=\"home_left_img\">
                          ";
-        // line 108
+        // line 112
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 108, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 108));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 112));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 109
+            // line 113
             echo "            <div class=\"alert alert-success\">
                 ";
-            // line 110
+            // line 114
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
             </div>
@@ -240,10 +247,10 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 113
+        // line 117
         echo "\t\t\t\t\t\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 116
+        // line 120
         echo "\t\t\t\t\t</div><br><br><br>
 \t\t\t\t\t<div class=\"col-lg-6\">
 \t\t\t\t\t\t<div class=\"banner_content\">
@@ -274,40 +281,40 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 145
+        // line 149
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 146
+        // line 150
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/scripts.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 147
+        // line 151
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"), "html", null, true);
         echo "crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 148
+        // line 152
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-area-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 149
+        // line 153
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-bar-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 150
+        // line 154
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/simple-datatables@latest"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 151
+        // line 155
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/datatables-simple-demo.js"), "html", null, true);
         echo "></script>
         <script src=\"//code.jquery.com/jquery.js\"></script>
         <script src=\"";
-        // line 153
+        // line 157
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/mercuryseriesflashy/js/flashy.js"), "html", null, true);
         echo "\"></script>
          ";
-        // line 154
+        // line 158
         echo twig_include($this->env, $context, "@MercurySeriesFlashy/flashy.html.twig");
         echo "
 
@@ -321,7 +328,7 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
 
     }
 
-    // line 113
+    // line 117
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -331,7 +338,7 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 114
+        // line 118
         echo "
                         ";
         
@@ -354,7 +361,7 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
 
     public function getDebugInfo()
     {
-        return array (  335 => 114,  325 => 113,  311 => 154,  307 => 153,  302 => 151,  298 => 150,  294 => 149,  290 => 148,  286 => 147,  282 => 146,  278 => 145,  247 => 116,  244 => 113,  235 => 110,  232 => 109,  228 => 108,  213 => 96,  193 => 79,  186 => 75,  180 => 72,  173 => 68,  165 => 63,  157 => 58,  142 => 46,  138 => 45,  134 => 44,  128 => 41,  115 => 31,  106 => 25,  102 => 24,  98 => 23,  93 => 21,  89 => 20,  85 => 19,  81 => 18,  77 => 17,  73 => 16,  69 => 15,  65 => 14,  61 => 13,  56 => 11,  44 => 1,);
+        return array (  342 => 118,  332 => 117,  318 => 158,  314 => 157,  309 => 155,  305 => 154,  301 => 153,  297 => 152,  293 => 151,  289 => 150,  285 => 149,  254 => 120,  251 => 117,  242 => 114,  239 => 113,  235 => 112,  220 => 100,  200 => 83,  193 => 79,  186 => 75,  180 => 72,  173 => 68,  165 => 63,  157 => 58,  142 => 46,  138 => 45,  134 => 44,  128 => 41,  115 => 31,  106 => 25,  102 => 24,  98 => 23,  93 => 21,  89 => 20,  85 => 19,  81 => 18,  77 => 17,  73 => 16,  69 => 15,  65 => 14,  61 => 13,  56 => 11,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -436,6 +443,10 @@ class __TwigTemplate_1ca158079812329f2df59c6b4a91d56415da32e1597810cb0b230daf2c3
                             </a><a class=\"nav-link\" href={{asset(\"index.php/admin/utilisateur\")}}>
                                 
                                 Users
+                            </a>
+                            </a><a class=\"nav-link\" href={{path(\"app_game_index\")}}>
+                                
+                                Games
                             </a>
                             <a class=\"nav-link\" href={{asset(\"https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget\")}}>
                                 

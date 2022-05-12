@@ -1,0 +1,58 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Chart{% endblock %}
+
+{% block stylesheets %} 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous">
+{% endblock %}
+
+
+{% block body %}
+<h1>Statistique</h1>
+
+<div class="pie_chart_view">
+   <canvas id="pieChart" width="607" height="303" class="chartjs-render-monitor"></canvas>
+</div>
+{% endblock %}
+
+
+{% block javascripts %}
+
+<script>   
+   $(function(){
+    Chart.defaults.global.defaultFontFamily = "Roboto";
+	
+	// Pie Chart
+	
+	var ctx = document.getElementById('pieChart').getContext('2d');
+	var pieChart = new Chart(ctx, {
+		type: 'pie',
+		data: {
+			labels: ['Applied Jobs', 'Posted Jobs', 'Active Bids', 'Favourite Jobs'],
+			datasets: [{
+				label: '# of Votes',
+				data: [30, 20, 10, 20],
+				backgroundColor: [
+					'#ff4500',
+					'#49d086',
+					'#b81b7f',
+					'#efa80f'
+				],
+				borderWidth: 1
+			}]
+		},
+		options: {
+			responsive: true,
+			legend: {
+				display: false
+			}
+		}
+	});
+	
+});
+</script>
+
+
+{% endblock %}

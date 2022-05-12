@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+		<meta name="description" content="Gambolthemes">
+		<meta name="author" content="Gambolthemes">
+		<title>Jobby - Checkout Plans</title>
+		
+		<!-- Favicon Icon -->
+		<link rel="icon" type="image/png" href="images/fav.png">
+		
+		<!-- Stylesheets -->
+		<link href="{{ asset ('Payement/css/responsive.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/css/style.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/css/datepicker.min.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/css/jquery.range.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/OwlCarousel/assets/owl.carousel.css') }}" rel="stylesheet">
+		<link href="{{ asset ('Payement/vendor/OwlCarousel/assets/owl.theme.default.min.css') }}" rel="stylesheet">
+		
+		<!-- Semantic Css -->
+		<link rel="stylesheet" type="text/css" href="{{ asset ('Payement/vendor/semantic/semantic.min.css') }}">
+		
+	</head>
+	<body>
+        <main class="browse-section">				
+			<div class="container">
+                <div class="row chk_pymnt">					
+					<div class="col-md-12">
+						<div class="main-heading">
+							<h2>Payment Method</h2>
+							<div class="line-shape1">
+								<img src="{{ asset ('images/line.svg')}}" alt="">
+							</div>
+						</div>				
+					</div>
+					<div class="col-md-6">
+						<div class="view_chart">
+							<div class="view_chart_header">
+								<div class="ui radio checkbox mt-1">
+									<input type="radio" name="example1" checked="">
+									<label class="chk_method" style="color:#242424 !important;">Credit or Debit Cards</label>
+								</div>
+								<div class="cards_right">
+									<img src="{{ asset ('images/cards.png')}}" alt="">
+								</div>
+							</div>
+                            {{ form_start(form)}}
+							<div class="pymt_mthd_body">
+								<div class="form-group">
+									<label class="label15">Card Number*</label>
+									
+                                    {{ form_widget(form.CardNumber,{'attr':{'placeholder': 'Enter Card Number' ,'class': 'job-input', 'id':'cardnumber' ,'pattern':'.{12}' , 'title' :"Field must be 12 numbers" }})}}
+									
+								</div>
+								<div class="form-group">
+									<label class="label15">Full Name*</label>
+								
+                                    {{ form_widget(form.Name,{'attr':{ 'placeholder': 'Enter Full Name' ,'class': 'job-input' , 'id':'name' }})}}
+									
+								</div>
+								<div class="fdsf452">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label class="label15">Expiring*</label>
+												
+                                               <input  type="month" class="job-input datepicker-here" data-language="en"  placeholder="Expiring" min={{date}} required>
+                                               
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label class="label15">Cvv*</label>
+												
+                                                {{ form_widget(form.Cvv,{'attr':{ 'placeholder': 'Enter Cvv' ,'class': 'job-input' , 'id':'cvv' , 'pattern':'.{3}' , 'title' :"Field must be 3 numbers" }})}}
+												
+											</div>
+										</div>																		
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			
+					<div class="col-md-12">
+						
+						<button class="post_jp_btn" type="submit" onclick="formHasError()">PROCEED PAYMENT</button>
+						
+                        {{ form_end(form)}}
+					</div>					
+				</div>	
+			</div>					
+		</main>
+    </div>	
+    </main>				
+	    
+		<!-- footer End -->
+		<!-- Scroll to Top Button Start -->
+		<button onclick="topFunction()" id="pageup" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+		<!-- Scroll to Top Button End -->
+		<!-- Scripts js -->	
+		
+		<script src="{{ asset ('Payement/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+		<script src="{{ asset ('Payement/vendor/OwlCarousel/owl.carousel.js') }}"></script>
+		<script src="{{ asset ('Payement/vendor/semantic/semantic.min.js') }}"></script>
+		<script src="{{ asset ('Payement/js/jquery.range-min.js') }}"></script>
+		<script src="{{ asset ('Payement/js/custom1.js') }}"></script>
+		
+		
+	</body>
+	
+</html>

@@ -141,14 +141,26 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
         // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation/new"), "html", null, true);
         echo ">Reclamation</a></li>
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+        // line 48
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("galery");
+        echo "\">Gallery</a>
+\t\t\t\t\t\t    <li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+        // line 49
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cartindex");
+        echo "\">Panier</a>
 \t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+        // line 51
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("MesAchat");
+        echo "\">Mes achats</a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
-        // line 50
+        // line 53
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("contact.html"), "html", null, true);
         echo ">Contact</a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
-\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t
 \t\t\t\t\t\t\t
@@ -158,33 +170,33 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
 \t\t\t\t\t\t\t <li class=\"nav-item dropdown no-arrow\">
             <a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" id=\"userDropdown\" role=\"button\">
                 <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\"><i class=\"far fa-user text-primary mr-2 fa-2x \"></i>";
-        // line 61
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 61, $this->source); })()), "user", [], "any", false, false, false, 61), "fullName", [], "any", false, false, false, 61), "html", null, true);
+        // line 64
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", [], "any", false, false, false, 64), "fullName", [], "any", false, false, false, 64), "html", null, true);
         echo "</span>
                 ";
-        // line 63
+        // line 66
         echo "            </a>
             <!-- Dropdown - User Information -->
             <div aria-labelledby=\"userDropdown\" class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\">
                 <a class=\"dropdown-item\" href=\"";
-        // line 66
+        // line 69
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_account_index");
         echo "\">
                     <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i>
                     Profil
                 </a>
                 <a class=\"dropdown-item\" href=\"";
-        // line 70
+        // line 73
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_parameter_index");
         echo "\">
                     <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i>
                     Paramètres
                 </a>
                 ";
-        // line 78
+        // line 81
         echo "                
                 <a class=\"dropdown-item\"   href=\"";
-        // line 79
+        // line 82
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
         echo "\">
                     <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>
@@ -207,11 +219,11 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
 \t\t\t\t\t<div class=\"banner_content text-center\">
 \t\t\t\t\t\t<div class=\"page_link\">
 \t\t\t\t\t\t\t<a href=";
-        // line 99
+        // line 102
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/r"), "html", null, true);
         echo ">Home</a>
 \t\t\t\t\t\t\t<a href=";
-        // line 100
+        // line 103
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation/new"), "html", null, true);
         echo ">Reclamation</a>
 \t\t\t\t\t\t</div>
@@ -232,9 +244,9 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
 \t\t\t\t\t<div class=\"section_content\">
 \t\t\t\t\t
 \t\t\t\t\t\t";
-        // line 118
-        $this->displayBlock('body', $context, $blocks);
         // line 121
+        $this->displayBlock('body', $context, $blocks);
+        // line 124
         echo "\t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -352,77 +364,77 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 237
+        // line 240
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 238
+        // line 241
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/popper.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 239
+        // line 242
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/bootstrap.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 240
+        // line 243
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/stellar.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 241
+        // line 244
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.magnific-popup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 242
+        // line 245
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/nice-select/js/jquery.nice-select.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 243
+        // line 246
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/imagesloaded.pkgd.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 244
+        // line 247
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/isotope/isotope-min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 245
+        // line 248
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/owl-carousel/owl.carousel.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 246
+        // line 249
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.ajaxchimp.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 247
+        // line 250
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.waypoints.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 248
+        // line 251
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/counter-up/jquery.counterup.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 249
+        // line 252
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/mail-script.js"), "html", null, true);
         echo "></script>
 \t<!--gmaps Js-->
 \t<script src=";
-        // line 251
+        // line 254
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 252
+        // line 255
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/gmaps.min.js"), "html", null, true);
         echo "></script>
 \t<script src=";
-        // line 253
+        // line 256
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/theme.js"), "html", null, true);
         echo "></script>
 \t<script src=\"//code.jquery.com/jquery.js\"></script>
         <script src=\"";
-        // line 255
+        // line 258
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/mercuryseriesflashy/js/flashy.js"), "html", null, true);
         echo "\"></script>
          ";
-        // line 256
+        // line 259
         echo twig_include($this->env, $context, "@MercurySeriesFlashy/flashy.html.twig");
         echo "
 \t<!--Start of Tawk.to Script-->
@@ -449,7 +461,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     }
 
-    // line 118
+    // line 121
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -459,7 +471,7 @@ s0.parentNode.insertBefore(s1,s0);
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 119
+        // line 122
         echo "
                        ";
         
@@ -482,7 +494,7 @@ s0.parentNode.insertBefore(s1,s0);
 
     public function getDebugInfo()
     {
-        return array (  463 => 119,  453 => 118,  426 => 256,  422 => 255,  417 => 253,  413 => 252,  409 => 251,  404 => 249,  400 => 248,  396 => 247,  392 => 246,  388 => 245,  384 => 244,  380 => 243,  376 => 242,  372 => 241,  368 => 240,  364 => 239,  360 => 238,  356 => 237,  238 => 121,  236 => 118,  215 => 100,  211 => 99,  188 => 79,  185 => 78,  178 => 70,  171 => 66,  166 => 63,  162 => 61,  148 => 50,  142 => 47,  138 => 46,  134 => 45,  130 => 44,  114 => 33,  100 => 22,  95 => 20,  91 => 19,  87 => 18,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
+        return array (  475 => 122,  465 => 121,  438 => 259,  434 => 258,  429 => 256,  425 => 255,  421 => 254,  416 => 252,  412 => 251,  408 => 250,  404 => 249,  400 => 248,  396 => 247,  392 => 246,  388 => 245,  384 => 244,  380 => 243,  376 => 242,  372 => 241,  368 => 240,  250 => 124,  248 => 121,  227 => 103,  223 => 102,  200 => 82,  197 => 81,  190 => 73,  183 => 69,  178 => 66,  174 => 64,  160 => 53,  155 => 51,  150 => 49,  146 => 48,  142 => 47,  138 => 46,  134 => 45,  130 => 44,  114 => 33,  100 => 22,  95 => 20,  91 => 19,  87 => 18,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -534,11 +546,14 @@ s0.parentNode.insertBefore(s1,s0);
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"about-us.html\")}}>About</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"index.php/post/front\")}}>News</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item active\"><a class=\"nav-link\" href={{asset(\"index.php/reclamation/new\")}}>Reclamation</a></li>
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('galery')}}\">Gallery</a>
+\t\t\t\t\t\t    <li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('app_cartindex')}}\">Panier</a>
 \t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('MesAchat')}}\">Mes achats</a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"contact.html\")}}>Contact</a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
-\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
+\t\t\t\t\t\t                                                                                                        </a></li><li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t
 \t\t\t\t\t\t\t

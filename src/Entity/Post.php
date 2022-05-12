@@ -3,6 +3,7 @@
 namespace App\Entity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * Post
@@ -18,6 +19,7 @@ class Post
      * @ORM\Column(name="id_post", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
+     * @Groups("post:read")
      */
     private $idPost;
 
@@ -25,6 +27,7 @@ class Post
      * @var string
      * @Assert\NotBlank(message=" titre doit etre non vide")
      * @ORM\Column(name="titre", type="string", length=50, nullable=false)
+     * @Groups("post:read")
      */
     private $titre;
 
@@ -32,6 +35,7 @@ class Post
      * @var string
      *@Assert\NotBlank(message=" auteur doit etre non vide")
      * @ORM\Column(name="auteur", type="string", length=50, nullable=false)
+     * @Groups("post:read")
      */
     private $auteur;
 
@@ -39,6 +43,7 @@ class Post
      * @var string
      *@Assert\NotBlank(message=" description doit etre non vide")
      * @ORM\Column(name="img_post", type="string", length=200, nullable=false)
+     * @Groups("post:read")
      */
     private $imgPost;
 
@@ -46,6 +51,7 @@ class Post
      * @var \DateTime
      *
      * @ORM\Column(name="date_post", type="date", nullable=false, options={"default"="CURRENT_TIMESTAMP"})
+     * @Groups("post:read")
      */
     private $datePost ;
     public function __construct()
@@ -63,6 +69,7 @@ class Post
      *
      *     )
      * @ORM\Column(name="rate", type="integer", nullable=true)
+     * @Groups("post:read")
      */
     private $rate= '0';
 
@@ -70,11 +77,13 @@ class Post
      * @var string
      *
      * @ORM\Column(name="image", type="string", length=50, nullable=false)
+     * @Groups("post:read")
      */
     private $image;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
+     * @Groups("post:read")
      */
     private $enable=0;
 
