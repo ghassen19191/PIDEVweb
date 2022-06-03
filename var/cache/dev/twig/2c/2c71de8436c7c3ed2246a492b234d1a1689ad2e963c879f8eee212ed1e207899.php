@@ -71,7 +71,7 @@ class __TwigTemplate_563d09b31b4b8a6e28c02c1e636b76dc9c6e37e4509ece1be6dba4405e9
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>image</th>
                 <th>Name</th>
                 <th>Category</th>
                 <th>Description</th>
@@ -95,10 +95,7 @@ class __TwigTemplate_563d09b31b4b8a6e28c02c1e636b76dc9c6e37e4509ece1be6dba4405e9
             // line 26
             echo twig_escape_filter($this->env, ($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("uploads/") . twig_get_attribute($this->env, $this->source, $context["game"], "photo", [], "any", false, false, false, 26)), "html", null, true);
             echo "\" alt=\"\"></td>
-                <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["game"], "id", [], "any", false, false, false, 27), "html", null, true);
-            echo "</td>
+               
                 <td>";
             // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["game"], "name", [], "any", false, false, false, 28), "html", null, true);
@@ -176,7 +173,7 @@ class __TwigTemplate_563d09b31b4b8a6e28c02c1e636b76dc9c6e37e4509ece1be6dba4405e9
 
     public function getDebugInfo()
     {
-        return array (  156 => 47,  151 => 44,  142 => 40,  133 => 36,  129 => 35,  124 => 33,  120 => 32,  116 => 31,  112 => 30,  108 => 29,  104 => 28,  100 => 27,  96 => 26,  92 => 24,  87 => 23,  68 => 6,  58 => 5,  35 => 1,);
+        return array (  153 => 47,  148 => 44,  139 => 40,  130 => 36,  126 => 35,  121 => 33,  117 => 32,  113 => 31,  109 => 30,  105 => 29,  101 => 28,  96 => 26,  92 => 24,  87 => 23,  68 => 6,  58 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -192,7 +189,7 @@ class __TwigTemplate_563d09b31b4b8a6e28c02c1e636b76dc9c6e37e4509ece1be6dba4405e9
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Id</th>
+                <th>image</th>
                 <th>Name</th>
                 <th>Category</th>
                 <th>Description</th>
@@ -207,7 +204,7 @@ class __TwigTemplate_563d09b31b4b8a6e28c02c1e636b76dc9c6e37e4509ece1be6dba4405e9
             <tr>
                 <td> <img style=\"width:50px;
                     clip-path:ellipse(50% 50%);\" src=\"{{ asset ('uploads/') ~ game.photo}}\" alt=\"\"></td>
-                <td>{{ game.id }}</td>
+               
                 <td>{{ game.name }}</td>
                 <td>{{ game.category }}</td>
                 <td>{{ game.description }}</td>

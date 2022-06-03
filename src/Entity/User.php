@@ -13,11 +13,13 @@ use App\Repository\UserRepository;
 use App\Entity\Newsletters\Categories;
 use Symfony\Component\Serializer\Annotation\Groups;
 use DateTimeInterface;
+use JsonSerializable;
+
 /**
  * @ORM\Entity
  * @UniqueEntity("email", message="Cet email est déjà pris par un autre utilisateur, merci de le changer !")
  */
-class User implements UserInterface
+class User implements JsonSerializable, UserInterface
 {
     /**
      * @ORM\Id()
@@ -27,12 +29,12 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=191)
      */
     private $firstName;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=191)
      */
     private $lastName;
 
@@ -43,7 +45,7 @@ class User implements UserInterface
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=191)
      * @Assert\Length(min = 5, minMessage = "Votre nom d'utilisateur doit faire au minimum {{ limit }} caractères")
      */
     private $username;
@@ -54,7 +56,7 @@ class User implements UserInterface
     private $roles = [];
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=191)
      * @Assert\Regex(
      * pattern = "/^(?=.*\d)(?=.*[A-Z])(?=.*[@#$%])(?!.*(.)\1{2}).*[a-z]/m",
      * match=true,
@@ -68,55 +70,53 @@ class User implements UserInterface
     private $createdAt;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=191, nullable=true)
      */
     protected $resetToken;
 
-    
+
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Newsletters\Categories", inversedBy="user")
      */
     private $categories;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
+     * @ORM\Column(type="boolean")
      */
     private $is_rgpd = false;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=191, nullable=true)
      */
     private $validation_token;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
+     * @ORM\Column(type="boolean")
      */
     private $is_valid = false;
-    
-    
-   /**
+
+
+    /**
      * @ORM\OneToMany(targetEntity=Message::class, mappedBy="user", orphanRemoval=true, cascade={"persist"})
      */
     private $messages;
 
-   
 
-     /**
+    /**
      * @ORM\ManyToMany(targetEntity=GroupConversation::class, inversedBy="users", cascade={"persist"})
      */
     private $conversations;
-   
- /**
+
+    /**
      * @ORM\OneToMany(targetEntity=GroupConversation::class, mappedBy="admin", cascade={"persist"})
      */
     private $adminGroupConversations;
 
     /**
-     * @ORM\Column(type="boolean", nullable=true)
+     * @ORM\Column(type="boolean")
      */
     private $status;
 
-    
 
     /**
      * @ORM\Column(type="datetime_immutable", nullable=true)
@@ -124,15 +124,9 @@ class User implements UserInterface
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=191, nullable=true)
      */
     private $activationToken;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $code;
-
 
 
     /**
@@ -147,7 +141,7 @@ class User implements UserInterface
 
     public function getRoleTitle()
     {
-        if(in_array("ROLE_ADMIN", $this->roles)) return "Administrateur";
+        if (in_array("ROLE_ADMIN", $this->roles)) return "Administrateur";
         else return "Utilisateur";
     }
 
@@ -156,22 +150,22 @@ class User implements UserInterface
         $this->createdAt = new \DateTime('now');
         $this->categories = new ArrayCollection();
         $this->conversations = new ArrayCollection();
-        $this->adminGroupConversations  = new ArrayCollection();
+        $this->adminGroupConversations = new ArrayCollection();
         $this->messages = new ArrayCollection();
-       
+
     }
 
-    public function getId() : ? int
+    public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getEmail() : ? string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
 
-    public function setEmail(string $email) : self
+    public function setEmail(string $email): self
     {
         $this->email = $email;
         return $this;
@@ -188,7 +182,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getRoles() : array
+    public function getRoles(): array
     {
         $roles = $this->roles;
         $roles[] = 'ROLE_USER';
@@ -196,35 +190,37 @@ class User implements UserInterface
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles) : self
+    public function setRoles(array $roles): self
     {
         $this->roles = $roles;
         return $this;
     }
 
-    
-    public function getPassword() : string
+
+    public function getPassword(): string
     {
         return (string)$this->password;
     }
 
-    public function setPassword(string $password) : self
+    public function setPassword(string $password): self
     {
         $this->password = $password;
         return $this;
     }
-    
+
     public function getCreatedAt()
     {
         return $this->createdAt;
     }
 
     public function getSalt()
-    {}
+    {
+    }
 
     public function eraseCredentials()
-    {}
-    
+    {
+    }
+
 
     public function getFirstName(): ?string
     {
@@ -254,13 +250,13 @@ class User implements UserInterface
     {
         return $this->resetToken;
     }
-     
+
     public function setResetToken(?string $resetToken): void
     {
         $this->resetToken = $resetToken;
     }
-  
-public function getIsRgpd(): ?bool
+
+    public function getIsRgpd(): ?bool
     {
         return $this->is_rgpd;
     }
@@ -319,7 +315,7 @@ public function getIsRgpd(): ?bool
         $this->categories->removeElement($category);
         return $this;
     }
-  
+
 
     /**
      * @return Collection|Message[]
@@ -351,7 +347,8 @@ public function getIsRgpd(): ?bool
 
         return $this;
     }
- /**
+
+    /**
      * @return Collection|GroupConversation[]
      */
     public function getConversations(): Collection
@@ -404,7 +401,8 @@ public function getIsRgpd(): ?bool
 
         return $this;
     }
-   public function getStatus(): ?bool
+
+    public function getStatus(): ?bool
     {
         return $this->status;
     }
@@ -415,8 +413,8 @@ public function getIsRgpd(): ?bool
 
         return $this;
     }
-   
-public function getActivationToken(): ?string
+
+    public function getActivationToken(): ?string
     {
         return $this->activationToken;
     }
@@ -427,6 +425,7 @@ public function getActivationToken(): ?string
 
         return $this;
     }
+
     public function getUpdatedAt(): ?\DateTimeImmutable
     {
         return $this->updatedAt;
@@ -439,16 +438,29 @@ public function getActivationToken(): ?string
         return $this;
     }
 
-    public function getCode(): ?string
+    public function jsonSerialize(): array
     {
-        return $this->code;
+        return array(
+            'id' => $this->id,
+            'firstName' => $this->firstName,
+            'lastName' => $this->lastName,
+            'email' => $this->email,
+            'username' => $this->username,
+            'roles' => $this->roles,
+            'password' => $this->password,
+            'createdAt' => $this->createdAt->format("d-m-Y")
+        );
     }
 
-    public function setCode(?string $code): self
+    public function setUp($firstName, $lastName, $email, $username, $roles, $password, $createdAt)
     {
-        $this->code = $code;
-
-        return $this;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->email = $email;
+        $this->username = $username;
+        $this->roles = $roles;
+        $this->password = $password;
+        $this->createdAt = $createdAt;
+        $this->status = true;
     }
-
 }

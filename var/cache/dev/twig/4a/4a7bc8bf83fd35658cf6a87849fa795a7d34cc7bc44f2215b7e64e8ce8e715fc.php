@@ -183,8 +183,9 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                                 
                                 Users
                             </a>
+                            
                             <a class=\"nav-link\" href=";
-        // line 77
+        // line 78
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget"), "html", null, true);
         echo ">
                                 
@@ -220,9 +221,9 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                     
 \t\t\t\t\t\t<div class=\"home_left_img\">
 \t\t\t\t\t\t\t";
-        // line 110
+        // line 111
         $this->displayBlock('body', $context, $blocks);
-        // line 113
+        // line 114
         echo "\t\t\t\t\t</div><br><br><br>
 \t\t\t\t\t<div class=\"col-lg-6\">
 \t\t\t\t\t\t<div class=\"banner_content\">
@@ -249,31 +250,31 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
 \t<!-- Optional JavaScript -->
 \t<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 \t<script src=";
-        // line 138
+        // line 139
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 139
+        // line 140
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/scripts.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 140
+        // line 141
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"), "html", null, true);
         echo "crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 141
+        // line 142
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-area-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 142
+        // line 143
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-bar-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 143
+        // line 144
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/simple-datatables@latest"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 144
+        // line 145
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/datatables-simple-demo.js"), "html", null, true);
         echo "></script>
     </body>
@@ -286,7 +287,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
 
     }
 
-    // line 110
+    // line 111
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -296,7 +297,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 111
+        // line 112
         echo "
                         ";
         
@@ -319,7 +320,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
 
     public function getDebugInfo()
     {
-        return array (  300 => 111,  290 => 110,  277 => 144,  273 => 143,  269 => 142,  265 => 141,  261 => 140,  257 => 139,  253 => 138,  226 => 113,  224 => 110,  188 => 77,  181 => 73,  175 => 70,  168 => 66,  160 => 61,  152 => 56,  137 => 44,  133 => 43,  129 => 42,  123 => 39,  110 => 29,  101 => 23,  97 => 22,  93 => 21,  88 => 19,  84 => 18,  80 => 17,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 10,  44 => 1,);
+        return array (  301 => 112,  291 => 111,  278 => 145,  274 => 144,  270 => 143,  266 => 142,  262 => 141,  258 => 140,  254 => 139,  227 => 114,  225 => 111,  189 => 78,  181 => 73,  175 => 70,  168 => 66,  160 => 61,  152 => 56,  137 => 44,  133 => 43,  129 => 42,  123 => 39,  110 => 29,  101 => 23,  97 => 22,  93 => 21,  88 => 19,  84 => 18,  80 => 17,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 10,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -400,6 +401,7 @@ class __TwigTemplate_a62eed6306069eb6a7a117058fe7e5ec9efb1b969695f40de79a6a0b611
                                 
                                 Users
                             </a>
+                            
                             <a class=\"nav-link\" href={{asset(\"https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget\")}}>
                                 
                                 live chat

@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerERVMPLy/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerXeatx7V/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -42,6 +42,7 @@ $classes[] = 'Symfony\Component\Mailer\Messenger\MessageHandler';
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AchatController';
+$classes[] = 'App\Controller\AchattMobileController';
 $classes[] = 'App\Controller\AdminAccountController';
 $classes[] = 'App\Controller\AdminDashboardController';
 $classes[] = 'App\Controller\AdminParameterController';
@@ -55,6 +56,7 @@ $classes[] = 'App\Controller\CommentaireController';
 $classes[] = 'App\Controller\DevController';
 $classes[] = 'App\Controller\FailedController';
 $classes[] = 'App\Controller\GameController';
+$classes[] = 'App\Controller\GameMobileController';
 $classes[] = 'App\Controller\GroupConversationController';
 $classes[] = 'App\Controller\HomeController';
 $classes[] = 'App\Controller\HomechatController';
@@ -75,6 +77,7 @@ $classes[] = 'App\Controller\StatController';
 $classes[] = 'App\Controller\TController';
 $classes[] = 'App\Controller\UpdateListController';
 $classes[] = 'App\Controller\UserAccountController';
+$classes[] = 'App\Controller\UserMobileController';
 $classes[] = 'App\Controller\UserParameterConrollerController';
 $classes[] = 'App\Controller\VisitorController';
 $classes[] = 'App\Controller\WishListController';

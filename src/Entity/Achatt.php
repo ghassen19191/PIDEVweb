@@ -6,11 +6,12 @@ use App\Repository\AchattRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass=AchattRepository::class)
  */
-class Achatt
+class Achatt implements JsonSerializable
 {
     /**
      * @ORM\Id
@@ -73,5 +74,28 @@ class Achatt
         $this->prix = $prix;
 
         return $this;
+    }
+
+    public function jsonSerialize(): array
+    {
+        $game = null;
+        if ($this->game){
+            if ($this->game[0]){
+                $game = $this->game[0];
+            }
+        }
+        return array(
+            'id' => $this->id,
+            'prix' => $this->prix,
+            'game' => $game
+
+        );
+    }
+
+    public function setUp($prix, $game)
+    {
+        $this->prix = $prix;
+        $this->game = [$game];
+
     }
 }

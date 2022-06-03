@@ -86,10 +86,10 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
         // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/flaticon/flaticon.css"), "html", null, true);
         echo ">
-\t<link rel=\"stylesheet\" href=\"";
+\t<link rel=\"stylesheet\" href=";
         // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/mercuryseriesflashy/css/flashy.css"), "html", null, true);
-        echo "\">
+        echo ">
 \t<link href=\"";
         // line 20
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("sbadmin2/vendor/fontawesome-free/css/all.min.css"), "html", null, true);
@@ -141,7 +141,7 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
         // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation/new"), "html", null, true);
         echo ">Reclamation</a></li>
-\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+\t\t\t\t\t\t\t<!--<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
         // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("galery");
         echo "\">Gallery</a>
@@ -153,7 +153,7 @@ class __TwigTemplate_a00220a6050d8dc818dcdfaa9304ace84e3687f0e9324cd0edee66f36e8
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
         // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("MesAchat");
-        echo "\">Mes achats</a></li>
+        echo "\">Mes achats</a></li>-->
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
         // line 53
@@ -517,7 +517,7 @@ s0.parentNode.insertBefore(s1,s0);
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/nice-select/css/nice-select.css\")}}>
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/animate-css/animate.css\")}}>
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/flaticon/flaticon.css\")}}>
-\t<link rel=\"stylesheet\" href=\"{{ asset('bundles/mercuryseriesflashy/css/flashy.css') }}\">
+\t<link rel=\"stylesheet\" href={{ asset(\"bundles/mercuryseriesflashy/css/flashy.css\") }}>
 \t<link href=\"{{ asset('sbadmin2/vendor/fontawesome-free/css/all.min.css') }}\" rel=\"stylesheet\" type=\"text/css\">
 \t<!-- main css -->
 \t<link rel=\"stylesheet\" href={{asset(\"css/style.css\")}}>
@@ -546,10 +546,10 @@ s0.parentNode.insertBefore(s1,s0);
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"about-us.html\")}}>About</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"index.php/post/front\")}}>News</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item active\"><a class=\"nav-link\" href={{asset(\"index.php/reclamation/new\")}}>Reclamation</a></li>
-\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('galery')}}\">Gallery</a>
+\t\t\t\t\t\t\t<!--<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('galery')}}\">Gallery</a>
 \t\t\t\t\t\t    <li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('app_cartindex')}}\">Panier</a>
 \t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('MesAchat')}}\">Mes achats</a></li>
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('MesAchat')}}\">Mes achats</a></li>-->
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"contact.html\")}}>Contact</a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>

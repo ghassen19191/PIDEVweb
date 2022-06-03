@@ -343,7 +343,7 @@ class __TwigTemplate_9c5802dc3986f7d01a6c8628230893692558859370c67407761e3b31526
                             <td>{{ user.lastName }}</td>
                             <td>{{ user.email }}</td>
                             <td>{{ user.username }}</td>
-                            <td>{{ user.roleTitle }}</td>
+                            <td>{{ user.roleTitle  }}</td>
                             <td>{{ user.createdAt | date(\"d-m-Y H:i\") }}</td>
                             <td>
                                 <a href=\"{{ path(\"admin_user_show\", {\"id\": user.id}) }}\" class=\"btn btn-info rounded with-icon\">

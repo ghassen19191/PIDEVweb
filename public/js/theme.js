@@ -434,8 +434,3 @@
 
 
 })(jQuery)
-darkbtn.onclick = function(){
-    darkbtn.classList.toggle("dark1");    /*tbadel itheme  */
-    document.body.classList.toggle("darkthe")
-
-}

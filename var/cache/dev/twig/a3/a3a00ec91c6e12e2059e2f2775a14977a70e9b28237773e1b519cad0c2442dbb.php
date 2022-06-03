@@ -146,15 +146,9 @@ class __TwigTemplate_2a1685c5428363a00d463b36496dcee0c87915de0961a9760c6c59d9730
                                 
                                 Users
                             </a>
-                            </a><a class=\"nav-link\" href=";
-        // line 68
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_game_index");
-        echo ">
-                                
-                                Games
-                            </a>
+                           
                              <a class=\"nav-link\" href=";
-        // line 72
+        // line 69
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget"), "html", null, true);
         echo ">
                                 
@@ -183,7 +177,7 @@ class __TwigTemplate_2a1685c5428363a00d463b36496dcee0c87915de0961a9760c6c59d9730
                     <br><br><br><br><br><br>
 \t\t\t\t\t\t<div class=\"home_left_img\">
 \t\t\t\t\t\t\t<img class=\"img-fluid\" src=";
-        // line 98
+        // line 95
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/banner/home-left.png"), "html", null, true);
         echo " alt=\"\" width=350px>
 \t\t\t\t\t\t</div>
@@ -222,31 +216,31 @@ class __TwigTemplate_2a1685c5428363a00d463b36496dcee0c87915de0961a9760c6c59d9730
             </div>
         </div>
         <script src=";
-        // line 134
+        // line 131
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 135
+        // line 132
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/scripts.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 136
+        // line 133
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"), "html", null, true);
         echo "crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 137
+        // line 134
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-area-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 138
+        // line 135
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/demo/chart-bar-demo.js"), "html", null, true);
         echo "></script>
         <script src=";
-        // line 139
+        // line 136
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdn.jsdelivr.net/npm/simple-datatables@latest"), "html", null, true);
         echo " crossorigin=\"anonymous\"></script>
         <script src=";
-        // line 140
+        // line 137
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js1/datatables-simple-demo.js"), "html", null, true);
         echo "></script>
     </body>
@@ -272,7 +266,7 @@ class __TwigTemplate_2a1685c5428363a00d463b36496dcee0c87915de0961a9760c6c59d9730
 
     public function getDebugInfo()
     {
-        return array (  250 => 140,  246 => 139,  242 => 138,  238 => 137,  234 => 136,  230 => 135,  226 => 134,  187 => 98,  158 => 72,  151 => 68,  144 => 64,  138 => 61,  130 => 56,  122 => 51,  114 => 46,  99 => 34,  95 => 33,  91 => 32,  85 => 29,  72 => 19,  62 => 12,  58 => 11,  54 => 10,  43 => 1,);
+        return array (  244 => 137,  240 => 136,  236 => 135,  232 => 134,  228 => 133,  224 => 132,  220 => 131,  181 => 95,  152 => 69,  144 => 64,  138 => 61,  130 => 56,  122 => 51,  114 => 46,  99 => 34,  95 => 33,  91 => 32,  85 => 29,  72 => 19,  62 => 12,  58 => 11,  54 => 10,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -344,10 +338,7 @@ class __TwigTemplate_2a1685c5428363a00d463b36496dcee0c87915de0961a9760c6c59d9730
                                 
                                 Users
                             </a>
-                            </a><a class=\"nav-link\" href={{path(\"app_game_index\")}}>
-                                
-                                Games
-                            </a>
+                           
                              <a class=\"nav-link\" href={{asset(\"https://dashboard.tawk.to/#/admin/6268102c7b967b11798c9af1/chat-widget\")}}>
                                 
                                 live chat

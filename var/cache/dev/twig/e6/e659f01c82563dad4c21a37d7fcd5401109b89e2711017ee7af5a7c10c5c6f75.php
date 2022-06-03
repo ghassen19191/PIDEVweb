@@ -376,7 +376,13 @@ class __TwigTemplate_301595f9ba1f7cdf2c0b60d53735afe996d0d7d3848867577f8207fdf12
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</nav>
-            
+            <form action=\"";
+        // line 108
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche");
+        echo "\" method='post'>
+\t\t\t<input type=\"text\"  placeholder=\"Type to Search...\" name=\"motcle\">
+\t\t\t<button type=\"submit\" >rechercher</button>
+\t\t\t</form>
 \t\t</div>
         
 \t</header>
@@ -399,15 +405,10 @@ class __TwigTemplate_301595f9ba1f7cdf2c0b60d53735afe996d0d7d3848867577f8207fdf12
 \t\t<div class=\"banner_inner\">
 \t\t\t<div class=\"container\">
     ";
-        // line 130
+        // line 133
         $this->displayBlock('content', $context, $blocks);
-        // line 132
-        echo "    <form action=\"";
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche");
-        echo "\" method='post'>
-\t\t\t<input type=\"text\"  placeholder=\"Type to Search...\" name=\"motcle\">
-\t\t\t<button type=\"submit\" >rechercher</button>
-\t\t\t</form>
+        // line 135
+        echo "    
             </div></div></section>
 \t<!--================Header Menu Area =================-->
 
@@ -580,7 +581,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     }
 
-    // line 130
+    // line 133
     public function block_content($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -590,7 +591,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "content"));
 
-        // line 131
+        // line 134
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -612,7 +613,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     public function getDebugInfo()
     {
-        return array (  594 => 131,  584 => 130,  571 => 252,  567 => 251,  561 => 248,  557 => 247,  553 => 246,  549 => 245,  545 => 244,  541 => 243,  537 => 242,  533 => 241,  529 => 240,  525 => 239,  521 => 238,  517 => 237,  513 => 236,  405 => 132,  403 => 130,  367 => 97,  364 => 96,  357 => 88,  350 => 84,  345 => 81,  341 => 79,  327 => 68,  323 => 67,  318 => 65,  314 => 64,  308 => 61,  304 => 60,  300 => 59,  296 => 58,  280 => 47,  270 => 39,  260 => 38,  250 => 17,  248 => 16,  238 => 15,  228 => 13,  226 => 12,  216 => 11,  197 => 8,  126 => 255,  124 => 38,  119 => 36,  113 => 33,  109 => 32,  105 => 31,  101 => 30,  97 => 29,  93 => 28,  89 => 27,  85 => 26,  81 => 25,  75 => 22,  69 => 18,  67 => 15,  64 => 14,  61 => 11,  57 => 8,  48 => 1,);
+        return array (  595 => 134,  585 => 133,  572 => 252,  568 => 251,  562 => 248,  558 => 247,  554 => 246,  550 => 245,  546 => 244,  542 => 243,  538 => 242,  534 => 241,  530 => 240,  526 => 239,  522 => 238,  518 => 237,  514 => 236,  411 => 135,  409 => 133,  381 => 108,  367 => 97,  364 => 96,  357 => 88,  350 => 84,  345 => 81,  341 => 79,  327 => 68,  323 => 67,  318 => 65,  314 => 64,  308 => 61,  304 => 60,  300 => 59,  296 => 58,  280 => 47,  270 => 39,  260 => 38,  250 => 17,  248 => 16,  238 => 15,  228 => 13,  226 => 12,  216 => 11,  197 => 8,  126 => 255,  124 => 38,  119 => 36,  113 => 33,  109 => 32,  105 => 31,  101 => 30,  97 => 29,  93 => 28,  89 => 27,  85 => 26,  81 => 25,  75 => 22,  69 => 18,  67 => 15,  64 => 14,  61 => 11,  57 => 8,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -724,7 +725,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</nav>
-            
+            <form action=\"{{ path('recherche') }}\" method='post'>
+\t\t\t<input type=\"text\"  placeholder=\"Type to Search...\" name=\"motcle\">
+\t\t\t<button type=\"submit\" >rechercher</button>
+\t\t\t</form>
 \t\t</div>
         
 \t</header>
@@ -748,10 +752,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t<div class=\"container\">
     {% block content %}
     {% endblock %}
-    <form action=\"{{ path('recherche') }}\" method='post'>
-\t\t\t<input type=\"text\"  placeholder=\"Type to Search...\" name=\"motcle\">
-\t\t\t<button type=\"submit\" >rechercher</button>
-\t\t\t</form>
+    
             </div></div></section>
 \t<!--================Header Menu Area =================-->
 

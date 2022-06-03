@@ -255,7 +255,7 @@ class PostController extends Controller
         $post->setTitre($request->get('titre'));
         $post->setAuteur($request->get('auteur'));
         $post->setImgPost($request->get('imgPost'));
-        $post->setDatePost($request->get('datePost'));
+        //$post->setDatePost($request->get('datePost'));
         $post->setRate($request->get('rate'));
         $post->setImage($request->get('image'));
         $em->persist($post);
@@ -268,7 +268,7 @@ class PostController extends Controller
     }
 
     /**
-     * @Route("/updatePostMobile/{idPost}", name="updatePostMobile")
+    * @Route("/p/updatePostMobile/{idPost}?titre={titre}&auteur={auteur}&imgPost={img_post}&rate={rate}&image={image}", name="updatePostMobile")
      */
     public function updatePostMobile(Request $request,$idPost ,NormalizerInterface $Normalizer)
     {
@@ -277,7 +277,7 @@ class PostController extends Controller
         $post->setTitre($request->get('titre'));
         $post->setAuteur($request->get('auteur'));
         $post->setImgPost($request->get('imgPost'));
-        $post->setDatePost($request->get('datePost'));
+       
         $post->setRate($request->get('rate'));
         $post->setImage($request->get('image'));
       

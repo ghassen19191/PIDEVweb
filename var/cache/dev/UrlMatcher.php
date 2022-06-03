@@ -13,6 +13,11 @@ return [
         '/_profiler/search_bar' => [[['_route' => '_profiler_search_bar', '_controller' => 'web_profiler.controller.profiler::searchBarAction'], null, null, null, false, false, null]],
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
+        '/mobile/achatt' => [[['_route' => 'app_achattmobile_index', '_controller' => 'App\\Controller\\AchattMobileController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/mobile/achatt/add' => [[['_route' => 'app_achattmobile_add', '_controller' => 'App\\Controller\\AchattMobileController::add'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/achatt/edit' => [[['_route' => 'app_achattmobile_edit', '_controller' => 'App\\Controller\\AchattMobileController::edit'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/achatt/delete' => [[['_route' => 'app_achattmobile_delete', '_controller' => 'App\\Controller\\AchattMobileController::delete'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/achatt/deleteAll' => [[['_route' => 'app_achattmobile_deleteall', '_controller' => 'App\\Controller\\AchattMobileController::deleteAll'], null, ['POST' => 0], null, false, false, null]],
         '/admin/profil/edition' => [[['_route' => 'admin_account_edit', '_controller' => 'App\\Controller\\AdminAccountController::edit'], null, null, null, false, false, null]],
         '/admin/profil' => [[['_route' => 'admin_account_index', '_controller' => 'App\\Controller\\AdminAccountController::index'], null, null, null, true, false, null]],
         '/admin/tableau-de-bord' => [[['_route' => 'admin_dashboard_index', '_controller' => 'App\\Controller\\AdminDashboardController::index'], null, null, null, false, false, null]],
@@ -37,6 +42,11 @@ return [
         '/game/gallery' => [[['_route' => 'galery', '_controller' => 'App\\Controller\\GameController::galery'], null, ['GET' => 0], null, false, false, null]],
         '/game/o' => [[['_route' => 'app_game_index', '_controller' => 'App\\Controller\\GameController::espaceAdmin'], null, ['GET' => 0], null, false, false, null]],
         '/game/new' => [[['_route' => 'app_game_new', '_controller' => 'App\\Controller\\GameController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/mobile/game' => [[['_route' => 'app_gamemobile_index', '_controller' => 'App\\Controller\\GameMobileController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/mobile/game/add' => [[['_route' => 'app_gamemobile_add', '_controller' => 'App\\Controller\\GameMobileController::add'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/game/edit' => [[['_route' => 'app_gamemobile_edit', '_controller' => 'App\\Controller\\GameMobileController::edit'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/game/delete' => [[['_route' => 'app_gamemobile_delete', '_controller' => 'App\\Controller\\GameMobileController::delete'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/game/deleteAll' => [[['_route' => 'app_gamemobile_deleteall', '_controller' => 'App\\Controller\\GameMobileController::deleteAll'], null, ['POST' => 0], null, false, false, null]],
         '/convo' => [[['_route' => 'conversation_browse', '_controller' => 'App\\Controller\\GroupConversationController::browse'], null, null, null, false, false, null]],
         '/conversation/add' => [[['_route' => 'conversation_add', '_controller' => 'App\\Controller\\GroupConversationController::add'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home_index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
@@ -62,6 +72,8 @@ return [
         '/reclamation' => [[['_route' => 'app_reclamation_index', '_controller' => 'App\\Controller\\ReclamationController::index'], null, ['GET' => 0], null, true, false, null]],
         '/reclamation/new' => [[['_route' => 'app_reclamation_new', '_controller' => 'App\\Controller\\ReclamationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/reclamation/printallreclamations' => [[['_route' => 'print_reclamations', '_controller' => 'App\\Controller\\ReclamationController::exportAllReclamationsPDF'], null, null, null, false, false, null]],
+        '/reclamation/s/AfficherRecMobile' => [[['_route' => 'AfficherRecMobile', '_controller' => 'App\\Controller\\ReclamationController::AfficherRecMobile'], null, null, null, false, false, null]],
+        '/reclamation/ajouterrecMobile/new' => [[['_route' => 'ajouterrecMobile', '_controller' => 'App\\Controller\\ReclamationController::ajouterrecMobile'], null, null, null, false, false, null]],
         '/reclr' => [[['_route' => 'app_reclr', '_controller' => 'App\\Controller\\ReclrController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/connexion' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
@@ -75,6 +87,12 @@ return [
         '/updatelist' => [[['_route' => 'updatelist', '_controller' => 'App\\Controller\\UpdateListController::updatelist'], null, null, null, false, false, null]],
         '/user/account/editionuser' => [[['_route' => 'user_account_edit', '_controller' => 'App\\Controller\\UserAccountController::edit'], null, null, null, false, false, null]],
         '/user/account' => [[['_route' => 'user_account_index', '_controller' => 'App\\Controller\\UserAccountController::index'], null, null, null, true, false, null]],
+        '/mobile/user' => [[['_route' => 'app_usermobile_index', '_controller' => 'App\\Controller\\UserMobileController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/mobile/user/add' => [[['_route' => 'app_usermobile_add', '_controller' => 'App\\Controller\\UserMobileController::add'], null, null, null, false, false, null]],
+        '/mobile/user/edit' => [[['_route' => 'app_usermobile_edit', '_controller' => 'App\\Controller\\UserMobileController::edit'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/user/delete' => [[['_route' => 'app_usermobile_delete', '_controller' => 'App\\Controller\\UserMobileController::delete'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/user/deleteAll' => [[['_route' => 'app_usermobile_deleteall', '_controller' => 'App\\Controller\\UserMobileController::deleteAll'], null, ['POST' => 0], null, false, false, null]],
+        '/mobile/user/verif' => [[['_route' => 'app_usermobile_verif', '_controller' => 'App\\Controller\\UserMobileController::verif'], null, ['POST' => 0], null, false, false, null]],
         '/user/parametre' => [[['_route' => 'user_parameter_index', '_controller' => 'App\\Controller\\UserParameterConrollerController::edit'], null, null, null, true, false, null]],
         '/visitor' => [[['_route' => 'app_visitor_index', '_controller' => 'App\\Controller\\VisitorController::index'], null, ['GET' => 0], null, true, false, null]],
         '/visitor/new' => [[['_route' => 'app_visitor_new', '_controller' => 'App\\Controller\\VisitorController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -169,53 +187,57 @@ return [
                         .'|(*:910)'
                     .')'
                 .')'
-                .'|/messages/(?'
-                    .'|([^/]++)(*:941)'
-                    .'|(\\d+)/add(*:958)'
-                    .'|([^/]++)/ping(*:979)'
+                .'|/m(?'
+                    .'|obile/game/image/([^/]++)(*:950)'
+                    .'|essages/(?'
+                        .'|([^/]++)(*:977)'
+                        .'|(\\d+)/add(*:994)'
+                        .'|([^/]++)/ping(*:1015)'
+                    .')'
                 .')'
                 .'|/post/(?'
                     .'|([^/]++)(?'
-                        .'|(*:1008)'
+                        .'|(*:1046)'
                         .'|/(?'
-                            .'|edit(*:1025)'
-                            .'|masquer(*:1041)'
-                            .'|afficher(*:1058)'
+                            .'|edit(*:1063)'
+                            .'|masquer(*:1079)'
+                            .'|afficher(*:1096)'
                         .')'
-                        .'|(*:1068)'
+                        .'|(*:1106)'
                     .')'
-                    .'|commentaire/([^/]++)(*:1098)'
-                    .'|stats(*:1112)'
-                    .'|updatePostMobile/([^/]++)(*:1146)'
-                    .'|deletePostMobile/([^/]++)(*:1180)'
+                    .'|commentaire/([^/]++)(*:1136)'
+                    .'|stats(*:1150)'
+                    .'|p/updatePostMobile/([^/]+)\\?titre\\=([^/]+)&auteur\\=([^/]+)&imgPost\\=([^/]+)&rate\\=([^/]+)&image\\=([^/]++)(*:1264)'
+                    .'|deletePostMobile/([^/]++)(*:1298)'
                 .')'
                 .'|/reclamation/(?'
-                    .'|(\\d+)(*:1211)'
-                    .'|(\\d+)/edit(*:1230)'
-                    .'|(\\d+)(*:1244)'
+                    .'|(\\d+)(*:1329)'
+                    .'|(\\d+)/edit(*:1348)'
+                    .'|(\\d+)(*:1362)'
+                    .'|deleteRecMobile/([^/]++)(*:1395)'
                 .')'
                 .'|/visitor/([^/]++)(?'
-                    .'|(*:1274)'
-                    .'|/edit(*:1288)'
-                    .'|(*:1297)'
+                    .'|(*:1425)'
+                    .'|/edit(*:1439)'
+                    .'|(*:1448)'
                 .')'
                 .'|/wishlist(?'
                     .'|/(?'
                         .'|share/([^/]++)(?'
-                            .'|(*:1340)'
+                            .'|(*:1491)'
                             .'|/(?'
-                                .'|join(*:1357)'
-                                .'|view(*:1370)'
+                                .'|join(*:1508)'
+                                .'|view(*:1521)'
                             .')'
                         .')'
-                        .'|edit/([^/]++)(*:1394)'
-                        .'|delete/([^/]++)(*:1418)'
-                        .'|open/([^/]++)(*:1440)'
+                        .'|edit/([^/]++)(*:1545)'
+                        .'|delete/([^/]++)(*:1569)'
+                        .'|open/([^/]++)(*:1591)'
                     .')'
                     .'|other/(?'
-                        .'|open/([^/]++)(*:1472)'
-                        .'|join/([^/]++)(*:1494)'
-                        .'|leave/([^/]++)(*:1517)'
+                        .'|open/([^/]++)(*:1623)'
+                        .'|join/([^/]++)(*:1645)'
+                        .'|leave/([^/]++)(*:1668)'
                     .')'
                 .')'
             .')/?$}sD',
@@ -260,33 +282,35 @@ return [
         889 => [[['_route' => 'app_game_show', '_controller' => 'App\\Controller\\GameController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         902 => [[['_route' => 'app_game_edit', '_controller' => 'App\\Controller\\GameController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         910 => [[['_route' => 'app_game_delete', '_controller' => 'App\\Controller\\GameController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        941 => [[['_route' => 'messages_browse', '_controller' => 'App\\Controller\\MessageController::browse'], ['groupConversation'], null, null, false, true, null]],
-        958 => [[['_route' => 'messages_add', '_controller' => 'App\\Controller\\MessageController::add'], ['id'], null, null, false, false, null]],
-        979 => [[['_route' => 'messages_ping', '_controller' => 'App\\Controller\\MessageController::ping'], ['id'], null, null, false, false, null]],
-        1008 => [[['_route' => 'app_post_show', '_controller' => 'App\\Controller\\PostController::show'], ['idPost'], ['GET' => 0], null, false, true, null]],
-        1025 => [[['_route' => 'app_post_edit', '_controller' => 'App\\Controller\\PostController::edit'], ['idPost'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        1041 => [[['_route' => 'masquer_evenement', '_controller' => 'App\\Controller\\PostController::masquerEvent'], ['idPost'], null, null, false, false, null]],
-        1058 => [[['_route' => 'afficher_evenement', '_controller' => 'App\\Controller\\PostController::afficherEvent'], ['idPost'], null, null, false, false, null]],
-        1068 => [[['_route' => 'app_post_delete', '_controller' => 'App\\Controller\\PostController::delete'], ['idPost'], ['POST' => 0], null, false, true, null]],
-        1098 => [[['_route' => 'app_postcom', '_controller' => 'App\\Controller\\PostController::PackItem'], ['idPost'], null, null, false, true, null]],
-        1112 => [[['_route' => 'stats', '_controller' => 'App\\Controller\\PostController::statistiques'], [], null, null, false, false, null]],
-        1146 => [[['_route' => 'updatePostMobile', '_controller' => 'App\\Controller\\PostController::updatePostMobile'], ['idPost'], null, null, false, true, null]],
-        1180 => [[['_route' => 'deletePostMobile', '_controller' => 'App\\Controller\\PostController::deletePostMobile'], ['idPost'], null, null, false, true, null]],
-        1211 => [[['_route' => 'app_reclamation_show', '_controller' => 'App\\Controller\\ReclamationController::show'], ['idRec'], ['GET' => 0], null, false, true, null]],
-        1230 => [[['_route' => 'app_reclamation_edit', '_controller' => 'App\\Controller\\ReclamationController::edit'], ['idRec'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        1244 => [[['_route' => 'app_reclamation_delete', '_controller' => 'App\\Controller\\ReclamationController::delete'], ['idRec'], ['POST' => 0], null, false, true, null]],
-        1274 => [[['_route' => 'app_visitor_show', '_controller' => 'App\\Controller\\VisitorController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        1288 => [[['_route' => 'app_visitor_edit', '_controller' => 'App\\Controller\\VisitorController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        1297 => [[['_route' => 'app_visitor_delete', '_controller' => 'App\\Controller\\VisitorController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        1340 => [[['_route' => 'wishlistshare', '_controller' => 'App\\Controller\\WishListController::wishlistShare'], ['code'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
-        1357 => [[['_route' => 'wishlistjoin', '_controller' => 'App\\Controller\\WishListController::wishlistJoin'], ['code'], ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
-        1370 => [[['_route' => 'wishlistviewcode', '_controller' => 'App\\Controller\\WishListController::wishlistviewcode'], ['code'], ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
-        1394 => [[['_route' => 'wishlistedit', '_controller' => 'App\\Controller\\WishListController::wishlistedit'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
-        1418 => [[['_route' => 'wishlistdelete', '_controller' => 'App\\Controller\\WishListController::wishlistDelete'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
-        1440 => [[['_route' => 'wishlistopen', '_controller' => 'App\\Controller\\WishListController::wishlistOpen'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
-        1472 => [[['_route' => 'wishlistotheropen', '_controller' => 'App\\Controller\\WishListOtherController::wishlistOtherOpen'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
-        1494 => [[['_route' => 'wishlistotherjoin', '_controller' => 'App\\Controller\\WishListOtherController::wishlistOtherJoin'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
-        1517 => [
+        950 => [[['_route' => 'app_gamemobile_getpicture', '_controller' => 'App\\Controller\\GameMobileController::getPicture'], ['image'], ['GET' => 0], null, false, true, null]],
+        977 => [[['_route' => 'messages_browse', '_controller' => 'App\\Controller\\MessageController::browse'], ['groupConversation'], null, null, false, true, null]],
+        994 => [[['_route' => 'messages_add', '_controller' => 'App\\Controller\\MessageController::add'], ['id'], null, null, false, false, null]],
+        1015 => [[['_route' => 'messages_ping', '_controller' => 'App\\Controller\\MessageController::ping'], ['id'], null, null, false, false, null]],
+        1046 => [[['_route' => 'app_post_show', '_controller' => 'App\\Controller\\PostController::show'], ['idPost'], ['GET' => 0], null, false, true, null]],
+        1063 => [[['_route' => 'app_post_edit', '_controller' => 'App\\Controller\\PostController::edit'], ['idPost'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        1079 => [[['_route' => 'masquer_evenement', '_controller' => 'App\\Controller\\PostController::masquerEvent'], ['idPost'], null, null, false, false, null]],
+        1096 => [[['_route' => 'afficher_evenement', '_controller' => 'App\\Controller\\PostController::afficherEvent'], ['idPost'], null, null, false, false, null]],
+        1106 => [[['_route' => 'app_post_delete', '_controller' => 'App\\Controller\\PostController::delete'], ['idPost'], ['POST' => 0], null, false, true, null]],
+        1136 => [[['_route' => 'app_postcom', '_controller' => 'App\\Controller\\PostController::PackItem'], ['idPost'], null, null, false, true, null]],
+        1150 => [[['_route' => 'stats', '_controller' => 'App\\Controller\\PostController::statistiques'], [], null, null, false, false, null]],
+        1264 => [[['_route' => 'updatePostMobile', '_controller' => 'App\\Controller\\PostController::updatePostMobile'], ['idPost', 'titre', 'auteur', 'img_post', 'rate', 'image'], null, null, false, true, null]],
+        1298 => [[['_route' => 'deletePostMobile', '_controller' => 'App\\Controller\\PostController::deletePostMobile'], ['idPost'], null, null, false, true, null]],
+        1329 => [[['_route' => 'app_reclamation_show', '_controller' => 'App\\Controller\\ReclamationController::show'], ['idRec'], ['GET' => 0], null, false, true, null]],
+        1348 => [[['_route' => 'app_reclamation_edit', '_controller' => 'App\\Controller\\ReclamationController::edit'], ['idRec'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        1362 => [[['_route' => 'app_reclamation_delete', '_controller' => 'App\\Controller\\ReclamationController::delete'], ['idRec'], ['POST' => 0], null, false, true, null]],
+        1395 => [[['_route' => 'deleteRecMobile', '_controller' => 'App\\Controller\\ReclamationController::deletePostMobile'], ['idRec'], null, null, false, true, null]],
+        1425 => [[['_route' => 'app_visitor_show', '_controller' => 'App\\Controller\\VisitorController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        1439 => [[['_route' => 'app_visitor_edit', '_controller' => 'App\\Controller\\VisitorController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        1448 => [[['_route' => 'app_visitor_delete', '_controller' => 'App\\Controller\\VisitorController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        1491 => [[['_route' => 'wishlistshare', '_controller' => 'App\\Controller\\WishListController::wishlistShare'], ['code'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        1508 => [[['_route' => 'wishlistjoin', '_controller' => 'App\\Controller\\WishListController::wishlistJoin'], ['code'], ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
+        1521 => [[['_route' => 'wishlistviewcode', '_controller' => 'App\\Controller\\WishListController::wishlistviewcode'], ['code'], ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
+        1545 => [[['_route' => 'wishlistedit', '_controller' => 'App\\Controller\\WishListController::wishlistedit'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        1569 => [[['_route' => 'wishlistdelete', '_controller' => 'App\\Controller\\WishListController::wishlistDelete'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        1591 => [[['_route' => 'wishlistopen', '_controller' => 'App\\Controller\\WishListController::wishlistOpen'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        1623 => [[['_route' => 'wishlistotheropen', '_controller' => 'App\\Controller\\WishListOtherController::wishlistOtherOpen'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        1645 => [[['_route' => 'wishlistotherjoin', '_controller' => 'App\\Controller\\WishListOtherController::wishlistOtherJoin'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null]],
+        1668 => [
             [['_route' => 'wishlistotherleave', '_controller' => 'App\\Controller\\WishListOtherController::wishlistOtherLeave'], ['id'], ['GET' => 0, 'HEAD' => 1], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

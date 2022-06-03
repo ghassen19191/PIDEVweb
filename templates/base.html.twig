@@ -105,7 +105,10 @@
 					</div>
 				</div>
 			</nav>
-            
+            <form action="{{ path('recherche') }}" method='post'>
+			<input type="text"  placeholder="Type to Search..." name="motcle">
+			<button type="submit" >rechercher</button>
+			</form>
 		</div>
         
 	</header>
@@ -129,10 +132,7 @@
 			<div class="container">
     {% block content %}
     {% endblock %}
-    <form action="{{ path('recherche') }}" method='post'>
-			<input type="text"  placeholder="Type to Search..." name="motcle">
-			<button type="submit" >rechercher</button>
-			</form>
+    
             </div></div></section>
 	<!--================Header Menu Area =================-->
 

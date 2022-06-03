@@ -8,11 +8,12 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use JsonSerializable;
 
 /**
  * @ORM\Entity(repositoryClass=GameRepository::class)
  */
-class Game
+class Game implements JsonSerializable
 {
     /**
      * @ORM\Id
@@ -225,5 +226,32 @@ class Game
         }
 
         return $this;
+    }
+
+    public function jsonSerialize(): array
+    {
+        return array(
+            'id' => $this->id,
+            'name' => $this->name,
+            'category' => $this->category,
+            'description' => $this->description,
+            'releaseYear' => $this->release_year->format("d-m-Y"),
+            'price' => $this->price,
+            'image' => $this->photo,
+            'stock' => $this->stock
+
+        );
+    }
+
+    public function setUp($name, $category, $description, $releaseYear, $price, $image, $stock)
+    {
+        $this->name = $name;
+        $this->category = $category;
+        $this->description = $description;
+        $this->release_year = $releaseYear;
+        $this->price = $price;
+        $this->photo = $image;
+        $this->stock = $stock;
+
     }
 }

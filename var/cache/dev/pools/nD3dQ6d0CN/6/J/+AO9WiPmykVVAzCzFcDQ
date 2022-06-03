@@ -8,7 +8,7 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
     [
         'Symfony\\Component\\Routing\\Annotation\\Route' => [
             'path' => [
-                '/updatePostMobile/{idPost}',
+                '/p/updatePostMobile/{idPost}?titre={titre}&auteur={auteur}&imgPost={img_post}&rate={rate}&image={image}',
             ],
             'name' => [
                 'updatePostMobile',

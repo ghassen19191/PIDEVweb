@@ -87,7 +87,7 @@ class __TwigTemplate_1ed0db56c1b06fa7d5347ef1bc5d5dec15ea4aa9700fe841f034c6ff478
         // line 6
         echo "<br/> <br/><br/><br/><br/><br/>
 
-<div class=\"row\">
+<center><div class=\"row\">
     <div class=\"col-lg-6 col-md-6\">
         
             <div class=\"col-lg-6 col-md-6\">
@@ -133,7 +133,7 @@ class __TwigTemplate_1ed0db56c1b06fa7d5347ef1bc5d5dec15ea4aa9700fe841f034c6ff478
         echo "                
                 
             
-        </div></div></div>
+        </div></div></div></center>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -167,7 +167,7 @@ class __TwigTemplate_1ed0db56c1b06fa7d5347ef1bc5d5dec15ea4aa9700fe841f034c6ff478
 {% block content %}
 <br/> <br/><br/><br/><br/><br/>
 
-<div class=\"row\">
+<center><div class=\"row\">
     <div class=\"col-lg-6 col-md-6\">
         
             <div class=\"col-lg-6 col-md-6\">
@@ -191,7 +191,7 @@ class __TwigTemplate_1ed0db56c1b06fa7d5347ef1bc5d5dec15ea4aa9700fe841f034c6ff478
                 
                 
             
-        </div></div></div>
+        </div></div></div></center>
 {% endblock %}", "game/gallery.html.twig", "C:\\xampp\\htdocs\\PIDEV\\templates\\game\\gallery.html.twig");
     }
 }

@@ -11,16 +11,13 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
                 'string',
             ],
             'length' => [
-                255,
+                191,
             ],
             'precision' => [
                 null,
             ],
             'scale' => [
                 null,
-            ],
-            'nullable' => [
-                true,
             ],
         ],
     ],

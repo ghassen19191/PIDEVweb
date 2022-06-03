@@ -13,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use MercurySeries\FlashyBundle\FlashyNotifier ;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**
  * @Route("/reclamation")
@@ -135,5 +136,55 @@ class ReclamationController extends AbstractController
         $dompdf->stream($fn, [
             "Attachment" => true
         ]);
+    }
+    /**
+     * @Route("/s/AfficherRecMobile", name="AfficherRecMobile")
+     */
+    public function AfficherRecMobile(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $commandes = $em->getRepository(Reclamation::class)->findAll();
+
+        return $this->json($commandes,200,[],['groups'=>'post:read']);
+
+        
+
+    }
+    /**
+     * @Route("/ajouterrecMobile/new", name="ajouterrecMobile")
+     */
+    public function ajouterrecMobile(Request $request, NormalizerInterface $Normalizer)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $post = new Reclamation();
+        $post->setNomRec($request->get('nomRec'));
+        $post->setDescriRec($request->get('descriRec'));
+        $post->setTraite($request->get('traite'));
+        
+        $em->persist($post);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($post ,'json' ,['groups'=>'post:read']);
+        return new Response(json_encode($jsonContent));;
+
+        
+
+    }
+
+    
+     /**
+     * @Route("/deleteRecMobile/{idRec}", name="deleteRecMobile")
+     */
+    public function deletePostMobile(Request $request,$idRec ,NormalizerInterface $Normalizer)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $post = $em->getRepository(Post::class)->find($idRec);
+  
+        $em->remove($post);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($post ,'json' ,['groups'=>'post:read']);
+        return new Response("information deleted".json_encode($jsonContent));;
+
+        
+
     }
 }

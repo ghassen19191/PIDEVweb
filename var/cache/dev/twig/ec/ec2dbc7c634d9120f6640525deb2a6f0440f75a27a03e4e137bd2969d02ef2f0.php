@@ -82,7 +82,10 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
         // line 17
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/animate-css/animate.css"), "html", null, true);
         echo ">
-\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css\">
+\t<link rel=\"stylesheet\" href=";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css"), "html", null, true);
+        echo ">
 \t<link rel=\"stylesheet\" href=";
         // line 19
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendors/flaticon/flaticon.css"), "html", null, true);
@@ -138,7 +141,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
         // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("index.php/reclamation/new"), "html", null, true);
         echo ">Reclamation</a></li>
-\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
+\t\t\t\t\t\t\t<!--<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
         // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("galery");
         echo "\">Gallery</a>
@@ -150,7 +153,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"";
         // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("MesAchat");
-        echo "\">Mes achats</a></li>
+        echo "\">Mes achats</a></li>-->
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=";
         // line 53
@@ -547,7 +550,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 
     public function getDebugInfo()
     {
-        return array (  526 => 150,  520 => 149,  511 => 143,  506 => 141,  502 => 140,  497 => 138,  490 => 134,  485 => 132,  481 => 131,  477 => 130,  469 => 124,  466 => 123,  462 => 122,  459 => 121,  449 => 120,  434 => 292,  430 => 291,  426 => 290,  421 => 288,  417 => 287,  413 => 286,  409 => 285,  405 => 284,  401 => 283,  397 => 282,  393 => 281,  389 => 280,  385 => 279,  381 => 278,  377 => 277,  373 => 276,  251 => 157,  246 => 154,  244 => 120,  224 => 103,  220 => 102,  197 => 82,  194 => 81,  187 => 73,  180 => 69,  175 => 66,  171 => 64,  157 => 53,  152 => 51,  147 => 49,  143 => 48,  139 => 47,  135 => 46,  131 => 45,  127 => 44,  111 => 33,  97 => 22,  92 => 20,  88 => 19,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
+        return array (  529 => 150,  523 => 149,  514 => 143,  509 => 141,  505 => 140,  500 => 138,  493 => 134,  488 => 132,  484 => 131,  480 => 130,  472 => 124,  469 => 123,  465 => 122,  462 => 121,  452 => 120,  437 => 292,  433 => 291,  429 => 290,  424 => 288,  420 => 287,  416 => 286,  412 => 285,  408 => 284,  404 => 283,  400 => 282,  396 => 281,  392 => 280,  388 => 279,  384 => 278,  380 => 277,  376 => 276,  254 => 157,  249 => 154,  247 => 120,  227 => 103,  223 => 102,  200 => 82,  197 => 81,  190 => 73,  183 => 69,  178 => 66,  174 => 64,  160 => 53,  155 => 51,  150 => 49,  146 => 48,  142 => 47,  138 => 46,  134 => 45,  130 => 44,  114 => 33,  100 => 22,  95 => 20,  91 => 19,  87 => 18,  83 => 17,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  53 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -569,7 +572,7 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t<link rel=\"stylesheet\" href={{asset(\"css/magnific-popup.css\")}}>
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/nice-select/css/nice-select.css\")}}>
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/animate-css/animate.css\")}}>
-\t<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css\">
+\t<link rel=\"stylesheet\" href={{asset(\"https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css\")}}>
 \t<link rel=\"stylesheet\" href={{asset(\"vendors/flaticon/flaticon.css\")}}>
 \t<link href=\"{{ asset('sbadmin2/vendor/fontawesome-free/css/all.min.css') }}\" rel=\"stylesheet\" type=\"text/css\">
 \t<!-- main css -->
@@ -599,10 +602,10 @@ class __TwigTemplate_8d31779876f4cb249d228d71e3e3dbc7ed9a5e918886ee09c6f74c960f4
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"about-us.html\")}}>About</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item active\"  ><a class=\"nav-link\" href={{asset(\"index.php/post/front\")}}>News</a></li>
 \t\t\t\t\t\t\t<li class=\"nav-item \"><a class=\"nav-link\" href={{asset(\"index.php/reclamation/new\")}}>Reclamation</a></li>
-\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('galery')}}\">Gallery</a>
+\t\t\t\t\t\t\t<!--<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('galery')}}\">Gallery</a>
 \t\t\t\t\t\t    <li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('app_cartindex')}}\">Panier</a>
 \t\t\t\t\t\t\t
-\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('MesAchat')}}\">Mes achats</a></li>
+\t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"{{ path ('MesAchat')}}\">Mes achats</a></li>-->
 \t\t\t\t\t\t\t
 \t\t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href={{asset(\"contact.html\")}}>Contact</a></li>
 \t\t\t\t\t\t<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">                                                                                                        </a></li>

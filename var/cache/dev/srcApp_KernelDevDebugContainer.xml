@@ -399,6 +399,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\AchatController"/>
       </call>
     </service>
+    <service id="App\Controller\AchattMobileController" class="App\Controller\AchattMobileController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\AchattMobileController"/>
+      </call>
+    </service>
     <service id="App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -491,6 +498,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\GameController"/>
+      </call>
+    </service>
+    <service id="App\Controller\GameMobileController" class="App\Controller\GameMobileController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\GameMobileController"/>
       </call>
     </service>
     <service id="App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" public="true" autowire="true" autoconfigure="true">
@@ -636,6 +650,13 @@
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\UserAccountController"/>
+      </call>
+    </service>
+    <service id="App\Controller\UserMobileController" class="App\Controller\UserMobileController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\UserMobileController"/>
       </call>
     </service>
     <service id="App\Controller\UserParameterConrollerController" class="App\Controller\UserParameterConrollerController" public="true" autowire="true" autoconfigure="true">
@@ -6110,6 +6131,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AchatController" class="App\Controller\AchatController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AchatController" class="App\Controller\AchatController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AchatController" class="App\Controller\AchatController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AchattMobileController" class="App\Controller\AchattMobileController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AchattMobileController" class="App\Controller\AchattMobileController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\AchattMobileController" class="App\Controller\AchattMobileController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdminAccountController" class="App\Controller\AdminAccountController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6149,6 +6173,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GameController" class="App\Controller\GameController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GameController" class="App\Controller\GameController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\GameController" class="App\Controller\GameController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GameMobileController" class="App\Controller\GameMobileController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GameMobileController" class="App\Controller\GameMobileController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\GameMobileController" class="App\Controller\GameMobileController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\GroupConversationController" class="App\Controller\GroupConversationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6208,6 +6235,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserAccountController" class="App\Controller\UserAccountController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserAccountController" class="App\Controller\UserAccountController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UserAccountController" class="App\Controller\UserAccountController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserMobileController" class="App\Controller\UserMobileController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserMobileController" class="App\Controller\UserMobileController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\UserMobileController" class="App\Controller\UserMobileController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UserParameterConrollerController" class="App\Controller\UserParameterConrollerController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UserParameterConrollerController" class="App\Controller\UserParameterConrollerController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UserParameterConrollerController" class="App\Controller\UserParameterConrollerController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -6600,6 +6630,32 @@
         <argument key="achatRepository" type="service_closure" id="App\Repository\AchatRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.45Yqot6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="achattRepository" type="service_closure" id="App\Repository\AchattRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.BltmxVt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.4eNHyq0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="achattRepository" type="service_closure" id="App\Repository\AchattRepository"/>
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.SPlmxZL" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="achattRepository" type="service_closure" id="App\Repository\AchattRepository"/>
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
     <service id=".service_locator.1UuH9tO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6743,16 +6799,17 @@
         <argument key="game" type="service_closure" id=".errored..service_locator.cnYF4_2.App\Entity\Game"/>
       </argument>
     </service>
-    <service id=".service_locator.BltmxVt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
-      </argument>
-    </service>
     <service id=".service_locator.LEDhkMU" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="game" type="service_closure" id=".errored..service_locator.LEDhkMU.App\Entity\Game"/>
+        <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.K__CQid" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
         <argument key="gameRepository" type="service_closure" id="App\Repository\GameRepository"/>
       </argument>
     </service>
@@ -6944,6 +7001,13 @@
         <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.XISRjPO" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="userRepository" type="service_closure" id="App\Repository\UserRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.NDq3eKE" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -6975,13 +7039,18 @@
         <argument key="id" type="service_closure" id=".errored..service_locator.xb2Fmw5.App\Entity\Wishes"/>
       </argument>
     </service>
-    <service id=".service_locator.SWGSOpx" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.HEa8EUN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AchatController::delete" type="service_closure" id=".service_locator.1Z41jEH"/>
         <argument key="App\Controller\AchatController::edit" type="service_closure" id=".service_locator.1Z41jEH"/>
         <argument key="App\Controller\AchatController::new" type="service_closure" id=".service_locator.a3_gg16"/>
         <argument key="App\Controller\AchatController::show" type="service_closure" id=".service_locator.KelfIhy"/>
+        <argument key="App\Controller\AchattMobileController::add" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\AchattMobileController::delete" type="service_closure" id=".service_locator.SPlmxZL"/>
+        <argument key="App\Controller\AchattMobileController::deleteAll" type="service_closure" id=".service_locator.SPlmxZL"/>
+        <argument key="App\Controller\AchattMobileController::edit" type="service_closure" id=".service_locator.4eNHyq0"/>
+        <argument key="App\Controller\AchattMobileController::index" type="service_closure" id=".service_locator.45Yqot6"/>
         <argument key="App\Controller\AdminDashboardController::index" type="service_closure" id=".service_locator.1UuH9tO"/>
         <argument key="App\Controller\AdminParameterController::edit" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\AdminUserController::add" type="service_closure" id=".service_locator.jmvbEvf"/>
@@ -7022,6 +7091,10 @@
         <argument key="App\Controller\GameController::recherche" type="service_closure" id=".service_locator.Ui1PEd."/>
         <argument key="App\Controller\GameController::show" type="service_closure" id=".service_locator.cnYF4_2"/>
         <argument key="App\Controller\GameController::showFront" type="service_closure" id=".service_locator.cnYF4_2"/>
+        <argument key="App\Controller\GameMobileController::delete" type="service_closure" id=".service_locator.K__CQid"/>
+        <argument key="App\Controller\GameMobileController::deleteAll" type="service_closure" id=".service_locator.K__CQid"/>
+        <argument key="App\Controller\GameMobileController::edit" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameMobileController::index" type="service_closure" id=".service_locator.BltmxVt"/>
         <argument key="App\Controller\GroupConversationController::add" type="service_closure" id=".service_locator.U_5YyZ3"/>
         <argument key="App\Controller\GroupConversationController::browse" type="service_closure" id=".service_locator.ykFEPKM"/>
         <argument key="App\Controller\GroupConversationController::delete" type="service_closure" id=".service_locator.50Xitbh"/>
@@ -7048,7 +7121,9 @@
         <argument key="App\Controller\PostController::show" type="service_closure" id=".service_locator.c7kbHeP"/>
         <argument key="App\Controller\PostController::statistiques" type="service_closure" id=".service_locator.gqRFayA"/>
         <argument key="App\Controller\PostController::updatePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\ReclamationController::ajouterrecMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\ReclamationController::delete" type="service_closure" id=".service_locator.8kL29dq"/>
+        <argument key="App\Controller\ReclamationController::deletePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\ReclamationController::edit" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController::exportAllReclamationsPDF" type="service_closure" id=".service_locator.z1a3NDa"/>
         <argument key="App\Controller\ReclamationController::index" type="service_closure" id=".service_locator.bJ2nGqo"/>
@@ -7059,6 +7134,11 @@
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.Z9YHLOP"/>
         <argument key="App\Controller\SecurityController::registration" type="service_closure" id=".service_locator.jmvbEvf"/>
         <argument key="App\Controller\SecurityController::resetPassword" type="service_closure" id=".service_locator.QBb2BJR"/>
+        <argument key="App\Controller\UserMobileController::delete" type="service_closure" id=".service_locator.XISRjPO"/>
+        <argument key="App\Controller\UserMobileController::deleteAll" type="service_closure" id=".service_locator.XISRjPO"/>
+        <argument key="App\Controller\UserMobileController::edit" type="service_closure" id=".service_locator.1UuH9tO"/>
+        <argument key="App\Controller\UserMobileController::index" type="service_closure" id=".service_locator.1UuH9tO"/>
+        <argument key="App\Controller\UserMobileController::verif" type="service_closure" id=".service_locator.QBb2BJR"/>
         <argument key="App\Controller\UserParameterConrollerController::edit" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\VisitorController::delete" type="service_closure" id=".service_locator.ngZfVqD"/>
         <argument key="App\Controller\VisitorController::edit" type="service_closure" id=".service_locator.ngZfVqD"/>
@@ -7074,6 +7154,11 @@
         <argument key="App\Controller\AchatController:edit" type="service_closure" id=".service_locator.1Z41jEH"/>
         <argument key="App\Controller\AchatController:new" type="service_closure" id=".service_locator.a3_gg16"/>
         <argument key="App\Controller\AchatController:show" type="service_closure" id=".service_locator.KelfIhy"/>
+        <argument key="App\Controller\AchattMobileController:add" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\AchattMobileController:delete" type="service_closure" id=".service_locator.SPlmxZL"/>
+        <argument key="App\Controller\AchattMobileController:deleteAll" type="service_closure" id=".service_locator.SPlmxZL"/>
+        <argument key="App\Controller\AchattMobileController:edit" type="service_closure" id=".service_locator.4eNHyq0"/>
+        <argument key="App\Controller\AchattMobileController:index" type="service_closure" id=".service_locator.45Yqot6"/>
         <argument key="App\Controller\AdminDashboardController:index" type="service_closure" id=".service_locator.1UuH9tO"/>
         <argument key="App\Controller\AdminParameterController:edit" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\AdminUserController:add" type="service_closure" id=".service_locator.jmvbEvf"/>
@@ -7114,6 +7199,10 @@
         <argument key="App\Controller\GameController:recherche" type="service_closure" id=".service_locator.Ui1PEd."/>
         <argument key="App\Controller\GameController:show" type="service_closure" id=".service_locator.cnYF4_2"/>
         <argument key="App\Controller\GameController:showFront" type="service_closure" id=".service_locator.cnYF4_2"/>
+        <argument key="App\Controller\GameMobileController:delete" type="service_closure" id=".service_locator.K__CQid"/>
+        <argument key="App\Controller\GameMobileController:deleteAll" type="service_closure" id=".service_locator.K__CQid"/>
+        <argument key="App\Controller\GameMobileController:edit" type="service_closure" id=".service_locator.BltmxVt"/>
+        <argument key="App\Controller\GameMobileController:index" type="service_closure" id=".service_locator.BltmxVt"/>
         <argument key="App\Controller\GroupConversationController:add" type="service_closure" id=".service_locator.U_5YyZ3"/>
         <argument key="App\Controller\GroupConversationController:browse" type="service_closure" id=".service_locator.ykFEPKM"/>
         <argument key="App\Controller\GroupConversationController:delete" type="service_closure" id=".service_locator.50Xitbh"/>
@@ -7140,7 +7229,9 @@
         <argument key="App\Controller\PostController:show" type="service_closure" id=".service_locator.c7kbHeP"/>
         <argument key="App\Controller\PostController:statistiques" type="service_closure" id=".service_locator.gqRFayA"/>
         <argument key="App\Controller\PostController:updatePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
+        <argument key="App\Controller\ReclamationController:ajouterrecMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\ReclamationController:delete" type="service_closure" id=".service_locator.8kL29dq"/>
+        <argument key="App\Controller\ReclamationController:deletePostMobile" type="service_closure" id=".service_locator.4wRfwhS"/>
         <argument key="App\Controller\ReclamationController:edit" type="service_closure" id=".service_locator.8kL29dq"/>
         <argument key="App\Controller\ReclamationController:exportAllReclamationsPDF" type="service_closure" id=".service_locator.z1a3NDa"/>
         <argument key="App\Controller\ReclamationController:index" type="service_closure" id=".service_locator.bJ2nGqo"/>
@@ -7151,6 +7242,11 @@
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.Z9YHLOP"/>
         <argument key="App\Controller\SecurityController:registration" type="service_closure" id=".service_locator.jmvbEvf"/>
         <argument key="App\Controller\SecurityController:resetPassword" type="service_closure" id=".service_locator.QBb2BJR"/>
+        <argument key="App\Controller\UserMobileController:delete" type="service_closure" id=".service_locator.XISRjPO"/>
+        <argument key="App\Controller\UserMobileController:deleteAll" type="service_closure" id=".service_locator.XISRjPO"/>
+        <argument key="App\Controller\UserMobileController:edit" type="service_closure" id=".service_locator.1UuH9tO"/>
+        <argument key="App\Controller\UserMobileController:index" type="service_closure" id=".service_locator.1UuH9tO"/>
+        <argument key="App\Controller\UserMobileController:verif" type="service_closure" id=".service_locator.QBb2BJR"/>
         <argument key="App\Controller\UserParameterConrollerController:edit" type="service_closure" id=".service_locator.ccM2MGC"/>
         <argument key="App\Controller\VisitorController:delete" type="service_closure" id=".service_locator.ngZfVqD"/>
         <argument key="App\Controller\VisitorController:edit" type="service_closure" id=".service_locator.ngZfVqD"/>
@@ -7549,6 +7645,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\AchattMobileController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\AchattMobileController"/>
+      <argument>App\Controller\AchattMobileController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\AdminAccountController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\AdminAccountController"/>
       <argument>App\Controller\AdminAccountController</argument>
@@ -7624,6 +7726,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\GameController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\GameController"/>
       <argument>App\Controller\GameController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\GameMobileController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\GameMobileController"/>
+      <argument>App\Controller\GameMobileController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -7738,6 +7846,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\UserAccountController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\UserAccountController"/>
       <argument>App\Controller\UserAccountController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\UserMobileController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\UserMobileController"/>
+      <argument>App\Controller\UserMobileController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -7911,12 +8025,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.SWGSOpx"/>
+      <argument type="service" id=".service_locator.HEa8EUN"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.SWGSOpx"/>
+      <argument type="service" id=".service_locator.HEa8EUN"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus" public="false">
       <argument type="iterator">
@@ -8385,7 +8499,7 @@
     <service id="Symfony\UX\Chartjs\Builder\ChartBuilderInterface" alias="chartjs.builder" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.SWGSOpx"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.HEa8EUN"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

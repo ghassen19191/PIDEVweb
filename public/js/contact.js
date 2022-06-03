@@ -83,36 +83,3 @@ $(document).ready(function(){
         
  })(jQuery)
 })
-let SubmitBtn = document.querySelector(".submit");
-let layout = document.querySelector(".container");
-let layoutIn = document.querySelector(".layout-in");
-let closeBtn = document.querySelector(".close");
-let finalmess = document.querySelector(".final");
-
-SubmitBtn.onclick = function () {
-  this.classList.add("clicked");
-  layout.classList.add("showen");
-  bodymovin.loadAnimation({
-    wrapper: document.getElementById("svg-animation"),
-    animType: "svg",
-    loop: false,
-    path: "https://raw.githubusercontent.com/Abdallah-Mohamed-Sayed/some-files/main/True-sign.json",
-  });
-};
-
-closeBtn.onclick = function () {
-  layout.classList.remove("showen");
-  finalShowen();
-};
-
-layoutIn.onclick = function () {
-  layout.classList.remove("showen");
-  finalShowen();
-};
-
-function finalShowen() {
-  finalmess.classList.add("showen");
-  setTimeout(() => {
-    finalmess.classList.remove("showen");
-  }, 3000);
-}
